@@ -1,6 +1,6 @@
-**呀！原来是杨先生**
+**呀杨先生 yayxs**
 
-`2020年`已经来到，在这里盘点一下进阶的各种技术栈,加油`洋小洋同学`
+学海无涯苦作舟，杨同学你要加油。
 
 ## WEB 前端
 
@@ -15,7 +15,9 @@
 ### 个人博客
 
 [Welcome to my site](https://yayxs.github.io/)
+![](https://raw.githubusercontent.com/yayxs/Pics/master/20200110213414.png)
 
 ### 掘金首页
 
 [洋小洋同学](https://juejin.im/user/5cf00b7c6fb9a07eba2c226f/posts)
+![](https://raw.githubusercontent.com/yayxs/Pics/master/20200110213529.png)
