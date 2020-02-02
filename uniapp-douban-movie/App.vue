@@ -17,5 +17,7 @@
 	/* 引入官方的css 样式 */
 	@import './common/style/uni';
 	/* 引入动画库 */
-	@import './common/style/animate'
+	@import './common/style/animate';
+	/* 引入阿里图标库 */
+	@import './common/iconfont.css'
 </style>

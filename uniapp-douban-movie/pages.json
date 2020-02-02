@@ -1,0 +1,51 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path" : "pages/hotTheaters/hotTheaters",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/findMovie/findMovie",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/hotTheaters/hotTheaters",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#FF9933",
+		"backgroundColor": "#F8F8F8"
+	},
+	// tabbar
+	"tabBar": {
+		"color": "#969696",
+		"selectedColor": "#505050",
+		"borderStyle": "black",
+		"backgroundColor": "#F9F9F9",
+		"list": [{
+				"pagePath": "pages/hotTheaters/hotTheaters",
+				"iconPath": "static/tabbar/hot.png",
+				"selectedIconPath": "static/tabbar/hot@ed.png",
+				"text": "热映"
+			},
+			{
+				"pagePath": "pages/findMovie/findMovie",
+				"iconPath": "static/tabbar/find.png",
+				"selectedIconPath": "static/tabbar/find@ed.png",
+				"text": "找片"
+			}, {
+				"pagePath": "pages/my/my",
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "static/tabbar/my@ed.png",
+				"text": "我的"
+			}
+		]
+	}
+}
