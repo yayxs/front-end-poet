@@ -1,5 +1,6 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, Delete, Put, Param } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiProperty } from '@nestjs/swagger';
+import { PostModel } from './post.model';
 
 // 
 class CreatePostDto{
@@ -21,14 +22,21 @@ export class PostsController {
         summary: '获取帖子列表' 
     })
     @Get()
-    index(){
-        return [
-            {
-                "id":1,
-                "con":"121212"
-            }
-        ]
+    async index(){
+        return await PostModel.find()
     }
+    // 帖子详情
+    @ApiOperation({
+        summary:'帖子 详情'
+    })
+    @Get(':id')
+    detail(@Param('id') id:string){
+        return {
+            code:0,
+            msg:''
+        }
+    }
+    // 创建帖子
     @ApiOperation({
         summary:'创建帖子'
     })
@@ -38,6 +46,28 @@ export class PostsController {
         return {
             code :0,
             success:true
+        }
+    }
+    // 更新帖子
+    @ApiOperation({
+        summary:'更新帖子'
+    })
+    @Put(':id')
+    update(@Param('id') id:string, @Body() body:CreatePostDto){
+        return {
+            success:true,
+            id:id
+        }
+    }
+    // 删除帖子
+    @ApiOperation({
+        summary:'删除帖子'
+    })
+    @Delete()
+    remove(){
+        return {
+            success:true,
+            msg:'删除成功'
         }
     }
 }

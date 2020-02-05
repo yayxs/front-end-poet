@@ -10,7 +10,18 @@ import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
+
+import * as mongoose from 'mongoose';
 async function bootstrap() {
+  // 设置默认 mongoose 连接
+const mongoDB = 'mongodb://127.0.0.1:27017/nest-blog-api';
+  mongoose.connect(mongoDB,
+   {
+     useNewUrlParser:true,
+     useFindAndModify:false,
+     useCreateIndex:true
+   } 
+    )
   const app = await NestFactory.create(AppModule);
 
   const options = new DocumentBuilder()
