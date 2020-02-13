@@ -1,6 +1,6 @@
 <template>
 	<view>
-		ๆ‘็้กต้ข
+		ึะฮฤยาย๋
 	</view>
 </template>
 
