@@ -1,22 +1,20 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-        {
-            "path" : "pages/hotTheaters/hotTheaters",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/findMovie/findMovie",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/my/my",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/hotTheaters/hotTheaters",
-            "style" : {}
-        }
-    ],
+		{
+			"path": "pages/hotTheaters/hotTheaters",
+			"style": {}
+		}, {
+			"path": "pages/findMovie/findMovie",
+			"style": {
+				"navigationBarTitleText": "找片",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/my/my",
+			"style": {}
+		}
+
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "",
