@@ -1,25 +1,46 @@
-## 给自己的一句话
+## For myself
 
-伤感的一件事：在2019失去了很多..2020..希望自己能变得更好..少一些无奈..多一些安全感！
+- 2019：失去了很多
+- 2020：希望自己能变得更好..少一些无奈..多一些安全感
 
 ### 养成标签
 
- - 自信
- - 放松
+- 自信:自信方能成事
+- 放松:放松才能从容
 
-### 立些FLAG
+### NEW-FLAG
 
-- [ ] DIY 主机 预算 5000¥
-- [ ] 
+- [ ] DIY 主机 预算 5000¥（进行中 ing）
+- [ ] 涨工资(不然要饿死)
 
-##  day-up 仓库
-关于`day-up`，他是记录我每天**向上**的一个仓库，其中的大体方向包括`前端` `node系列`等。
+## day-up 仓库概述
+
+关于`day-up`，它是记录我每天**向上**的一个仓库，其中的大体方向包括`Web前端` `Node后端`等。
+
+- Web 前端:Vue 生态 && React 生态 && Flutter && 小程序等
+- Node 后端：Node && Koa2 && Egg && Nest 等
 
 ### WEB 前端
 
 #### TypeScript
- - [春节间的TypeScript学习笔记](https://github.com/yayxs/day-up/tree/master/TypeScriptDemos)
+
+- [TypeScriptDemos-春节间的 TypeScript 学习笔记](https://github.com/yayxs/day-up/tree/master/TypeScriptDemos)
+
+#### Css 样式
+
+#### 框架
+
+##### Vue 生态
+
+- [uniapp-douban-movie]()
+
+##### React 生态
+
 ### Node 后端
+
+#### Express
+
+- [my-express-app 基本框架案例]()
 
 #### Nest.js
 
@@ -29,11 +50,11 @@
 
 ### 个人博客
 
-[基于Vue+VuePress的一个简易的个人博客(已停止更新)](https://yayxs.github.io/)
+[基于 Vue+VuePress 的一个简易的个人博客(已停止更新)](https://yayxs.github.io/)
 ![](https://cdn.jsdelivr.net/gh/yayxs/Pics@master/uPic/3Y4jc2.png)
 
 ### 掘金首页
 
-[洋小洋同学个人主页(目前的文章多为Flutter相关)](https://juejin.im/user/5cf00b7c6fb9a07eba2c226f/posts)
+[洋小洋同学个人主页(目前的文章多为 Flutter 相关)](https://juejin.im/user/5cf00b7c6fb9a07eba2c226f/posts)
 
 ![](https://cdn.jsdelivr.net/gh/yayxs/Pics@master/uPic/BEKV6c.png)
