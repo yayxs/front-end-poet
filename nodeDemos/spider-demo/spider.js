@@ -1,6 +1,14 @@
+
+/**
+ * @description 爬取自我发表的文章
+ * @author yayxs
+ */
 // 引入axios
 let axios = require('axios')
-
+// 引入mysql
+let mysql = require(mysql)
+// 引入爬虫辅助
+const cheerio = require('cheerio');
 // 异步获取数据
 async function getEntryBySelf() {
   let reqUrl = `https://timeline-merger-ms.juejin.im/v1/get_entry_by_self?src=web&uid=5cf00b7c6fb9a07eba2c226f&device_id=1580692913721&token=eyJhY2Nlc3NfdG9rZW4iOiJqa3FzYTJaUzB3cTY3VVBoIiwicmVmcmVzaF90b2tlbiI6ImJrcG9LMnAyaUlSUFRvSFUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ%3D%3D&targetUid=5cf00b7c6fb9a07eba2c226f&type=post&limit=20&order=createdAt`;
