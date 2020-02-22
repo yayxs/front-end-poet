@@ -9,20 +9,32 @@ const config = {
 // 建立连接
 let con = mysql.createConnection(config);
 con.connect(err=>{
-  console.log(err)
+  if(err){
+    console.log(`数据库建立失败`)
+  }
 });
 
-// 查询user表
+// 查询user_admin表
 
-const sql = `select * from user`
+const sql = `select * from user_admin`
 
-// 进行查询
+
 
 con.query(sql,(err,res,info)=>{
     if(err){
 
     }else{
         console.log(res)
-        console.log(info)
     }
 })
+
+// 创建用户test003
+
+// let iuserSql = "INSERT INTO user_admin (username, password) VALUES ('test003', 'test003')";
+// con.query(iuserSql,(err)=>{
+//   if(err){
+//     console.log(`创建测试用户失败`)
+//   }else{
+//     console.log(`test003插入成功`)
+//   }
+// })
