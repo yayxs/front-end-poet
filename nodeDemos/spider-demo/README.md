@@ -1,5 +1,11 @@
 ## Node | 自我爬虫掘金专栏文章
 
+## 写在前面
+
+- 转载请标注来源（请尊重原创及想法思路）
+- 本篇的 demo 案例仅作为演示案例，练习案例，禁止商用
+- 如有问题致邮：`youngwanlia@gmail.com`
+
 ## 需求概述
 
 由于后续会搭建一个 `全栈个人网站`，目前暂定放一些`技术文档` `全民K歌资源` `B站制作的视频`，也打算把`博客`集成在网站中。所以本篇就来分享一下`node爬虫`。
@@ -10,12 +16,6 @@
 - 文章 ：平常没事的技术文档
 
 这篇就打算先`爬虫一些数据`，暂且放在本地的数据库里
-
-## 写在前面
-
-- 转载请标注来源（请尊重原创及想法思路）
-- 本篇的 demo 案例仅作为演示案例，练习案例，禁止商用
-- 如有问题致邮：`youngwanlia@gmail.com`
 
 ## 前期准备
 
@@ -50,6 +50,18 @@ npm install -g nodemon
 yarn add  axios
 ```
 
+- mysql
+
+```sh
+yarn add mysql
+```
+
+- cheerio
+
+```sh
+yarn add cheerio
+```
+
 ## 需求分析
 
 获取专栏的列表，刷新列表页分析接口的请求
@@ -68,22 +80,50 @@ https://timeline-merger-ms.juejin.im/v1/get_entry_by_self?src=web&uid=5cf00b7c6f
 那我们就在 node 环境下跑一下这个接口
 
 ```js
-// 异步获取数据
 async function getEntryBySelf() {
   let reqUrl = `https://timeline-merger-ms.juejin.im/v1/get_entry_by_self?src=web&uid=5cf00b7c6fb9a07eba2c226f&device_id=1580692913721&token=eyJhY2Nlc3NfdG9rZW4iOiJqa3FzYTJaUzB3cTY3VVBoIiwicmVmcmVzaF90b2tlbiI6ImJrcG9LMnAyaUlSUFRvSFUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ%3D%3D&targetUid=5cf00b7c6fb9a07eba2c226f&type=post&limit=20&order=createdAt`;
   const res = await axios.get(reqUrl);
-  console.log(res.data);
+  const {
+    s,
+    m,
+    d: { total, entrylist }
+  } = res.data;
+  if (s === 1 && m === "ok") {
+    // 请求成功
+    return entrylist;
+  } else {
+    return `reqErr`;
+  }
 }
-
-getEntryBySelf();
 ```
 
 ![20200220210104.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200220210104.png)
-全局安装`nodemon`
 
-### 模块 module
+## MySql 结合 Node
 
-- exports
-- module.exports
+我们通过使用`node`环境然后操作数据库，在这篇文章就简单的说一下数据相关的操作，后续会持续更新，希望能够关注笔者`github`
 
-`exports`在模块执行之前赋值给`module.exports` ，实际上导出的是`module.rxports`
+### 数据库连接
+
+```js
+// 配置对象
+const config = {
+  host: "localhost", // 主机地址
+  user: "root", // 数据库用户
+  password: "123456", // 密码
+  database: "blog" // 数据库
+};
+// 建立连接
+let con = mysql.createConnection(config);
+con.connect(err => {
+  if (err) {
+    console.log(`数据库建立失败`);
+  }
+});
+```
+
+### 建表-专栏
+
+在`blog` 数据库新建`zhuan_lan`表用来存放掘金专栏的文章，并初始化一些字段，这里与爬取的数据字段名大致一致
+
+![20200222190951.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200222190951.png)
