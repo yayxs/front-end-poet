@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Node | 自我爬虫掘金专栏文章
 
 ## 需求概述
@@ -88,4 +88,4 @@ getEntryBySelf();
 - module.exports
 
 `exports`在模块执行之前赋值给`module.exports` ，实际上导出的是`module.rxports`
->>>>>>> 22bd853 (node)
+
