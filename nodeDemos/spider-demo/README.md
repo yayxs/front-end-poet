@@ -127,3 +127,31 @@ con.connect(err => {
 在`blog` 数据库新建`zhuan_lan`表用来存放掘金专栏的文章，并初始化一些字段，这里与爬取的数据字段名大致一致
 
 ![20200222190951.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200222190951.png)
+
+### 插入数据库
+
+```js
+// 数据插入数据库
+// let testSql = "INSERT INTO zhuan_lan (collectionCount,commentsCount,originalUrl,createdAt,screenshot,content,titlte,category,viewsCount,summaryInfo) VALUES (21,2121,'212','212','212','212','212','221','2121','212')";
+let iblogSql =
+  "INSERT INTO zhuan_lan (collectionCount,commentsCount,originalUrl,createdAt,screenshot,content,titlte,category,viewsCount,summaryInfo) VALUES (?,?,?,?,?,?,?,?,?,?)";
+// 插入数据
+con.query(iblogSql, arrData, (err, res) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(`插入成功`);
+  }
+});
+```
+
+## 本章小结
+
+倘若对`爬虫`感兴趣的话，可以多多交流。本篇所有完整代码在[](https://github.com/yayxs/day-up/tree/master/nodeDemos/spider-demo)
+
+```sh
+day-up/nodeDemos/spider-demo/
+```
+
+**提问**
+有个问题请教一下：把日常的小案例放在一个仓库里，是不是对**你**点赞有影响
