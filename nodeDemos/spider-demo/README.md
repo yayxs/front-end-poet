@@ -145,6 +145,12 @@ con.query(iblogSql, arrData, (err, res) => {
 });
 ```
 
+![20200222195953.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200222195953.png)
+
+### 插入数据库
+
+![20200222200348.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200222200348.png)
+
 ## 本章小结
 
 倘若对`爬虫`感兴趣的话，可以多多交流。本篇所有完整代码在[](https://github.com/yayxs/day-up/tree/master/nodeDemos/spider-demo)
