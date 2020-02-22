@@ -54,6 +54,7 @@ yarn add  axios
 
 获取专栏的列表，刷新列表页分析接口的请求
 ![20200220204021.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200220204021.png)
+爬取相关的数据，然后存入`数据库表里`
 
 经过我们对接口的分析，得出:获得数据专栏的`api`便是这个
 
