@@ -1,5 +1,7 @@
 ## Node | 自我爬虫掘金专栏文章
 
+![20200223192736.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200223192736.png)
+
 ## 写在前面
 
 - 转载请标注来源（请尊重原创及想法思路）
@@ -153,7 +155,7 @@ con.query(iblogSql, arrData, (err, res) => {
 
 ## 本章小结
 
-倘若对`爬虫`感兴趣的话，可以多多交流。本篇所有完整代码在[](https://github.com/yayxs/day-up/tree/master/nodeDemos/spider-demo)
+倘若对`爬虫`感兴趣的话，可以多多交流。本篇所有完整代码在[样小样童鞋的`day-up`仓库](https://github.com/yayxs/day-up/tree/master/nodeDemos/spider-demo)
 
 ```sh
 day-up/nodeDemos/spider-demo/
