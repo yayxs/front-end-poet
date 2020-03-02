@@ -95,6 +95,8 @@ sass --watch style/sass:style/css
 - 目的 ：为了能够在样式表中方便的访问
 - 使用：存储颜色、字体
 
+以`$`开头
+
 ```scss
 $my-color: #fff;
 $my-border: 1px solid $my-color;
@@ -116,6 +118,14 @@ h1 {
 }
 
 /*# sourceMappingURL=demo.css.map */
+```
+
+#### 插值变量
+
+```scss
+$class: ".div" #{$class} {
+  width: 200px;
+}
 ```
 
 ### 嵌套
