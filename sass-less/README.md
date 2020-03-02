@@ -1,4 +1,4 @@
-# 预处理器 Sass Vs Less
+# CSS | 预处理器（上）- Sass
 
 ---
 
@@ -11,23 +11,13 @@
 - less
 - stylus
 
-那么本篇就一起用`对比` `类比` 的方式，来分析一下，它们的不同点，又或者说又有什么相似的地方
+这是一个`系列篇`
 
-## 安装
+1. [CSS | 预处理器（上）- Sass (已完成)]()
+2. [CSS | 预处理器（中）- Less (未完成)]()
+3. [CSS | 预处理器（下）- Stylus(未完成)]()
 
-### sass
-
-```bash
- npm install -g sass
-```
-
-在基于`node` 的环境下，直接全局安装就可以使用，当然在`windows`以及`mac` 平台上又有一些差异，这里可以查阅官网
-[sass 英文官方网站](https://sass-lang.com/install)
-
-**安装完成**
-![20200205182552.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200205182552.png)
-
-## 初识
+### 初识
 
 或多或少我们都知道`sass`很便捷，支持嵌套的语法
 
@@ -53,7 +43,57 @@ body ul li {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-## 变量
+### 核心用法
+
+- 变量
+- 嵌套
+- 混合
+- 函数
+
+## 准备工作
+
+### 安装
+
+对于前端开发者来说,可以直接在`node`环境安装
+
+```bash
+ npm install -g sass
+
+ sass --version // 1.26.2 compiled with dart2js 2.7.1
+```
+
+在基于`node` 的环境下，直接全局安装就可以使用，当然在`windows`以及`mac` 平台上又有一些差异，这里可以查阅官网
+[sass 英文官方网站](https://sass-lang.com/install)
+
+**安装完成**
+![20200205182552.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200205182552.png)
+
+### 编译
+
+将`style`文件下的`sass`转为`style`下的`css`
+
+```bash
+sass --watch style/sass:style/css
+```
+
+```sh
+├─demo.html
+├─README.md
+├─style
+|   ├─sass
+|   |  ├─demo.scss
+|   |  └_base.scss
+|   ├─css
+|   |  ├─demo.css
+|   |  └demo.css.map
+```
+
+## 详细用法
+
+### 变量
+
+- 目的 ：为了能够在样式表中方便的访问
+- 使用：存储颜色、字体
 
 ```scss
 $my-color: #fff;
@@ -78,7 +118,10 @@ h1 {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-## &
+### 嵌套
+
+- 目的：便于维护、层次分明、可视化
+- 使用：直接一层一层的嵌套
 
 ```scss
 li {
@@ -108,8 +151,6 @@ li li-text {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-## 嵌套
-
 ```scss
 body {
   font: {
@@ -137,9 +178,9 @@ body {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-## mixin
+### mixins 混合
 
-### 基本使用
+#### 基本使用
 
 ```scss
 // 定义混入
@@ -169,7 +210,7 @@ div a {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-### 参数
+#### 带参数
 
 ```scss
 @mixin myMixin($text-color, $bgc) {
@@ -199,7 +240,7 @@ div a {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-## 继承
+### 继承
 
 ```scss
 .type {
@@ -233,7 +274,7 @@ div a {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-## partials 和 @import
+### partials 和 @import
 
 ```scss
 @import "base";
@@ -242,7 +283,7 @@ div {
 }
 ```
 
-## 注释
+### 注释
 
 ```scss
 // 单行注释
@@ -259,7 +300,7 @@ div {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-## 类型
+### 类型
 
 ```
 PS E:\gh-code\every-day-up\sass-less\style> sass -i
@@ -309,7 +350,7 @@ max(100, 99, 98)
 >>
 ```
 
-## string
+### string
 
 ```
 >> to-lower-case('YAYXS')
@@ -324,7 +365,7 @@ max(100, 99, 98)
 
 ```
 
-## 颜色函数
+### 颜色函数
 
 ```scss
 body {
@@ -335,7 +376,7 @@ body {
 }
 ```
 
-### adjust-hue
+#### adjust-hue
 
 ```scss
 $base-color: #ff0000;
@@ -352,7 +393,7 @@ body {
 /*# sourceMappingURL=demo.css.map */
 ```
 
-### lighten
+#### lighten
 
 ```scss
 $light-color: lighten($base-color, 30%);
@@ -361,7 +402,7 @@ $dark-color: darken($base-color, 30%);
 $saturate-color: saturate($base-color, 50%);
 ```
 
-## 列表
+### 列表
 
 ```
 >> length(1px solid red)
@@ -375,4 +416,3 @@ $saturate-color: saturate($base-color, 50%);
 >>
 
 ```
-## 函数
