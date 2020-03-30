@@ -3,13 +3,15 @@
 **盘点大前端所有技术栈，查漏补缺，更上一层楼**
 
 - webpack(基本知识梳理已完成)
+- vue源码（阅读中）
 
 ## 目录说明
 
-| 文件夹名称 |               技术栈               |                 当前版本（version）                  |                  主要内容                   | 文章地址                |
-| :--------: | :--------------------------------: | :--------------------------------------------------: | :-----------------------------------------: | ----------------------- |
-|    docs    |              文档说明              |                         v1.0                         |             demo配套的文章笔记              |                         |
-|  webpack   | [webpack](https://webpack.js.org/) | [v5.0.0-beta.14](https://github.com/webpack/webpack) | 关于webpack最新版本的梳理，期待webpack5发布 | [【周主题之webpack】]() |
+|   文件夹名称    |               技术栈               |                 当前版本（version）                  |                  主要内容                   | 文章地址                                                     |
+| :-------------: | :--------------------------------: | :--------------------------------------------------: | :-----------------------------------------: | ------------------------------------------------------------ |
+|      docs       |              文档说明              |                         v1.0                         |             demo配套的文章笔记              |                                                              |
+|     webpack     | [webpack](https://webpack.js.org/) | [v5.0.0-beta.14](https://github.com/webpack/webpack) | 关于webpack最新版本的梳理，期待webpack5发布 | [【webpack-notes】](https://github.com/yayxs/awesome-frontend-learning/blob/master/docs/webpack.md) |
+| vue-source-code |                                    |                                                      |                vue源码的阅读                |                                                              |
 
 ## 大纲预览
 
@@ -17,10 +19,20 @@
 
 ![webpack v4.42.1.png](https://raw.githubusercontent.com/yayxs/Pics/master/webpack%20v4.42.1.png)
 
+### Vue
+
+#### vue源码
+![](https://raw.githubusercontent.com/yayxs/Pics/master/Vue%E6%BA%90%E7%A0%81.png)
+
+
 
 ## 更新记录
 
-> [**20200328*9] 更新
+> [**20200330**]更新
+>
+> 1. Vue源码阅读
+>
+> [**20200329**] 更新
 >
 > 1.  【add】基本完成`webpack` 的基本梳理
 >
