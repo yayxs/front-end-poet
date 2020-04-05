@@ -1,0 +1,1 @@
+export const ADD_TYPE = 'ADD_TYPE' // 数据增加的动作类型
