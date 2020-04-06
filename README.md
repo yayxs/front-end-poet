@@ -1,63 +1,56 @@
-## 写在前面
+## 仓库概述
 
-**盘点大前端所有技术栈，查漏补缺，更上一层楼**
-
-- webpack(基本知识梳理已完成)
-- vue源码（阅读中）
+> 是一个很不错的前端学习笔记
 
 ## 目录说明
 
-|   文件夹名称    |               技术栈               |                 当前版本（version）                  |                  主要内容                   | 文章地址                                                     |
-| :-------------: | :--------------------------------: | :--------------------------------------------------: | :-----------------------------------------: | ------------------------------------------------------------ |
-|      docs       |              文档说明              |                         v1.0                         |             demo配套的文章笔记              |                                                              |
-|     webpack     | [webpack](https://webpack.js.org/) | [v5.0.0-beta.14](https://github.com/webpack/webpack) | 关于webpack最新版本的梳理，期待webpack5发布 | [【webpack-notes】](https://github.com/yayxs/awesome-frontend-learning/blob/master/docs/webpack.md) |
-| vue-source-code |                                    |                                                      |                vue源码的阅读                |                                                              |
+|      文件夹名称       |           备注           |
+| :-------------------: | :----------------------: |
+|         docs          |      学习总结的笔记      |
+|      node-learn       | 有一个简单的**爬虫案例** |
+|   react-redux-learn   | react全家桶-状态管理笔记 |
+|    sass-less-learn    |    **css预处理**整理     |
+|   typescript-learn    |         ts的学习         |
+| vue-source-code-learn |    **vue**源码的阅读     |
+|     webpack-learn     |     自动化构建的笔记     |
 
-## 大纲预览
+## 推荐阅读
 
-### webpack
+1. [Node | 自我爬虫掘金专栏文章](https://juejin.im/post/5e532c53518825497312232f)
+2. [CSS | 预处理器（上）- Sass](https://juejin.im/post/5e5dba7ef265da575a6a14d6)
+3. [春节间的TypeScript笔记整理](https://juejin.im/post/5e377a5de51d4530e60e4d1d)
+4. 
+
+## 学习大纲
+
+### 一 、HTML5
+
+### 二 、Cascading Style Sheets
+
+### 三 、**JavaScript**
+
+### 四 、框架篇
+
+#### Vue
+
+##### vue源码阅读
+![20200406102739](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200406102739.png)
+#### 2. React
+
+### 五 、构建工具
+
+#### 1 . webpack
 
 ![webpack v4.42.1.png](https://raw.githubusercontent.com/yayxs/Pics/master/webpack%20v4.42.1.png)
 
-### Vue
-
-#### vue源码
-![20200331230536](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200331230536.png)
 
 
-## 更新记录
+## 博客
 
-> [**20200330**]更新
->
-> 1. Vue源码阅读
->
-> [**20200329**] 更新
->
-> 1.  【add】基本完成`webpack` 的基本梳理
->
-> [**20200328**] 更新
->
-> 1.  【del】删除仓库中 `potential security vulnerabilities`
-> 2.  【add】增加`webpack`相关大纲内容梳理
->
-> [**20200322**] 更新
->
-> 1.  【rename】更新仓库名：every-day-up 至 awesome-frontend-learning
+- [掘金主页（洋小洋同学）](https://juejin.im/user/5cf00b7c6fb9a07eba2c226f/activities)
+- [静态博客（停止更新）](https://yayxs.github.io/)
 
-## 关于我
 
-### 掘金主页
 
-- [洋小洋同学掘金主页(努力写作)](https://juejin.im/user/5cf00b7c6fb9a07eba2c226f/posts)
-  ![20200328002004.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200328002004.png)
 
-### 静态博客
 
-- [基于 Vue+VuePress 的一个简易的个人博客(已停止更新)](https://yayxs.github.io/)
-
-![20200328001619.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200328001619.png)
-
-### 养成标签
-
-- 自信:自信方能成事
-- 放松:放松才能从容

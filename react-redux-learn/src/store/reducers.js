@@ -6,12 +6,8 @@ const counterReducer = (state = { num: 123 }, action) => {
   console.log(action.type);
   // 判断传入的动作是什么类型
   switch (action.type) {
-    case "ADD_TYPE":
-      console.log(111111);
-      // return Object.assign({}, state, action);
-      return {
-        num: state.num + 1,
-      };
+    case "takeEvery":
+      return {};
     default:
       return state;
   }
