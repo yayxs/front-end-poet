@@ -500,6 +500,21 @@ export default store;
   }
   ```
 
+
+
+## Redux-Saga
+
+- 副作用
+- 异步操作
+- redux 的中间件
+- ES6的新语法
+
+### API
+
+
+
+
+
 ## 思考
 
 - hooks API 页面刷新
