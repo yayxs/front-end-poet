@@ -1,10 +1,14 @@
-const sagaReducer = (state, action) => {
+const sagaReducer = (state = {}, action) => {
   switch (action.type) {
-    case "takeEvery":
-      return {};
+    case 'SUCCESS':
+
+      console.log(action)
+      return action
+  
     default:
-      return state;
+      break;
   }
+  return Object.assign(state,{},action);
 };
 
-export {sagaReducer};
+export { sagaReducer };

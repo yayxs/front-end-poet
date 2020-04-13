@@ -5,11 +5,11 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 // import { infoReducer } from "./reducers/infoReducer";
 // import { listReducer } from "./reducers/listReducer";
 import { sagaReducer } from "./reducers/sagaReducer";
-
-import { defSage } from "./sagas/index";
+// 导入saga
+import { defaultSaga } from "./sagas/index";
 import createSagaMiddleware from "redux-saga";
 
-const sagaMidd = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 
 // const reducer = combineReducers({
 //   infoReducer,
@@ -18,6 +18,6 @@ const sagaMidd = createSagaMiddleware();
 
 // 构建store
 // const store = createStore(reducer);
-const store = createStore(sagaReducer, {}, applyMiddleware(sagaMidd));
-sagaMidd.run(defSage);
+const store = createStore(sagaReducer, {}, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(defaultSaga);
 export default store;
