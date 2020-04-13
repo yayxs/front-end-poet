@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{message}}</p>
+      <p>{{name.firstName}}</p>
+    </div>
+
+    <script>
+      // 获取模板  <div id="app">...</div>
+      const getTemplate = () => document.querySelector("#app");
+      //   克隆模板
+      const cloneTemplate = getTemplate().cloneNode(true);
+      //   准备数据
+      let data = {
+        message: "message",
+        name: {
+          firstName: "firstName",
+        },
+      };
+      //   定义正则，用来匹配{{}}
+      let regx = /\{\{(.+?)\}\}/g;
+      /**
+       * @description 编译
+       * @param template 模板 DOM元素（真正的VUE中是字符串）
+       * @param data 准备的数据
+       */
+      const compile = (template, data) => {
+        //   获取子元素 NodeList(5) [text, p, text, p, text]
+        let childrenNodes = template.childNodes;
+        //    循环遍历子元素
+        childrenNodes.forEach((element) => {
+          // 3 1 3 1 3
+          let elementType = element.nodeType;
+          //    判断子元素的类型
+          if (elementType === 1) {
+            //   元素节点，递归子元素查找
+            compile(element, data);
+          } else if (elementType === 3) {
+            //   文本节点
+            let txt = element.nodeValue;
+            txt = txt.replace(regx, (_, g) => {
+              //    其中g第一次为message 第二次name.firstName
+              let con = g.trim();
+              let value = data[con]; // message
+              return value;
+            });
+
+            element.nodeValue = txt;
+          }
+        });
+      };
+      compile(cloneTemplate, data);
+      //   渲染到页面
+      const render = () => {
+        app.parentNode.replaceChild(cloneTemplate,app);
+        console.log(app.parentNode);
+      };
+      render();
+      // xxx.yyy.zzz
+      const 
+    </script>
+  </body>
+</html>
