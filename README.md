@@ -4,15 +4,16 @@
 
 ## 目录说明
 
-|      文件夹名称       |           备注           |
-| :-------------------: | :----------------------: |
-|         docs          |      学习总结的笔记      |
-|      node-learn       | 有一个简单的**爬虫案例** |
-|   react-redux-learn   | react全家桶-状态管理笔记 |
-|    sass-less-learn    |    **css预处理**整理     |
-|   typescript-learn    |         ts的学习         |
-| vue-source-code-learn |    **vue**源码的阅读     |
-|     webpack-learn     |     自动化构建的笔记     |
+| 序号 | 文件夹名称                       | 备注                                 |
+| :--: | -------------------------------- | :----------------------------------- |
+|  1   | data-structures-algorithms-learn | JavaScript数据结构与算法的学习进行时 |
+|  2   | docs                             | 笔记                                 |
+|      | node-learn                       | 有一个简单的**爬虫案例**             |
+|      | react-redux-learn                | react全家桶-状态管理笔记             |
+|      | sass-less-learn                  | **css预处理**整理                    |
+|      | typescript-learn                 | ts的学习                             |
+|      | vue-source-code-learn            | **vue**源码的阅读                    |
+|      | webpack-learn                    | 自动化构建的笔记                     |
 
 ## 推荐阅读
 
