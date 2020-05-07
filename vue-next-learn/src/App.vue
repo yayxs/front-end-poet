@@ -27,20 +27,35 @@
         <section class="ipt">
           <p>counter</p>
           <form id="sum">
-            <input type="text" class="form-control" v-model="num1" />
-            <input type="text" class="form-control" v-model="num2" />
-            <button @click="addNumbers" type="button" class="btn">
+            <input type="text" class="form-control" v-model="num3" />
+            <input type="text" class="form-control" v-model="num4" />
+            <button @click="addNumbersVue3" type="button" class="btn">
               加一起
             </button>
           </form>
-          <p class="sum"><strong>Sum:</strong> {{ sum }}</p>
+          <p class="sum"><strong>Sum:</strong> {{ sum1 }}</p>
         </section>
       </section>
     </section>
   </section>
 </template>
 <script>
+import {ref} from 'vue'
 export default {
+   setup() {
+        let num3 = ref(0);
+        let num4 = ref(0);
+        let sum1 = ref(0);
+        function addNumbersVue3() {
+            sum1.value = parseInt(num3.value) + parseInt(num4.value);
+        }
+        return {
+            num3,
+            num4,
+            sum1,
+            addNumbersVue3
+        }
+    },
   data() {
     return {
       num1: 0,

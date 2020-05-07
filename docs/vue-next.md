@@ -123,7 +123,7 @@ export default {
 vue add vue-next
 ```
 
-来在项目里使用`vue3` 
+来在项目里使用`vue3`  ，这样能够很轻松的把vue 2.x 的项目转换为 vue 3项目
 
 #### main.js
 
@@ -135,17 +135,85 @@ createApp(App).mount('#app')
 
 ```
 
-我们可以看到在挂载的时候是不一样的， 这里的不一样大概值得是用法不一样
+我们可以看到在挂载的时候是不一样的， 这里的不一样大概指得是用法不一样，
 
+**在之前的版本**
 
+```js
+import Vue from 'vue'
+import App from './App.vue'
 
+Vue.config.productionTip = false
 
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
+
+```
 
 ## 核心API
 
 `vue 2.x ` 我们都知道一些常用的`api` ，那么在最新版本的vue中（基本大的框架与语法已经成型）会多哪些新的api呢，
 
 疑问：到底`vue3` 是不是多了新的`api` 呢
+
+### ref 
+
+```js
+import {ref} from 'vue'
+// ……
+let num3 = ref(0);
+let num4 = ref(0);
+let sum1 = ref(0);
+```
+
+**所有内容现在都在`setup()`函数内。模板中需要使用的所有函数或属性都应加入，`setup()`因为这是将它们返回模板的方式。**
+
+- 在内部`setup()`，我们使用的反应变量在顶部定义为独立变量，而不是`data()`函数中的返回对象。
+
+还有一个函数，单独的挂出，并不是写在`methods`中，现在，我们可以轻松地在组件实例之间重用我们的功能，这将显着提高大型代码库的可读性。还请注意，`this`不再需要引用变量！
+
+```js
+  function addNumbersVue3() {
+            sum1.value = parseInt(num3.value) + parseInt(num4.value);
+        }
+```
+
+最后，我们将函数和属性返回到模板。
+
+```js
+ return {
+            num3,
+            num4,
+            sum1,
+            addNumbersVue3
+        }
+```
+
+这里的一件事是`ref`在变量中使用`let num1 = ref(0)`。这就是我们使变量具有反应性的方式！有两个函数可用于处理状态和反应性：`ref`和`reactive`。
+
+#### 特点
+
+- `ref`如本示例中所示，采用一个值并返回一个反应性引用对象。该对象具有单个值：`.value`指向提供的值。
+- `ref` 可以直接创建，就像我们上文提到的，也可以用来创建`computed()`
+
+
+
+### computed
+
+有时候我们需要依赖其他状态，在`vue` 中是通过计算属性来处理。我们起初的时候，是直接通过一个方法来计算两者之和，这是为了更好的来演示用。接下来我们使用`computed()`
+
+```js
+import { computed } from 'vue'
+```
+
+```js
+let sum1 = computed(() => parseInt(num3.value) + parseInt(num4.value));
+```
+
+**这`sum1`是一个我们称为“ ref”的对象，因为它用作对其持有的内部值的反应性引用。**
+
+
 
 ### reactive 
 
@@ -174,17 +242,13 @@ data(){
 
 根据反应状态重新应用副作用
 
-### computed
 
-有时候我们需要依赖其他状态，在`vue` 中是通过计算属性来处理，直接创建一个计算值：
-
-```js
-const double = computed(() => state.count * 2)
-```
 
 ## 参考
 
-- [开始vue3之旅](https://auth0.com/blog/getting-started-with-vue-3-composition-api/)
+- [https://auth0.com/blog/getting-started-with-vue-3-composition-api/](https://auth0.com/blog/getting-started-with-vue-3-composition-api/)
+
+
 
 
 
