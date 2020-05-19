@@ -1,8 +1,33 @@
+>本篇干货分享: [在线PS设计,在线P图](https://www.uupoop.com/ps/)
+
+
+
 ## 前言
 
 不知道在哪个瞬间,`尤大` 发了一条微博，我就知道"大事不妙"。要来了……`千呼万唤始出来` 的[vue3](https://github.com/vuejs/vue-next)  就在这个特别的日子发布了。
 
-最核心的一点便是**Composition API** ，在本文咱们先揭开它的面纱，简单的进行横向对比一下，最后我们将一同构建两个版本：一个使用Composition API，另一个使用基于Options API
+最核心的一点便是**Composition API** ，在本文咱们先揭开它的面纱，简单的进行横向对比一下，最后我们将一同构建两个版本：一个使用Composition API，另一个使用基于Options API。简单的探究一下两者有什么区别与联系。最后完成的样子
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722d405b64cb5e1?w=1676&h=713&f=png&s=29422)
+
+## 升级
+
+我们可以通过使用官方的`脚手架方式` 进行升级。直接通过命令升级 `vue add vue-next` 
+
+此时在依赖包中就是  vue 3 的版本
+
+```js
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^3.0.0-beta.1"
+  },
+```
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722d499dc33d818?w=1165&h=376&f=png&s=92275)
+
+**我们可以看到：vue不再具备默认导出，命名导出创建一个新的 vue应用程序，就像是在vue2中使用构造函数一样，插件设置将使用`use`方法**
+
+> 其他全家桶也请关注后续文章，文章第一时间发在公众号
 
 ## Composition API
 
@@ -174,20 +199,21 @@ let sum1 = ref(0);
 还有一个函数，单独的挂出，并不是写在`methods`中，现在，我们可以轻松地在组件实例之间重用我们的功能，这将显着提高大型代码库的可读性。还请注意，`this`不再需要引用变量！
 
 ```js
-  function addNumbersVue3() {
-            sum1.value = parseInt(num3.value) + parseInt(num4.value);
-        }
+ const vue3Add = () => {
+      vue3sum.value = parseInt(vue3num1.value) + parseInt(vue3num2.value);
+    };
 ```
 
 最后，我们将函数和属性返回到模板。
 
 ```js
  return {
-            num3,
-            num4,
-            sum1,
-            addNumbersVue3
-        }
+      vue3num1,
+      vue3num2,
+      vue3sum,
+      vue3Add,
+     
+    };
 ```
 
 这里的一件事是`ref`在变量中使用`let num1 = ref(0)`。这就是我们使变量具有反应性的方式！有两个函数可用于处理状态和反应性：`ref`和`reactive`。
@@ -196,10 +222,41 @@ let sum1 = ref(0);
 
 - `ref`如本示例中所示，采用一个值并返回一个反应性引用对象。该对象具有单个值：`.value`指向提供的值。
 - `ref` 可以直接创建，就像我们上文提到的，也可以用来创建`computed()`
+- 当我们使用的时候就需要像上文那样`return ` 出去
 
+### reactive 
 
+> 反应性 反应状态 副作用 的意思
 
-### computed
+```js
+import { reactive } from 'vue'
+
+// reactive state
+const data = reactive({
+      title: `Vue 2.x Options-based API vs Vue 3 Composition API`,
+    });
+```
+
+其中`data` 便是反应性对象，
+
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722d7bae5236891?w=550&h=54&f=png&s=3948)
+
+在组件模板部分使用的时候需要`data.XXX` 这样是可以取到值，不过是有一点麻烦,或者可以借用`roResfs`
+
+```js
+ return {
+      vue3num1,
+      vue3num2,
+      vue3sum,
+      vue3Add,
+      ...toRefs(data),
+      total,
+    };
+```
+
+在返回的时候将**响应式的对象** 转为普通对象，但其属性是响应式的
+
+###  computed
 
 有时候我们需要依赖其他状态，在`vue` 中是通过计算属性来处理。我们起初的时候，是直接通过一个方法来计算两者之和，这是为了更好的来演示用。接下来我们使用`computed()`
 
@@ -215,36 +272,18 @@ let sum1 = computed(() => parseInt(num3.value) + parseInt(num4.value));
 
 
 
-### reactive 
+### setup
 
-> 反应性 反应状态 副作用 的意思
+有两个参数
 
-```js
-import { reactive } from 'vue'
+- props:用来访问组件中的`props` 属性
+- context ：有点像之前的this
 
-// reactive state
-const state = reactive({
-  count: 0
-})
-```
-
-其中`state` 便是反应性对象，类似，
-
-```js
-data(){
-    return {
-        count:0
-    }
-}
-```
-
-### watchEffect
-
-根据反应状态重新应用副作用
+![](https://user-gold-cdn.xitu.io/2020/5/19/1722d675248123df?w=368&h=376&f=png&s=26462)
 
 
 
-## 参考
+## 参考阅读
 
 - [https://auth0.com/blog/getting-started-with-vue-3-composition-api/](https://auth0.com/blog/getting-started-with-vue-3-composition-api/)
 
