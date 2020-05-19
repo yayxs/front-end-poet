@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <section class="title">
-      <h3>Vue 2.x Options-based API vs Vue 3 Composition API</h3>
+      <hello-world :title="title"></hello-world>
     </section>
     <section class="main">
       <section class="options-api">
@@ -11,13 +11,13 @@
         <section class="ipt">
           <p>counter</p>
           <form id="sum">
-            <input type="text" class="form-control" v-model="num1" />
-            <input type="text" class="form-control" v-model="num2" />
-            <button @click="addNumbers" type="button" class="btn btn-light">
+            <input type="text" class="form-control" v-model="vue2num1" />
+            <input type="text" class="form-control" v-model="vue2num2" />
+            <button @click="vue2Add" type="button" class="btn btn-light">
               加一起
             </button>
           </form>
-          <p class="sum"><strong>Sum:</strong> {{ sum }}</p>
+          <p class="sum"><strong>Sum:</strong> {{ vue2sum }}</p>
         </section>
       </section>
       <section class="composition-api">
@@ -27,35 +27,50 @@
         <section class="ipt">
           <p>counter</p>
           <form id="sum">
-            <input type="text" class="form-control" v-model="num3" />
-            <input type="text" class="form-control" v-model="num4" />
-            <button @click="addNumbersVue3" type="button" class="btn">
+            <input type="text" class="form-control" v-model="vue3num1" />
+            <input type="text" class="form-control" v-model="vue3num2" />
+            <button @click="vue3Add" type="button" class="btn">
               加一起
             </button>
           </form>
-          <p class="sum"><strong>Sum:</strong> {{ sum1 }}</p>
+          <p class="sum"><strong>Sum:</strong> {{ total }}</p>
         </section>
       </section>
     </section>
   </section>
 </template>
 <script>
-import {ref} from 'vue'
+import { ref, computed, reactive,toRefs } from "vue";
+import HelloWorld from "@/components/HelloWorld.vue";
 export default {
-   setup() {
-        let num3 = ref(0);
-        let num4 = ref(0);
-        let sum1 = ref(0);
-        function addNumbersVue3() {
-            sum1.value = parseInt(num3.value) + parseInt(num4.value);
-        }
-        return {
-            num3,
-            num4,
-            sum1,
-            addNumbersVue3
-        }
-    },
+  components: { HelloWorld },
+  setup() {
+    let vue3num1 = ref(0);
+    let vue3num2 = ref(0);
+    let vue3sum = ref(0);
+
+    const data = reactive({
+      title: `Vue 2.x Options-based API vs Vue 3 Composition API`,
+    });
+
+    const vue3Add = () => {
+      vue3sum.value = parseInt(vue3num1.value) + parseInt(vue3num2.value);
+    };
+    // 计算总和
+    const total = computed({
+      get: () => {
+        return `总和是${vue3sum.value}`;
+      },
+    });
+    return {
+      vue3num1,
+      vue3num2,
+      vue3sum,
+      vue3Add,
+      ...toRefs(data),
+      total,
+    };
+  },
   data() {
     return {
       num1: 0,
