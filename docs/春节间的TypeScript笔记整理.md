@@ -1,10 +1,5 @@
-# 春节间的TypeScript学习笔记
+## 背景
 
-标签（空格分隔）： TypeScript
-
----
-
-## 写在前面
 由于在春节期间，实在没什么事干，就想系统的写份`typescript`笔记。废话不多说，为什么我们都在说着`ts`这件事呢，尤其对于前端开发者来说，`JavaScript`作为行为交互，是四剑客之一。那么为什么还要用`ts`呢?
 ### 现状分析
 我们知道，目前国内主流的**3**大前端开发框架:
@@ -25,7 +20,7 @@ tips:这里暂不说跨平台解决方案，比如比较优秀的`Flutter`等。
 ![](https://cdn.jsdelivr.net/gh/yayxs/Pics@master/uPic/k9zRmw.png)
 
  - mobx
- 
+
 ![](https://cdn.jsdelivr.net/gh/yayxs/Pics@master/uPic/6cIda4.png)
 
 正是由于
@@ -33,7 +28,7 @@ tips:这里暂不说跨平台解决方案，比如比较优秀的`Flutter`等。
  - 优秀的第三方框架库`ts`的比重越来越多
  - 即将发布的Vue.js 3x 版本，源码用`ts`重构
  - 老旧的项目可以无缝衔接`ts`
- 
+
 以及我们众所周知的`JavaScript`本身存在的一些不够完美的地方，例如`xxx 未定义`，等等。当然了在一些原有的项目中可能也不习惯重新接触`ts`，那么我和大家一块来来做做笔记，这对于我们还是很有必要的。
 ### 环境准备
 
@@ -45,7 +40,6 @@ tips:这里暂不说跨平台解决方案，比如比较优秀的`Flutter`等。
     - vue/cli 
 ![](https://cdn.jsdelivr.net/gh/yayxs/Pics@master/uPic/hP0GUV.png)
     
-
  - 第三方辅助
     - + ts-node@8.6.2
     TypeScript execution and REPL for node.js
@@ -70,15 +64,15 @@ tips:这里暂不说跨平台解决方案，比如比较优秀的`Flutter`等。
 ## JavaScript vs TypeScript
 
 首先，我们不管是读什么文章，或者茶余饭后同事唠嗑，多少都有耳闻，`ts`相比于`js`会有几点不同
- 
+
  - 真正意义上的面向对象编程
  - 类型校验
  - 是js 的超集
  - ...
- 
+
 对这几点对于编程来说还是尤为重要的，我们先看几个简单的`demo`
 一些简单的浏览器调试，咱们选择在`vscode`里直接预览，这里推荐一个插件 
- 
+
  - **Brower Previews**
 
 ![](https://cdn.jsdelivr.net/gh/yayxs/Pics@master/uPic/rAa5ry.png)
@@ -135,15 +129,22 @@ console.log(Me(`洋小洋同学`, 18, `男`))
 =>我的名字是洋小洋同学,我今年18,我是男生,欢迎关注我的掘金呦~
 
 ```
- 
-    
+
+
 - IDE良好的提示（这里我们后续慢慢体会下）
 
 ## 学习文档
 
  - [TS官网TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.Any browser. Any host. Any OS. Open source.](https://www.typescriptlang.org/)
- 
+
+## 安装TS
+
+
+
+
+
 ## hello-world
+
 老规矩，咱们一块写个`hello world`
 
 ```ts
@@ -408,12 +409,13 @@ p.sayHi();
     - 继承的对象也能使用
 
  - private
- 
+
     -  私有的，内部才能访问
 
  - protected
     - 受保护的，权限稍大于 private
     
+
 其实在类的内部，所有的`属性`和`方法`默认是通过`public`修饰符来进行修饰的
 ```ts
 class Person {
@@ -633,9 +635,9 @@ let ali_pay: Pay = new AlPay()
  ## 倾情链接
 
 如果你还没有看过瘾，在`19年度`我曾写过一篇很简单的文章，也是基于第三方的环境搭建的一篇极为简单的博客（依赖github、Vuepress）
- 
+
  - [TypeScript初体验（已停更，正在重新个人博客中…）](https://yayxs.github.io/views/frontEnd/2019/100101.html#ts-%E8%83%8C%E6%99%AF)
- 
+
 
 
 ## 参考文章
