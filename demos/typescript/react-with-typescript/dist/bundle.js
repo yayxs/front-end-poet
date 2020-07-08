@@ -114,33 +114,19 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importStar(__webpack_require__(/*! react */ "react"));
-const ReactDOM = __importStar(__webpack_require__(/*! react-dom */ "react-dom"));
-const Simple = () => {
-    const [name, setName] = react_1.useState('yayxs');
-    const [width, setWidth] = react_1.useState(0);
-    react_1.useEffect(() => {
-        return () => {
-            document.title = `Hello ${name}`;
-        };
-    }, [name]);
-    // 事件的派发监听
-    react_1.useEffect(() => {
-        const eventHandler = () => {
-            setWidth(Number(window.innerWidth));
-        };
-        window.addEventListener('resize', eventHandler);
-        return () => {
-            window.removeEventListener('resize', eventHandler);
-        };
-    }, [name]);
-    return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("h4", null, width)));
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const ReactDOM = __importStar(__webpack_require__(/*! react-dom */ "react-dom"));
+const Button = ({ onClick: handleClick, color, children }) => (react_1.default.createElement("button", { style: { color }, onClick: handleClick }, children));
 const App = () => {
+    const handleClick = () => {
+        console.log(`点击了按钮`);
+    };
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement(Simple, null)));
+        react_1.default.createElement(Button, { onClick: handleClick }, "\u6309\u94AE")));
 };
 ReactDOM.render(react_1.default.createElement(App, null), document.getElementById("example"));
 
