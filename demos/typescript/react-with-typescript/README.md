@@ -77,7 +77,7 @@ const Button = ({ onClick: handleClick, children }:Props) => (
 
 ```
 
-还记不记得，在本文的开篇我们一起说了，一些依赖包，那么`@types/react` 中就替我们声明了一些优雅的描述
+还记不记得，在本文的开篇我们一起说了，一些依赖包，那么`@types/react` 中就替我们声明了一些优雅的描述,比如说`SFC` 这里就已经预设了 `children` 我们每次不用再去指定 `children` 的类型
 
 ```jsx
 type Props = { onClick(e: MouseEvent<HTMLElement>): void };
@@ -166,6 +166,19 @@ const App = () => {
 };
 ```
 
+或者我们可以使用`React.FC`
+
+```jsx
+interface AppProps {
+  value?: string;
+}
+// React.FC 的意思是说 FunctionComponent 如果使用`React.FC` 的话，内含有 children ,
+// 这样我们可以直接使用 children
+const App:React.FC<AppProps> = ({ value = '' , children}) => {
+  return <></>;
+};
+```
+
 ### 有状态组件（calss 类）
 
 既然是有状态的组件，或者一个开始，我们会想到`计数器` `时钟` ，因为案例虽小，但是足以说明我们的问题
@@ -173,7 +186,7 @@ const App = () => {
 #### 一个计数器（此处如此美观代码参见[https://juejin.im/post/5b07caf16fb9a07aa83f2977](https://juejin.im/post/5b07caf16fb9a07aa83f2977)）
 
 ```jsx
-
+// 为了防止 state被修改 所以我们可以通过如下的方式设置为只读的
 const initialState = { clicksCount: 0 }; // 初始化
 type State = Readonly<typeof initialState>; // 这里我们的state是不可直接进行修改，不是吗
 
@@ -183,7 +196,7 @@ type State = Readonly<typeof initialState>; // 这里我们的state是不可直�
  *      第二参数 一般是  状态 state
  */
 class Counter extends Component<object, State> {
-  readonly state: State = initialState;
+  readonly state: State = initialState; // 这里是状态
   // 不要忘了 render 方法 用来渲染视图
   render() {
     const { clicksCount } = this.state;
@@ -262,6 +275,24 @@ class App extends Component<{}, { time: Date }> {
 ReactDOM.render(<App />, document.getElementById("example"));
 ```
 
+我们通过上述的方式，去设置只读的`state` ，那如果有自己定义的复杂类型的话，就需要我们换种方式了
+```jsx
+export default interface IUser {
+  name: string;
+  id: number;
+  age: number;
+}
+
+interface IState {
+  list: IUser[];
+  total: number;
+}
+
+class Simple extends Component{
+  
+}
+```
+
 #### 构造函数
 
 ```jsx
@@ -274,8 +305,12 @@ class Simple extends Component<ISimpleProps, {}> {
 }
 ```
 
-## 默认属性 defaultProps
 
+### 泛型组件
+
+
+## 默认属性 defaultProps
+我们可以通过 defaultProps 来定义一个组件的默认属性
 ```jsx
   static defaultProps = {
     msg: 'Hello everyone!'
@@ -283,33 +318,10 @@ class Simple extends Component<ISimpleProps, {}> {
 
 ```
 
-## 子组件
 
-```jsx
-class Simple extends Component {
-  render() {
-    return <>123</>;
-  }
-}
+## 事件处理
 
-class App extends Component {
-  render() {
-    return <>{this.props.children}</>;
-  }
-}
-
-ReactDOM.render(
-  <App>
-    {" "}
-    <Simple />{" "}
-  </App>,
-  document.getElementById("example")
-);
-```
-
-## 事件
-
-事件是关键
+我们无时无刻都在与事件打交道
 
 ```jsx
 import React, { Component, MouseEvent } from "react"; // 导入函数组件
@@ -329,6 +341,27 @@ export class Button extends Component {
 ReactDOM.render(<Button>点击啊</Button>, document.getElementById("example"));
 ```
 
+
+### 常见事件
+
+```jsx
+const App = () => {
+  // 指的是鼠标点击的事件
+  const onClick: React.MouseEventHandler<HTMLInputElement> = (e) => {
+    console.log(e.currentTarget.value);
+  };
+  // React.ChangeEventHandler
+  const onChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    console.log(e.currentTarget.value);
+  };
+  // React.FocusEventHandler
+  const onFocus: React.FocusEventHandler<HTMLInputElement> = (e) => {
+    console.log(e.currentTarget.value);
+  };
+  return <input onClick={onClick} onChange={onChange} onFocus={onFocus} />;
+};
+
+```
 ### 限制性事件处理
 
 可以使用泛型
@@ -418,7 +451,7 @@ ArticleList.propTypes = {
 };
 ```
 
-## hooks 用法
+## hooks声明用法
 
 ```jsx
 import React, { FunctionComponent, useState, FC } from "react";
@@ -449,14 +482,19 @@ ReactDOM.render(<App />, document.getElementById("example"));
 ```
 
 ### useState & useEffect
+关于 `useState` 我们可以通过
+ - 泛型传参
+ - 自动推断
 
 ```jsx
 import React, { FunctionComponent, useState, FC, useEffect } from "react";
 import * as ReactDOM from "react-dom";
 
 const Simple: FC = () => {
-  const [name, setName] = useState("yayxs");
+  const [name, setName] = useState("yayxs"); // state的类型string 自动推断出来是 字符串类型
+  const [sex,SetSex ] = useState<string>() // 类型 为 string | undefined
   const [width, setWidth] = useState(0);
+  const [state,setState ] = useState<string | null >() // state的类型为 string | null
   useEffect(() => {
     return () => {
       document.title = `Hello ${name}`;
@@ -510,9 +548,26 @@ const Simple: FC = () => {
 ### useRef
 
 ```jsx
+type Value = { value:string }
+const App = ()=>{
+    // 其中 ref 是 存值的作用
+  // const ref = useRef<Value>({ value: "" })
+  // ref 是html 元素
+  const ref = useRef<HTMLDivElement>(null);
+  return (
+    <>
+      <div ref={ref} ></div>
+    </>
+  )
+}
+```
+
+```jsx
 function Simple() {
   // 用null 初始化 虽然初始化 是 null 但是 尝试去寻找 HTMLInputElement 类型的元素
   const inputEl = useRef < HTMLInputElement > null;
+  const ref = useRef(""); // ref.current的类型为 string
+  // 使用泛型
   const handleClick = () => {
     // 如果存在的话，才使聚焦
     if (inputEl && inputEl.current) {
