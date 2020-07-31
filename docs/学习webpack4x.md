@@ -1,3 +1,5 @@
+
+## 背景
 ## 核心概念
 
 ### entry
@@ -84,4 +86,6 @@ resolve:{
 
 ### optimization
 
- 
+## 推荐阅读
+
+ - [https://github.com/wallstreetcn/webpack-and-spa-guide](https://github.com/wallstreetcn/webpack-and-spa-guide)
