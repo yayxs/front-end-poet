@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>child页面</title>
+  </head>
+  <body>
+    <script>
+      window.addEventListener(
+        "message",
+        (event) => {
+          // 监听父窗口发送过来的数据向服务器发送post请求
+          let data = event.data;
+          //   console.log(data)
+          // 将 data 数据返回
+          window.parent.postMessage(data, "*");
+          //   $.ajax({
+          //     // 注意这里的url只是一个示例.实际练习的时候你需要自己想办法提供一个后台接口
+          //     type: "POST",
+          //     url: "http://moweide.gitcafe.io/getData",
+          //     data: "info=" + data,
+          //     dataType: "json",
+          //   })
+          //     .done(function (res) {
+          //       //将请求成功返回的数据通过postMessage发送给父窗口
+          //       window.parent.postMessage(res, "*");
+          //     })
+          //     .fail(function (res) {
+          //       //将请求失败返回的数据通过postMessage发送给父窗口
+          //       window.parent.postMessage(res, "*");
+          //     });
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
