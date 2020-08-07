@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>跨域消息发送</title>
+  </head>
+  <body>
+    <textarea name="" id="message" cols="30" rows="10"></textarea>
+    <input type="button" value="发送" onclick="sendHandleClick()" />
+    <iframe src="./child.html" id="childPage" style="display: none;"></iframe>
+    <script>
+      function sendHandleClick() {
+        // 点击获取窗口对象
+        let iframeWin = document.querySelector("#childPage");
+        console.log(iframeWin.contentWindow);
+        let iframeConWin = iframeWin.contentWindow;
+        // 向窗口发讯息
+        iframeConWin.postMessage(
+          document.querySelector("#message").value,
+          "http://127.0.0.1:5500/"
+        );
+      }
+      window.addEventListener(
+        "message",
+        function (event) {
+          console.log(event, event.data);
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
