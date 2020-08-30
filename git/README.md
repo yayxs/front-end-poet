@@ -1,6 +1,17 @@
- - 首先在你提交的仓库下 git log 然后查看 Author 
- - `git config --list`
- ```
+<!--
+ * @Author: yayxs
+ * @Date: 2020-08-30 23:19:37
+ * @LastEditTime: 2020-08-30 23:19:39
+ * @LastEditors: yayxs
+ * @Description:
+ * @FilePath: \frontend-thick-talk\docs\git\README.md
+ * @
+-->
+
+- 首先在你提交的仓库下 git log 然后查看 Author
+- `git config --list`
+
+```
 core.symlinks=false
 core.autocrlf=true
 core.fscache=true
@@ -32,4 +43,4 @@ core.autocrlf=false
 core.repositoryformatversion=0
 core.filemode=false
 core.bare=false
- ```
+```

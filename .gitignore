@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 /my-express-app/node_modules
 node_modules
 .astro
+=======
+node_modules
+.vuepress/dist
+>>>>>>> 18f0a11 (add vuepress config)

@@ -88,7 +88,7 @@ async function getEntryBySelf() {
   const {
     s,
     m,
-    d: { total, entrylist }
+    d: { total, entrylist },
   } = res.data;
   if (s === 1 && m === "ok") {
     // 请求成功
@@ -113,11 +113,11 @@ const config = {
   host: "localhost", // 主机地址
   user: "root", // 数据库用户
   password: "123456", // 密码
-  database: "blog" // 数据库
+  database: "blog", // 数据库
 };
 // 建立连接
 let con = mysql.createConnection(config);
-con.connect(err => {
+con.connect((err) => {
   if (err) {
     console.log(`数据库建立失败`);
   }
