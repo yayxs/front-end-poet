@@ -40,10 +40,8 @@
   </section>
 </template>
 <script>
-import { ref, computed, reactive,toRefs } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue";
+import { ref, computed, reactive, toRefs } from "vue";
 export default {
-  components: { HelloWorld },
   setup() {
     let vue3num1 = ref(0);
     let vue3num2 = ref(0);
