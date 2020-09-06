@@ -1,19 +1,13 @@
-## 开发命令及配置
+<!--
+ * @Author: yayxs
+ * @Date: 2020-08-30 22:58:01
+ * @LastEditTime: 2020-09-06 23:29:11
+ * @LastEditors: yayxs
+ * @Description:
+ * @FilePath: \frontend-thick-talk\README.md
+ * @
+-->
 
-### 本地开发
+# 当前所在博客 master 主分支
 
-```
-npm run dev
-```
-
-### 上线部署
-
-```
-npm run deploy
-```
-
-### build
-
-```
-npm run build
-```
+## 部署

@@ -1,15 +1,13 @@
 {
   "name": "frontend-thick-talk",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Use vuepress to build a blog",
-  "main": "index.js",
   "repository": "https://github.com/yayxs/frontend-thick-talk",
   "author": "yayxs <leaderywl@163.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build",
-    "deploy": "cloudbase framework:deploy"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "devDependencies": {
     "vuepress": "^1.5.4"
