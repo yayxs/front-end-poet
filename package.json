@@ -6,7 +6,7 @@
   "author": "yayxs <leaderywl@163.com>",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs ",
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
