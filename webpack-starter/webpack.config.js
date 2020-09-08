@@ -22,8 +22,8 @@ module.exports = {
   },
   devServer: {
     // contentBase: "./dist",
-    hot: true,
-    port: "8080",
+    hot: true, // 开启模块热替换
+    port: "8080", // 监听的端口
     open: true,
     noInfo: false,
     overlay: {
