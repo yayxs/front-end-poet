@@ -1,10 +1,14 @@
 ---
-sidebar: auto
+title: 网抑云一
 ---
 
 > 源码地址（实时更新）[https://github.com/yayxs/NeteaseCloudMusic](https://github.com/yayxs/NeteaseCloudMusic)
 >
 > wiki 地址 [https://github.com/yayxs/NeteaseCloudMusic/tree/master/docs](https://github.com/yayxs/NeteaseCloudMusic/tree/master/docs)
+
+::: tip
+axios 封装、轮播图实现、alias 别名
+:::
 
 ## 前言
 

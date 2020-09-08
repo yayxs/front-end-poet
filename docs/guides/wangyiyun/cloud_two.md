@@ -1,6 +1,10 @@
 ---
-sidebar: auto
+title: 网抑云二
 ---
+
+::: tip
+播放条组件、路由配置、Api 项目双部署
+:::
 
 > 项目源码地址,第一时间更新 [https://github.com/yayxs/NeteaseCloudMusic](https://github.com/yayxs/NeteaseCloudMusic)
 >
