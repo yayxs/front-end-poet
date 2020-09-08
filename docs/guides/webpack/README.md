@@ -1,12 +1,6 @@
-<!--
- * @Author: yayxs
- * @Date: 2020-08-30 23:19:54
- * @LastEditTime: 2020-08-30 23:20:01
- * @LastEditors: yayxs
- * @Description:
- * @FilePath: \frontend-thick-talk\docs\webpack\README.md
- * @
--->
+---
+title: 还用学webpack吗？
+---
 
 ## 背景
 

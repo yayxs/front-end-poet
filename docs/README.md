@@ -5,11 +5,11 @@ actionText: Get Started →
 actionLink: /guides/
 features:
   - title: frontend
-    details: 建设中……
+    details: 简约
   - title: thick
-    details: 建设中……
+    details: 直白
   - title: talk
-    details: 建设中……
+    details: 傻瓜
 
 footer: MIT Licensed | Copyright © 2019-2020-present yayxs
 ---
