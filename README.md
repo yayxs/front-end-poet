@@ -1,36 +1,10 @@
-# frontend-thick-talk
-
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-
-## Table of Contents
-
-- [Background](#background)
-- [Preview](#preview)
-
-- [Install](#install)
-- [Usage](#usage)
-
-- [License](#license)
-
-## Background
-
-> 梳理前端技术点，纵横交错分析对比，博文记录
+# Welcome to frontend-thick-talk
 
 ## Preview
 
-[预览地址](https://fett.netlify.app/)
+[线上预览地址](https://fett.netlify.app/)
 
-## Install
-
-```
-npm i
-```
-
-## Usage
-
-```
-npm run vuepress dev docs
-```
+<image src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d83cf1dc6c84f549c564e1f50c8302c~tplv-k3u1fbpfcp-zoom-1.image" />
 
 ## License
 

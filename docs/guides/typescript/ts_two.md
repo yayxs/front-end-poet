@@ -6,7 +6,7 @@ title: Ts第二部分
 
 ### 背景
 
-在 2020 春节假期期间，我曾整理了一份关于 `TypeScript入门级别的笔记分享` 也就是它 **[春节间的 TypeScript 笔记整理](<[https://github.com/yayxs/advanced-road/blob/master/docs/%E6%98%A5%E8%8A%82%E9%97%B4%E7%9A%84TypeScript%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86.md](https://github.com/yayxs/advanced-road/blob/master/docs/春节间的TypeScript笔记整理.md)>)** 还记得当时正是 `疫情` 正严重的时候，正值 2020 年中时候，BJ 又再次迎来第二次 疫情冲击 ，在这愈发困难 的境地下，我们在保证 安全的前提下，疯狂提升自己就对了
+在 2020 春节假期期间，我曾整理了一份关于 `TypeScript入门级别的笔记分享` 也就是它 **[春节间的 TypeScript 笔记整理](https://fett.netlify.app/guides/typescript/ts_one.html)** 还记得当时正是 `疫情` 正严重的时候，正值 2020 年中时候，BJ 又再次迎来第二次 疫情冲击 ，在这愈发困难 的境地下，我们在保证 安全的前提下，疯狂提升自己就对了
 
 ### 重要性
 
@@ -16,9 +16,13 @@ title: Ts第二部分
 
 ## 
 
+## 学习路线
 
 
 
+### 文档阅读
+
+### 视频教程
 
 
 
