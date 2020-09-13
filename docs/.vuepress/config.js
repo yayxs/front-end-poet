@@ -18,6 +18,11 @@ module.exports = {
         children: ["/guides/"],
       },
       {
+        title: "阅读思考",
+        collapsable: true,
+        children: ["/guides/books/js_advanced_v4"],
+      },
+      {
         title: "TypeScript",
         collapsable: true,
         children: ["/guides/typescript/ts_one", "/guides/typescript/ts_two"],
