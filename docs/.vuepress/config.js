@@ -18,7 +18,7 @@ module.exports = {
         children: ["/guides/"],
       },
       {
-        title: "阅读思考",
+        title: "读书系列",
         collapsable: true,
         children: [
           "/guides/books/js_advanced_one",
