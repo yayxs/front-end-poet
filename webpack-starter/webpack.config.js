@@ -32,11 +32,18 @@ module.exports = {
     },
   },
   plugins: [new MiniCssExtractPlugin()],
+  devtool:'source-map',
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         // 命中 JavaScript 文件
-        test: /\.js$/,
+        // test: /\.js$/,
+        test: /\.m?js$/,
         // 用 babel-loader 转换 JavaScript 文件
         // ?cacheDirectory 表示传给 babel-loader 的参数，用于缓存 babel 编译结果加快重新编译速度
         // use: ["babel-loader?cacheDirectory"],
@@ -45,8 +52,9 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              cacheDirectory: true,
+              cacheDirectory: true, // 默认是false
               presets: ["@babel/preset-env"],
+              plugins: ['@babel/plugin-transform-runtime']
             },
             // // enforce:'post' 的含义是把该 Loader 的执行顺序放到最后
             // // enforce 的值还可以是 pre，代表把 Loader 的执行顺序放到最前面
@@ -58,7 +66,8 @@ module.exports = {
       },
       {
         // 命中 SCSS 文件
-        test: /\.scss$/,
+        // test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         // 使用一组 Loader 去处理 SCSS 文件。
         // 处理顺序为从后到前，即先交给 sass-loader 处理，再把结果交给 css-loader 最后再给 style-loader。
         use: ["style-loader", "css-loader", "sass-loader"],
@@ -78,6 +87,6 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".js", ".json"],
+    extensions: [".ts", ".js", ".json",'.tsx', '.ts'],
   },
 };
