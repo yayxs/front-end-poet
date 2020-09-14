@@ -20,7 +20,12 @@ module.exports = {
       {
         title: "阅读思考",
         collapsable: true,
-        children: ["/guides/books/js_advanced_v4"],
+        children: [
+          "/guides/books/js_advanced_one",
+          "/guides/books/webpack_one",
+          "/guides/books/webpack_two",
+          "/guides/books/webpack_three",
+        ],
       },
       {
         title: "TypeScript",
