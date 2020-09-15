@@ -3,6 +3,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const resolveDir = (str) => path.resolve(__dirname, str);
 console.log(path.resolve(__dirname, "./dist"));
+
+// const { AutoWebPlugin } = require('web-webpack-plugin');
+
+// const autoWebPlugin = new AutoWebPlugin('pages',{
+//   template:'./src/template.html', // 生成的html 模板
+//   postEntrys:['./src/common.css'], // 通用的css 样式
+//   commonsChunk:{
+//     name: 'common',// 提取出公共代码 Chunk 的名称
+//   }
+// })
 module.exports = {
   mode: "development",
   entry: "./src/index.js",

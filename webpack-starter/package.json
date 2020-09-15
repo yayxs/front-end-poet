@@ -6,8 +6,7 @@
   "author": "yayxs",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --open --hot --devtool source-map",
-    "start": "webpack --config webpack.config.js"
+    "dev": "webpack-dev-server --open"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
