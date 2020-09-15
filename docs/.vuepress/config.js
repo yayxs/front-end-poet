@@ -15,7 +15,9 @@ module.exports = {
       {
         title: "前言",
         collapsable: false,
-        children: ["/guides/"],
+        children: ["/guides/",
+      
+      ],
       },
       {
         title: "读书系列",
