@@ -15,9 +15,7 @@ module.exports = {
       {
         title: "前言",
         collapsable: false,
-        children: ["/guides/",
-      
-      ],
+        children: ["/guides/"],
       },
       {
         title: "读书系列",
@@ -45,7 +43,12 @@ module.exports = {
       {
         title: "工程化",
         collapsable: true,
-        children: ["/guides/webpack/"],
+        children: [],
+      },
+      {
+        title: "LeetCode",
+        collapsable: true,
+        children: ["/guides/leetcode/"],
       },
     ],
   },
