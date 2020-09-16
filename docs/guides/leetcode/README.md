@@ -1,12 +1,6 @@
-<!--
- * @Author: yayxs
- * @Date: 2020-08-30 23:18:49
- * @LastEditTime: 2020-08-30 23:18:57
- * @LastEditors: yayxs
- * @Description:
- * @FilePath: \frontend-thick-talk\docs\algorithm\README.md
- * @
--->
+---
+title: leetcode刷题启动仪式
+---
 
 > 歌曲推荐：《MOM-蜡笔小心-网易云》
 
@@ -20,14 +14,6 @@
 - 准备面试，因为面试跳槽一般会有算法题目，想更上一层楼
 
 至于数据结构与算法，这个就好比你吃饭一样，吃着吃着总会胖的。也就是说，`胖`这个过程是慢慢的，所以关于`刷题`或者看算法是个积淀的过程。
-
-> 项目推荐 [希望有朝一日，我们在一家公司一起看这篇文章](https://github.com/mengkunsoft/MKOnlineMusicPlayer)
-
-![](https://user-gold-cdn.xitu.io/2020/5/14/1720ec3b6942867b?w=788&h=255&f=png&s=13985)
-
-![](https://user-gold-cdn.xitu.io/2020/5/14/1720ec437df799b0?w=950&h=830&f=png&s=404406)
-
-听着歌就开始了。（以上的插曲请自行忽略）
 
 ## 语言选择
 
@@ -60,10 +46,8 @@
 
 **算法**（algorithm），在[数学](https://zh.wikipedia.org/wiki/數學)（[算学](https://zh.wikipedia.org/wiki/算學)）和[计算机科学](https://zh.wikipedia.org/wiki/電腦科學)之中，为任何一系列良定义的具体计算步骤[[1\]](https://zh.wikipedia.org/wiki/算法#cite_note-1)，常用于[计算](https://zh.wikipedia.org/wiki/計算)、[数据处理](https://zh.wikipedia.org/w/index.php?title=數據處理&action=edit&redlink=1)和[自动推理](https://zh.wikipedia.org/wiki/自动推理)。作为一个[有效方法](https://zh.wikipedia.org/w/index.php?title=有效方法&action=edit&redlink=1)，算法被用于计算[函数](https://zh.wikipedia.org/wiki/函數)[[2\]](https://zh.wikipedia.org/wiki/算法#cite_note-2)，它包含了一系列定义清晰的指令[[3\]](https://zh.wikipedia.org/wiki/算法#cite_note-3)，并可于[有限的](https://zh.wiktionary.org/wiki/Special:Search/有限的)时间及空间内清楚的表述出来[[4\]](https://zh.wikipedia.org/wiki/算法#cite_note-4)。
 
-## 下回预告
+## 方式
 
-> 最基础最常见的数据结构-数组
+`vscode` 插件结合官网
 
-## 看完不妨
-
-![](https://user-gold-cdn.xitu.io/2020/5/14/1720ec5002fc8da5?w=1073&h=394&f=png&s=63296)
+![An image](./index.png)
