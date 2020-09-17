@@ -48,7 +48,9 @@ module.exports = {
       {
         title: "LeetCode",
         collapsable: true,
-        children: ["/guides/leetcode/"],
+        children: ["/guides/leetcode/",
+        "/guides/leetcode/outline",
+      ],
       },
     ],
   },
