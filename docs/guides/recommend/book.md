@@ -1,5 +1,5 @@
 ---
-title: Web 大前端书籍推荐分享（JavaScript 等）
+title: 前端书籍推荐
 ---
 
 ## 写在前面
