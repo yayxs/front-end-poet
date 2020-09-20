@@ -18,6 +18,20 @@ module.exports = {
         children: ["/guides/"],
       },
       {
+        title: "简历面试",
+        collapsable: true,
+        children: ["/guides/interview"],
+      },
+      {
+        title: "推荐",
+        collapsable: true,
+        children: [
+          "/guides/recommend/book",
+          "/guides/recommend/video",
+          "/guides/recommend/other",
+        ],
+      },
+      {
         title: "读书系列",
         collapsable: true,
         children: [
@@ -25,6 +39,14 @@ module.exports = {
           "/guides/books/webpack_one",
           "/guides/books/webpack_two",
           "/guides/books/webpack_three",
+        ],
+      },
+      {
+        title: "Vue3",
+        collapsable: true,
+        children: [
+          "/guides/vue_next/outline",
+          "/guides/vue_next/video_tutorial",
         ],
       },
       {
@@ -48,9 +70,7 @@ module.exports = {
       {
         title: "LeetCode",
         collapsable: true,
-        children: ["/guides/leetcode/",
-        "/guides/leetcode/outline",
-      ],
+        children: ["/guides/leetcode/", "/guides/leetcode/outline"],
       },
     ],
   },
