@@ -20,7 +20,7 @@ module.exports = {
       {
         title: "简历面试",
         collapsable: true,
-        children: ["/guides/interview"],
+        children: ["/guides/interview/"],
       },
       {
         title: "推荐",
@@ -43,7 +43,7 @@ module.exports = {
       },
       {
         title: "Vue3",
-        collapsable: true,
+        collapsable: false,
         children: [
           "/guides/vue_next/outline",
           "/guides/vue_next/video_tutorial",
