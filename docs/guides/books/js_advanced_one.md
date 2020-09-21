@@ -12,10 +12,8 @@ title: 《JavaScript高级程序设计（第4版）》
 
 ## 关于 ECMAScript 版本
 
-| Tables |     |     |     |
-| :----: | :-: | --: | --: |
-
-
+| 版本 |别名     | 发布时间    |    主要变动 |
+| :----: | :-: | :--: | :--: |
 |ECMA-262 第 6 版|ES6 ES2015|2016 年 6 月|ES6 正式支持了类、模块、迭代器、生成器、箭头函数、期约、反射、代理和众多新的数据类型|
 |ECMA-262 第 7 版|ES7 或 ES2016|2016 年 6 月|Array.prototype.includes 和指数操作符|
 | ECMA-262 第 8 版 | Es8 ES2017 | 2017 年 6 月 | 异步函数（async/await）Object.values()/Object.entries()/Object.getOwnPropertyDescriptors() |
@@ -92,4 +90,27 @@ ES6 重点 ：类 class 模块化 import from 、生成器函数 Promise Proxy �
 <!-- HTML5 -->
 <!DOCTYPE html>
 ```
+
+# var let const
+
+```js
+function test(){
+  var foo = 1 // 调用之后随即被销毁
+}
+```
+## 变量提升
+
+`var`声明的变量会出现声明提升 提到函数作用域的顶部，在声明语句之前使用并不会抛出异常，这就是所谓的声明提升
+let声明的范围是块作用域，而var声明的范围是函数作用域。
+
+## 暂时性死区
+
+ - `let` 声明的变量不会声明提前
+ - let 声明之前的执行瞬间叫做所谓的暂时性死区
+
+## const
+
+ - 声明变量时必须同时初始化变量
+ - 尝试修改变量 运行时报错（这里只是适用于指向变量的引用）
+ - 修改对象内部的属性是ok的
 
