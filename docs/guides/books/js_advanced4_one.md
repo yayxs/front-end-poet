@@ -1,8 +1,8 @@
 ---
-title: 《JavaScript高级程序设计（第4版）》
+title: Js语言基础
 ---
 
-> javascript 高级程序设计 读书笔记
+
 
 ::: tip
 核心掌握：文档模型有哪些以及异步执行脚本的方式
@@ -57,8 +57,8 @@ ES6 重点 ：类 class 模块化 import from 、生成器函数 Promise Proxy �
   <script async charset="" crossorigin="anonymous" defer integrity="" src="" type=""></script>
 ```
 
-::: defer vs async
-脚本异步加载的区别
+::: tip
+defer vs async 脚本异步加载的区别
 :::
 
 ### 推迟执行脚本 defer
@@ -113,4 +113,68 @@ let声明的范围是块作用域，而var声明的范围是函数作用域。
  - 声明变量时必须同时初始化变量
  - 尝试修改变量 运行时报错（这里只是适用于指向变量的引用）
  - 修改对象内部的属性是ok的
+
+## 数据类型
+
+### 转布尔
+
+```js
+      // Boolean
+      const isNumber = 1;
+      const isZeroNumber = 0
+      const isNaN = NaN
+      
+      const isStr = "I am string";
+      const isNullArr =[];
+      const isNullStr = ""; 
+      const isBool = true;
+      const isArr = [0, 1, 2];
+      const isObj = {
+        name: "i am obj",
+      };
+      const isNull = null;
+      const isUndefined = undefined;
+      const isFunc = () => {};
+      const isSymbol = Symbol();
+
+      const targetArr = [
+        isNumber,
+        isZeroNumber,
+        isNaN,
+        isStr,
+        isNullArr,
+        isBool,
+        isArr,
+        isObj,
+        isNull,
+        isUndefined,
+        isSymbol,
+        isFunc,
+      ];
+      for (let i = 0, len = targetArr.length; i < len; i++) {
+        console.log(targetArr[i], Boolean( targetArr[i]));
+      }
+
+```
+
+
+```
+1 true
+demo_test.html:43 0 false
+demo_test.html:43 NaN false
+demo_test.html:43 I am string true
+demo_test.html:43 [] true
+demo_test.html:43 true true
+demo_test.html:43 (3) [0, 1, 2] true
+demo_test.html:43 {name: "i am obj"} true
+demo_test.html:43 null false
+demo_test.html:43 undefined false
+demo_test.html:43 Symbol() true
+demo_test.html:43 () => {} true
+```
+
+## NaN
+
+- 任何涉及NaN的操作始终返回NaN（如NaN/10）
+- NaN不等于包括NaN在内的任何值。 // console.log(NaN == NaN); // false
 
