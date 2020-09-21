@@ -35,10 +35,16 @@ module.exports = {
         title: "读书系列",
         collapsable: true,
         children: [
-          "/guides/books/js_advanced_one",
-          "/guides/books/webpack_one",
-          "/guides/books/webpack_two",
-          "/guides/books/webpack_three",
+          "/guides/books/js_advanced4_outline",
+          "/guides/books/webpack_outline",
+        ],
+      },
+      {
+        title: "三剑客",
+        collapsable: true,
+        children: [
+          "/guides/threeMusketeers/html",
+        
         ],
       },
       {
@@ -66,6 +72,12 @@ module.exports = {
         title: "工程化",
         collapsable: true,
         children: [],
+      }, {
+        title: "数据结构与算法",
+        collapsable: true,
+        children: [
+          "/guides/dataStructuresAndAlgorithms/one",
+        ],
       },
       {
         title: "LeetCode",

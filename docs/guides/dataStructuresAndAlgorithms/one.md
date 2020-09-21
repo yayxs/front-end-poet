@@ -1,3 +1,9 @@
+---
+title: 栈的封装
+---
+
+```html
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,3 +41,5 @@
     </script>
   </body>
 </html>
+
+```
