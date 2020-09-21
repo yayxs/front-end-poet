@@ -8,10 +8,12 @@
 <body>
    <script>
        function test(){
-           var foo = 1
+           console.log(foo) // undefiend 
+           var foo = 1 
        }
        test()
-       console.log(foo) // foo  
+       console.log(foo) // Uncaught ReferenceError: foo is not defined
+     
    </script>
 </body>
 </html>
