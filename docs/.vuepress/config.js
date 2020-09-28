@@ -42,10 +42,7 @@ module.exports = {
       {
         title: "三剑客",
         collapsable: true,
-        children: [
-          "/guides/threeMusketeers/html",
-        
-        ],
+        children: ["/guides/threeMusketeers/html", "/guides/styles/outline"],
       },
       {
         title: "Vue3",
@@ -72,12 +69,11 @@ module.exports = {
         title: "工程化",
         collapsable: true,
         children: [],
-      }, {
+      },
+      {
         title: "数据结构与算法",
         collapsable: true,
-        children: [
-          "/guides/dataStructuresAndAlgorithms/one",
-        ],
+        children: ["/guides/dataStructuresAndAlgorithms/one"],
       },
       {
         title: "LeetCode",

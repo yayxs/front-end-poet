@@ -10,7 +10,8 @@
     "docs:build": "vuepress build docs"
   },
   "keywords": [
-    "JavaScript高级程序设计 4 "
+    "JavaScript高级程序设计 4 ",
+    "Css 3"
   ],
   "devDependencies": {
     "vuepress": "^1.5.4"
