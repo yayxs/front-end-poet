@@ -1,8 +1,9 @@
 ---
-title: HTML进阶
+title: HTML/HTML5进阶
 ---
 
 # 实现跨源通信
+
 window.postMessage() 方法可以安全地实现跨源通信。
 
 - message 将要发送到其他 window 的数据
@@ -40,7 +41,7 @@ window.postMessage() 方法可以安全地实现跨源通信。
       }
       window.addEventListener(
         "message",
-        function (event) {
+        function(event) {
           console.log(event, event.data);
         },
         false
@@ -48,7 +49,6 @@ window.postMessage() 方法可以安全地实现跨源通信。
     </script>
   </body>
 </html>
-
 ```
 
 ```html
@@ -91,5 +91,4 @@ window.postMessage() 方法可以安全地实现跨源通信。
     </script>
   </body>
 </html>
-
 ```
