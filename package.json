@@ -14,6 +14,7 @@
     "Css 3"
   ],
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.6.0",
     "vuepress": "^1.5.4"
   },
   "dependencies": {}

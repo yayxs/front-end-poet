@@ -1,5 +1,6 @@
 module.exports = {
   title: "前端厚说",
+  plugins: ["@vuepress/back-to-top"],
   description: "frontend-thick-talk",
   themeConfig: {
     nav: [
