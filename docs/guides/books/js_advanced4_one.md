@@ -2,23 +2,25 @@
 title: Js语言基础
 ---
 
-
-
 ::: tip
-核心掌握：文档模型有哪些以及异步执行脚本的方式
-:::
 
-# 什么是 JavaScript
+1. 了解 DOM 级别
+2. 文档模式
+3. 脚本的执行顺序
+4. 变量提升
+5. 暂时性死区
+6. 0.1+0.2
+   :::
 
 ## 关于 ECMAScript 版本
 
-| 版本 |别名     | 发布时间    |    主要变动 |
-| :----: | :-: | :--: | :--: |
-|ECMA-262 第 6 版|ES6 ES2015|2016 年 6 月|ES6 正式支持了类、模块、迭代器、生成器、箭头函数、期约、反射、代理和众多新的数据类型|
-|ECMA-262 第 7 版|ES7 或 ES2016|2016 年 6 月|Array.prototype.includes 和指数操作符|
-| ECMA-262 第 8 版 | Es8 ES2017 | 2017 年 6 月 | 异步函数（async/await）Object.values()/Object.entries()/Object.getOwnPropertyDescriptors() |
-| ECMA-262 第 9 版 | ES9、ES2018 | 2018 年 6 月 | Promise finally() |
-| ECMA-262 第 10 版 | ES10、ES2019 | 2019 年 6 月 | Array.prototype.flat()/flatMap()、String.prototype.trimStart()/trimEnd()、Object.fromEntries() Symbol.prototype.description |
+|       版本        |     别名      |   发布时间   |                                                          主要变动                                                           |
+| :---------------: | :-----------: | :----------: | :-------------------------------------------------------------------------------------------------------------------------: |
+| ECMA-262 第 6 版  |  ES6 ES2015   | 2016 年 6 月 |                    ES6 正式支持了类、模块、迭代器、生成器、箭头函数、期约、反射、代理和众多新的数据类型                     |
+| ECMA-262 第 7 版  | ES7 或 ES2016 | 2016 年 6 月 |                                            Array.prototype.includes 和指数操作符                                            |
+| ECMA-262 第 8 版  |  Es8 ES2017   | 2017 年 6 月 |                 异步函数（async/await）Object.values()/Object.entries()/Object.getOwnPropertyDescriptors()                  |
+| ECMA-262 第 9 版  |  ES9、ES2018  | 2018 年 6 月 |                                                      Promise finally()                                                      |
+| ECMA-262 第 10 版 | ES10、ES2019  | 2019 年 6 月 | Array.prototype.flat()/flatMap()、String.prototype.trimStart()/trimEnd()、Object.fromEntries() Symbol.prototype.description |
 
 ::: details 点击查看代码
 ES6 重点 ：类 class 模块化 import from 、生成器函数 Promise Proxy 箭头函数、模板字符串、解构语法
@@ -35,9 +37,7 @@ ES6 重点 ：类 class 模块化 import from 、生成器函数 Promise Proxy �
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-      
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -49,12 +49,21 @@ ES6 重点 ：类 class 模块化 import from 、生成器函数 Promise Proxy �
 4. DOM 4
 
 ## BOM
-`HTML` 的出现涵盖了大多的BOM特性
+
+`HTML` 的出现涵盖了大多的 BOM 特性
 
 ## `<script />`
 
 ```js
-  <script async charset="" crossorigin="anonymous" defer integrity="" src="" type=""></script>
+<script
+  async
+  charset=""
+  crossorigin="anonymous"
+  defer
+  integrity=""
+  src=""
+  type=""
+></script>
 ```
 
 ::: tip
@@ -63,28 +72,27 @@ defer vs async 脚本异步加载的区别
 
 ### 推迟执行脚本 defer
 
- - 外部的脚本
- - 立即下载资源
- - 推迟执行 DOMContentLoaded事件之前执行
+- 外部的脚本
+- 立即下载资源
+- 推迟执行 DOMContentLoaded 事件之前执行
 
-### 异步执行脚本 async 
+### 异步执行脚本 async
 
- - 外部的脚本
- - 立即下载资源
- - 不保证执行的顺序 
- - load 事件之前执行
+- 外部的脚本
+- 立即下载资源
+- 不保证执行的顺序
+- load 事件之前执行
 
 ## XHTML 可扩展超文本标记语言
 
- - type text/javascript
- - <> 会被当做标签 需要转义
-
+- type text/javascript
+- <> 会被当做标签 需要转义
 
 ## 文档模式
 
- - 混杂模式 省略 <!DOCTYPE html>
- - 标准模式
- - 准标准模式
+- 混杂模式 省略 <!DOCTYPE html>
+- 标准模式
+- 准标准模式
 
 ```html
 <!-- HTML5 -->
@@ -94,87 +102,115 @@ defer vs async 脚本异步加载的区别
 # var let const
 
 ```js
-function test(){
-  var foo = 1 // 调用之后随即被销毁
+function test() {
+  var foo = 1; // 调用之后随即被销毁
 }
 ```
+
 ## 变量提升
 
 `var`声明的变量会出现声明提升 提到函数作用域的顶部，在声明语句之前使用并不会抛出异常，这就是所谓的声明提升
-let声明的范围是块作用域，而var声明的范围是函数作用域。
+let 声明的范围是块作用域，而 var 声明的范围是函数作用域。
 
 ## 暂时性死区
 
- - `let` 声明的变量不会声明提前
- - let 声明之前的执行瞬间叫做所谓的暂时性死区
+- `let` 声明的变量不会声明提前
+- let 声明之前的执行瞬间叫做所谓的暂时性死区
 
 ## const
 
- - 声明变量时必须同时初始化变量
- - 尝试修改变量 运行时报错（这里只是适用于指向变量的引用）
- - 修改对象内部的属性是ok的
+- 声明变量时必须同时初始化变量
+- 尝试修改变量 运行时报错（这里只是适用于指向变量的引用）
+- 修改对象内部的属性是 ok 的
 
-## 数据类型
+## Number 类型
 
-### 转布尔
+### 0.1+0.2
+
+采用 IEEE 754 格式表示整数和浮点值，正是由于这种存储方式，导致 0.1+0.2 的问题，可以通过`toFixed` 处理一下
 
 ```js
-      // Boolean
-      const isNumber = 1;
-      const isZeroNumber = 0
-      const isNaN = NaN
-      
-      const isStr = "I am string";
-      const isNullArr =[];
-      const isNullStr = ""; 
-      const isBool = true;
-      const isArr = [0, 1, 2];
-      const isObj = {
-        name: "i am obj",
-      };
-      const isNull = null;
-      const isUndefined = undefined;
-      const isFunc = () => {};
-      const isSymbol = Symbol();
-
-      const targetArr = [
-        isNumber,
-        isZeroNumber,
-        isNaN,
-        isStr,
-        isNullArr,
-        isBool,
-        isArr,
-        isObj,
-        isNull,
-        isUndefined,
-        isSymbol,
-        isFunc,
-      ];
-      for (let i = 0, len = targetArr.length; i < len; i++) {
-        console.log(targetArr[i], Boolean( targetArr[i]));
-      }
-
+let res = 0.1+0.2
+undefined
+console.log(res)
+VM206:1 0.30000000000000004
+undefined
+let finRes = res.toFixed(2)
+undefined
+console.log(finRes)
+VM349:1 0.30
+undefined
+console.log(+finRes)
+VM431:1 0.3
+undefined
 ```
 
+### NaN
 
-```
-1 true
-demo_test.html:43 0 false
-demo_test.html:43 NaN false
-demo_test.html:43 I am string true
-demo_test.html:43 [] true
-demo_test.html:43 true true
-demo_test.html:43 (3) [0, 1, 2] true
-demo_test.html:43 {name: "i am obj"} true
-demo_test.html:43 null false
-demo_test.html:43 undefined false
-demo_test.html:43 Symbol() true
-demo_test.html:43 () => {} true
+- 任何涉及 NaN 的操作始终返回 NaN（如 NaN/10）
+- NaN 不等于包括 NaN 在内的任何值。 // console.log(NaN == NaN); // false
+
+ECMA 提供 `isNaN` 但凡能转换为数字的都返回 false 因为它们是数字 或者间接的能够转换为数字
+
+## String 类型
+
+```js
+const str = `i am str!`;
+console.log(str.length);
 ```
 
-## NaN
+## Symbol()
 
-- 任何涉及NaN的操作始终返回NaN（如NaN/10）
-- NaN不等于包括NaN在内的任何值。 // console.log(NaN == NaN); // false
+确保对象属性使用唯一标识符，不会发生属性冲突的危险。
+最重要的是，Symbol()函数不能用作构造函数，与new关键字一起使用。这样做是为了避免创建符号包装对象，像使用Boolean、String或Number那样，它们都支持构造函数且可用于初始化包含原始值的包装对象：
 
+## 对象
+
+## 创建对象的方式
+对象通过new操作符后跟对象类型的名称来创建
+
+```js
+ let o1 = new Object()
+    let o2 = new Object
+    console.log(o1) // {}
+    console.log(o2) // {}
+    console.log(o1===o2) // false
+    console.log(o1==o2) // false
+```
+```js
+
+ let o1 = new Object();
+
+      // console.log(o1)
+      console.log(o1.__proto__);
+      const {
+        constructor,
+        hasOwnProperty,
+        isPrototypeOf,
+        propertyIsEnumerable,
+        toLocaleString,
+        toString:toStringTemp,
+        valueOf
+      } = o1.__proto__;
+      console.log(constructor) // 函数:用于创建当前对象的函数(Object()函数)
+      console.log(hasOwnProperty) // 函数：当前对象实例上的属性是否存在 hasOwnProperty('name')
+      console.log(isPrototypeOf) // 函数:判断当前对象是不是另一个对象的原型
+      console.log(propertyIsEnumerable) // 函数：判定的对象是否可以用于for-in枚举
+      console.log(toLocaleString) // 函数:返回对象的字符串表示
+      console.log(toStringTemp) // 函数
+      console.log(valueOf) // 函数：返回对象对应的字符串表示，通常
+```
+### 注意
+
+原始类型的初始化可以只使用原始字面量形式。如果使用的是new关键字，则JavaScript会创建一个Object类型的实例，但其行为类似原始值。
+
+```js
+let name1 = "Nicholas";
+let name2 = new String("Matt");
+name1.age = 27;
+name2.age = 26;
+console.log(name1.age);    // undefined
+console.log(name2.age);    // 26
+console.log(typeof name1); // string
+console.log(typeof name2); // object
+```
