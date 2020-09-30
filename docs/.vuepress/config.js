@@ -33,7 +33,7 @@ module.exports = {
         ],
       },
       {
-        title: "读书系列",
+        title: "读书笔记",
         collapsable: true,
         children: [
           "/guides/books/js_advanced4_outline",
@@ -47,7 +47,7 @@ module.exports = {
       },
       {
         title: "Vue3",
-        collapsable: false,
+        collapsable: true,
         children: [
           "/guides/vue_next/outline",
           "/guides/vue_next/video_tutorial",
