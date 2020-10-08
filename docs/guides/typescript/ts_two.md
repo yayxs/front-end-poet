@@ -28,7 +28,7 @@ title: 2020年10月 TypeScript TS 免费视频教程
 
 > TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions. ---摘自 ts 官方
 >
-> 换句话说，当别人问你 ts 是啥，也可以说是 js 的超集 也可以说是一门语言，因为 js 是一门代码语言嘛
+> 换句话说，当别人问你 ts 是啥，也可以说是 js 的超集 也可以说是一门语言，因为 js 是一门代码语言嘛，或者说是一个工具
 
 ### js 与 ts 的关系
 
@@ -47,11 +47,22 @@ title: 2020年10月 TypeScript TS 免费视频教程
     a = "hahha";
     ```
 
-    
+>
+>
+>既然提到类型，就简单的说一下，类型包括动态类型与静态类型
+
+| 静态类型         | 动态类型       |      |
+| ---------------- | -------------- | ---- |
+| 类型的极度严格性 | 类型比较宽松   |      |
+| 运行性能ok       | 运行性能差点   |      |
+| 并不是绝对的     | 不断发展渐进性 |      |
+
+
 
 - 类型推断 ，所谓的类型系统
-
 - 编辑器更友好提示
+
+
 
 ### 转换
 
@@ -65,6 +76,10 @@ VM212:1 Uncaught SyntaxError: Unexpected token ':' // 错误的一种形式，�
 ```
 
 #### node 环境
+
+在node环境下也是不能够正常的跑ts 的项目 一句话 就是我们最终需要转换一下，在实际的项目中我i们一般需要
+
+借助 babel 或者 一些工具
 
 既然 ts 是 js 的超集，在一些环境中最终认识的还是 js,ts 好比化了妆的你的女友，更迷人而已，怎么卸妆，两种方式
 
@@ -147,7 +162,77 @@ add({ x: 1, y: 2 });
 两数相加的场景，两个输入框一个相加的按钮，
 
 - 首先保证相加的两个部分都是数值类型数字类型的我们知道两个字符串数字相加的达不到效果
+- 逆向思维 先写一段ts 代码 然后 编译一下
 
 ```
 
 ```
+
+**遇到的问题**
+
+```
+tsc .\first-ts.ts
++ ~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+```
+
+这时候无非是一些终端的权限问题
+
+- 用管理员权限打开vscode
+
+- 然后修改权限 set-ExecutionPolicy RemoteSigned;
+
+- 查看 get-ExecutionPolicy，就显示RemoteSigned
+
+  ```typescript
+  const btn = document.querySelector("#btn");
+  const number1Dom = document.querySelector("#number1")! as HTMLInputElement;
+  const number2Dom = document.querySelector("#number2")! as HTMLInputElement;
+  
+  const sum = (a: number, b: number): number => {
+    return a + b;
+  };
+  const evtHandler = () => {
+    const val1 = number1Dom.value;
+    const val2 = number2Dom.value;
+    console.log(sum(+val1, +val2));
+  };
+  
+  btn.addEventListener("click", 
+  
+  ```
+
+上述的ts 通过 tsc 编译 上文有提到一种编译的方式，我们来对比一下使用js有什么问题
+
+先来贴一下编译后的js
+
+```javascript
+var btn = document.querySelector("#btn");
+var number1Dom = document.querySelector("#number1");
+var number2Dom = document.querySelector("#number2");
+var sum = function (a, b) {
+    return a + b;
+};
+var evtHandler = function () {
+    var val1 = number1Dom.value;
+    var val2 = number2Dom.value;
+    console.log(sum(+val1, +val2));
+    
+};
+btn.addEventListener("click", evtHandler);
+
+```
+
+我们要对类型进行优化，确保相加的是两个数字
+
+```javascript
+var sum = function(a, b) {
+  if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  } else {
+    return +a + +b;
+  }
+};
+```
+
