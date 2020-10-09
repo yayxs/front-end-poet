@@ -236,3 +236,156 @@ var sum = function(a, b) {
 };
 ```
 
+## 项目的配置
+
+### tsconfig.json
+
+还是简单说一下 json 文件，
+
+>
+>
+>**JSON**(JavaScript Object Notation) 是一种轻量级的数据交换格式。 易于人阅读和编写。同时也易于机器解析和生成。 它基于[JavaScript Programming Language](http://www.crockford.com/javascript), [Standard ECMA-262 3rd Edition - December 1999](http://www.ecma-international.org/publications/files/ecma-st/ECMA-262.pdf)的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C, C++, C#, Java, JavaScript, Perl, Python等）。 这些特性使JSON成为理想的数据交换语言。
+>
+>
+
+首先 项目中的跟目下（一般的情况是这样） 新建一个 `tsconfig.json`  **文件指定了根文件和编译项目所需的编译器选项**
+
+JavaScript项目可以改用一个`jsconfig.json`文件，该文件的作用几乎相同，但是默认情况下启用了一些与JavaScript相关的编译器标志。 需要注意的一点是我们的配置信息是相当的额 多 ，前期不必要了解全部
+
+```json
+{
+  "compilerOptions": {
+
+    /* 基本选项 */
+    "target": "es5",                       // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES6'/'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
+    "module": "commonjs",                  // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    "lib": [],                             // 指定要包含在编译中的库文件
+    "allowJs": true,                       // 允许编译 javascript 文件
+    "checkJs": true,                       // 报告 javascript 文件中的错误
+    "jsx": "preserve",                     // 指定 jsx 代码的生成: 'preserve', 'react-native', or 'react'
+    "declaration": true,                   // 生成相应的 '.d.ts' 文件
+    "sourceMap": true,                     // 生成相应的 '.map' 文件
+    "outFile": "./",                       // 将输出文件合并为一个文件
+    "outDir": "./",                        // 指定输出目录
+    "rootDir": "./",                       // 用来控制输出目录结构 --outDir.
+    "removeComments": true,                // 删除编译后的所有的注释
+    "noEmit": true,                        // 不生成输出文件
+    "importHelpers": true,                 // 从 tslib 导入辅助工具函数
+    "isolatedModules": true,               // 将每个文件作为单独的模块 （与 'ts.transpileModule' 类似）.
+
+    /* 严格的类型检查选项 */
+    "strict": true,                        // 启用所有严格类型检查选项
+    "noImplicitAny": true,                 // 在表达式和声明上有隐含的 any类型时报错
+    "strictNullChecks": true,              // 启用严格的 null 检查
+    "noImplicitThis": true,                // 当 this 表达式值为 any 类型的时候，生成一个错误
+    "alwaysStrict": true,                  // 以严格模式检查每个模块，并在每个文件里加入 'use strict'
+
+    /* 额外的检查 */
+    "noUnusedLocals": true,                // 有未使用的变量时，抛出错误
+    "noUnusedParameters": true,            // 有未使用的参数时，抛出错误
+    "noImplicitReturns": true,             // 并不是所有函数里的代码都有返回值时，抛出错误
+    "noFallthroughCasesInSwitch": true,    // 报告 switch 语句的 fallthrough 错误。（即，不允许 switch 的 case 语句贯穿）
+
+    /* 模块解析选项 */
+    "moduleResolution": "node",            // 选择模块解析策略： 'node' (Node.js) or 'classic' (TypeScript pre-1.6)
+    "baseUrl": "./",                       // 用于解析非相对模块名称的基目录
+    "paths": {},                           // 模块名到基于 baseUrl 的路径映射的列表
+    "rootDirs": [],                        // 根文件夹列表，其组合内容表示项目运行时的结构内容
+    "typeRoots": [],                       // 包含类型声明的文件列表
+    "types": [],                           // 需要包含的类型声明文件名列表
+    "allowSyntheticDefaultImports": true,  // 允许从没有设置默认导出的模块中默认导入。
+
+    /* Source Map Options */
+    "sourceRoot": "./",                    // 指定调试器应该找到 TypeScript 文件而不是源文件的位置
+    "mapRoot": "./",                       // 指定调试器应该找到映射文件而不是生成文件的位置
+    "inlineSourceMap": true,               // 生成单个 soucemaps 文件，而不是将 sourcemaps 生成不同的文件
+    "inlineSources": true,                 // 将代码与 sourcemaps 生成到一个文件中，要求同时设置了 --inlineSourceMap 或 --sourceMap 属性
+
+    /* 其他选项 */
+    "experimentalDecorators": true,        // 启用装饰器
+    "emitDecoratorMetadata": true          // 为装饰器提供元数据的支持
+  }
+}
+```
+
+趁着这个空隙咱们再 简单的写一个ts案例
+
+```typescript
+// 美女
+class Beauty {
+  fullName: string;
+  constructor(public firstName: string, public lastName: string) {
+    this.fullName = `${firstName}${lastName}`;
+  }
+}
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+function genGirl(person: Person): string {
+  return `hi ${person.firstName}${person.lastName}`;
+}
+const beautyGirl: Beauty = new Beauty("赵", "铁柱子");
+document.body.textContent = genGirl(beautyGirl);
+
+```
+
+编译之后的js 
+
+```javascript
+// 美女
+var Beauty = /** @class */ (function () {
+    function Beauty(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fullName = "" + firstName + lastName;
+    }
+    return Beauty;
+}());
+function genGirl(person) {
+    return "hi " + person.firstName + person.lastName;
+}
+var beautyGirl = new Beauty("赵", "铁柱子");
+document.body.textContent = genGirl(beautyGirl);
+
+```
+
+
+
+### files属性
+
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",  // 模块
+    "noImplicitAny": true,                 // 在表达式和声明上有隐含的 any类型时报错
+    "removeComments": true, // 删除编译后的注释
+    "preserveConstEnums": true,
+    "sourceMap": true // 生成map文件
+  },
+  "files": ["./file-one.ts", "./file-two.ts"]
+}
+
+```
+
+
+
+### `"include"`和`"exclude"`属性
+
+```json
+{
+"compilerOptions": {
+  "module": "system",
+  "noImplicitAny": true,
+  "removeComments": true,
+  "preserveConstEnums": true,
+  "outFile": "../../built/local/tsc.js",
+  "sourceMap": true
+},
+"include": ["src/**/*"],
+"exclude": ["node_modules", "**/*.spec.ts"]
+}
+```
+
+### 总结
+
