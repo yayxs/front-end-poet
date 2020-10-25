@@ -11,7 +11,9 @@
   },
   "keywords": [
     "JavaScript高级程序设计 4 ",
-    "Css 3"
+    "Css 3",
+    "webpack",
+    "webpack 5"
   ],
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.6.0",
