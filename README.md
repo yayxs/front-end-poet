@@ -1,11 +1,7 @@
-# Welcome to frontend-thick-talk
+## 洋小洋同学的技术博客 Blog
 
-## Preview
-
-[线上预览地址](https://fett.netlify.app/)
-
-<image src="./assets/images/home_new.png" />
+## Webpack
 
 ## License
 
-MIT © 2020 yayxs
+MIT © 2019-2020 yayxs
