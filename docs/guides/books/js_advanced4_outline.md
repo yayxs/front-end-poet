@@ -2,7 +2,7 @@
 title: 《JavaScript高级程序设计（第4版）》
 ---
 
-> javascript 高级程序设计 读书笔记
+> JavaScript 高级程序设计 4 读书笔记
 
 ::: tip
 
@@ -12,4 +12,6 @@ title: 《JavaScript高级程序设计（第4版）》
 4. [第 4 章　变量、作用域与内存](./js_advanced4_four.md)
 5. [第 5 章　基本引用类型](./js_advanced4_fifth.md)
 6. [第 6 章　集合引用类型](js_advanced4_six.md)
-   :::
+7. [第 12 章 BOM](./js_advanced4_12.md)
+
+:::
