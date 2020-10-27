@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
-   
-   const date = new Date(Date.parse('September 30, 2020'))
-   console.log(date)
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        height: 1200px;
+      }
+      .top {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function hasPlugin(name) {
+        name = name.toLowerCase();
+        for (let plugin of window.navigator.plugins) {
+          if (plugin.name.toLowerCase().indexOf(name) > -1) {
+            return true;
+          }
+          return false;
+        }
+      }
 
-  </script>
-</body>
+      console.log(hasPlugin("Flash"));
+    </script>
+  </body>
 </html>
