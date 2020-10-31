@@ -14,5 +14,7 @@ title: 《JavaScript高级程序设计（第4版）》
 6. [第 6 章　集合引用类型](js_advanced4_six.md)
 7. [第 12 章 BOM](./js_advanced4_12.md)
 8. [第 14 章 DOM](./js_advanced14.md)
-9. [第 25 章 客户端存储](./js_advanced4_25.md)
-   :::
+9. [第 23 章 JSON](./js_advanced4_23.md)
+10. [第 25 章 客户端存储](./js_advanced4_25.md)
+
+:::

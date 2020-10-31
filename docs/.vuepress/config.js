@@ -41,9 +41,9 @@ module.exports = {
         ],
       },
       {
-        title: "三剑客",
+        title: "HTML/CSS",
         collapsable: true,
-        children: ["/guides/threeMusketeers/html", "/guides/styles/outline"],
+        children: ["/guides/html_css/html", "/guides/styles/outline"],
       },
       {
         title: "Vue3",
