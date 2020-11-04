@@ -36,6 +36,7 @@ module.exports = {
         title: "读书笔记",
         collapsable: true,
         children: [
+          "/guides/books/css_secret_outline",
           "/guides/books/js_advanced4_outline",
           "/guides/books/webpack_outline",
         ],
