@@ -44,7 +44,7 @@ module.exports = {
       {
         title: "HTML/CSS",
         collapsable: true,
-        children: ["/guides/html_css/html", "/guides/styles/outline"],
+        children: ["/guides/html_css/html", "/guides/css/outline"],
       },
       {
         title: "Vue3",
