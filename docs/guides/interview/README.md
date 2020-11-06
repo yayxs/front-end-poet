@@ -1,7 +1,7 @@
 ---
-title: 每天整点面试题
+title: 我该怎么准备一份写简历的模板
 ---
 
-::: tip
-请跳转 [top-fe-iqa](https://top-fe-iqa.netlify.app/)
-:::
+# 我该怎么准备一份写简历的模板
+
+没写呢

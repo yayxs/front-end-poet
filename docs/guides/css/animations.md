@@ -62,3 +62,33 @@ title: CSS3 系列之动画 animations
 ```
 
 上述不明白暂时没有关系，接着看
+
+<div style="color:red">上述的完整代码 [css/animations.html](https://github.com/yayxs/frontend-thick-talk/blob/master/docs/guides/css/animations.html) </div>
+
+### keyframes  
+
+desc:用来定义动画的序列（两个及以上的关键帧） 上个例子的
+
+```css
+  form { // 代表的是从什么时间开始 开始状态
+        background-color: #fff;
+      }
+      to { // 代表结束状态
+        background-color: black;
+      }
+```
+
+上述便是关键帧的简单实用
+
+```css
+@keyframes animationName {
+      100% {
+        background-color: #fff;
+      }
+      0%{ // 元素的原始状态
+        background-color: black;
+      }
+    }
+// 值得注意的是即使是顺序颠倒也是同样的道理 0% 是动画的开始，100% 是动画的完成。 为了得到最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。
+```
+

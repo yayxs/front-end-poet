@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /my-express-app/node_modules
 node_modules
 .astro
@@ -12,3 +13,9 @@ node_modules
 .vuepress/dist
 docs/.vuepress/dist
 >>>>>>> 3c5efa2 (feat:添加leetcode基本环境)
+=======
+node_modules
+.vuepress/dist
+./docs/.vuepress/dist
+dist
+>>>>>>> c3f516a (feat:修改前言以及简历面试)
