@@ -21,11 +21,15 @@ module.exports = {
       {
         title: "简历面试",
         collapsable: false,
-        children: ["/guides/interview/", "/guides/interview/question"],
+        children: [
+          "/guides/interview/",
+          "/guides/interview/question",
+          "/guides/interview/top_fe_iqa",
+        ],
       },
       {
         title: "推荐分享",
-        collapsable: true,
+        collapsable: false,
         children: [
           "/guides/recommend/book",
           "/guides/recommend/video",
@@ -34,7 +38,7 @@ module.exports = {
       },
       {
         title: "读书笔记",
-        collapsable: true,
+        collapsable: false,
         children: [
           "/guides/books/css_secret_outline",
           "/guides/books/js_advanced4_outline",
