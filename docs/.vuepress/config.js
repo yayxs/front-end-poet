@@ -41,35 +41,72 @@ module.exports = {
         collapsable: false,
         children: [
           "/guides/books/css_secret_outline",
+          "/guides/books/js_advanced3_1",
           "/guides/books/js_advanced4_outline",
           "/guides/books/webpack_outline",
+          "/guides/books/flutter_1",
         ],
       },
+
       {
-        title: "HTML/CSS",
-        collapsable: true,
-        children: ["/guides/html_css/html", "/guides/css/outline"],
+        title: "自制教程",
+        collapsable: false,
+        children: ["/guides/bilibili/typescript", "/guides/bilibili/vue3"],
       },
+
       {
-        title: "Vue3",
-        collapsable: true,
+        title: "实战项目",
+        collapsable: false,
         children: [
-          "/guides/vue_next/outline",
-          "/guides/vue_next/video_tutorial",
+          "/guides/wangyiyun/",
+          "/guides/pro/flutter",
+          "/guides/pro/mini_pro",
         ],
+      },
+      {
+        title: "HTML/HTML5",
+        collapsable: true,
+        children: ["/guides/html/"],
+      },
+      {
+        title: "CSS/CSS3",
+        collapsable: true,
+        children: ["/guides/css/"],
+      },
+      {
+        title: "JavaScript",
+        collapsable: true,
+        children: ["/guides/javascript/storage"],
       },
       {
         title: "TypeScript",
         collapsable: true,
-        children: ["/guides/typescript/ts_one", "/guides/typescript/ts_two"],
+        children: ["/guides/typescript/ts_1", "/guides/typescript/ts_2"],
       },
       {
-        title: "框架实战",
+        title: "Vue2/Vue3",
         collapsable: true,
-        children: [
-          "/guides/wangyiyun/cloud_one",
-          "/guides/wangyiyun/cloud_two",
-        ],
+        children: [],
+      },
+      {
+        title: "React",
+        collapsable: true,
+        children: ["/guides/react/"],
+      },
+      {
+        title: "Flutter",
+        collapsable: true,
+        children: ["/guides/flutter/"],
+      },
+      {
+        title: "微信小程序",
+        collapsable: true,
+        children: ["/guides/mini_pro/"],
+      },
+      {
+        title: "性能优化",
+        collapsable: true,
+        children: ["/guides/performance_optimization/vue"],
       },
       {
         title: "工程化",
@@ -85,6 +122,16 @@ module.exports = {
         title: "LeetCode",
         collapsable: true,
         children: ["/guides/leetcode/", "/guides/leetcode/outline"],
+      },
+
+      {
+        title: "博客文章",
+        collapsable: true,
+        children: [
+          "/guides/blog_article/first_vue3",
+          "/guides/blog_article/cra_admin",
+          "/guides/blog_article/commit",
+        ],
       },
     ],
   },

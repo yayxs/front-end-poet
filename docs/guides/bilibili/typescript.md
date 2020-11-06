@@ -1,6 +1,8 @@
 ---
-title: 2020年10月 TypeScript TS 免费视频教程
+title: 2020年10月 TypeScript免费视频教程
 ---
+
+# 2020 年 10 月 TypeScript 免费视频教程
 
 ## 导读
 

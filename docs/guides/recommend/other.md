@@ -45,3 +45,13 @@ title: 除了敲代码我还应知道
 1. [在线 PS 设计,在线 P 图](https://www.uupoop.com/ps/)
 
 :::
+
+:::tip
+在开发的过程中我们总是会遇到在等待后端的接口返回的数据，我们可以尝试使用 mock.js
+:::
+
+## 网址导航
+
+- [http://mockjs.com/](http://mockjs.com/)
+- [https://easy-mock.com/login](https://easy-mock.com/login)
+- [http://rap2.taobao.org/account/login?original=%2Frepository%2Fjoined](http://rap2.taobao.org/account/login?original=%2Frepository%2Fjoined)

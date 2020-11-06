@@ -1,6 +1,8 @@
 ---
-title: Ts基础
+title: 春节间的TypeScript笔记整理
 ---
+
+# 春节间的 TypeScript 笔记整理
 
 ## 背景
 
@@ -701,7 +703,3 @@ let ali_pay: Pay = new AlPay();
 如果你还没有看过瘾，在`19年度`我曾写过一篇很简单的文章，也是基于第三方的环境搭建的一篇极为简单的博客（依赖 github、Vuepress）
 
 - [TypeScript 初体验（已停更，正在重新个人博客中…）](https://yayxs.github.io/views/frontEnd/2019/100101.html#ts-%E8%83%8C%E6%99%AF)
-
-## 参考文章
-
-- [前端前辈技术胖关于 vscode 编辑器插件的分享](https://jspang.com/detailed?id=60)
