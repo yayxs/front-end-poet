@@ -16,15 +16,15 @@ module.exports = {
       {
         title: "前言",
         collapsable: false,
-        children: ["/guides/"],
+        children: ["/guides/", "/guides/quick_start"],
       },
       {
         title: "简历面试",
-        collapsable: true,
-        children: ["/guides/interview/"],
+        collapsable: false,
+        children: ["/guides/interview/", "/guides/interview/question"],
       },
       {
-        title: "推荐",
+        title: "推荐分享",
         collapsable: true,
         children: [
           "/guides/recommend/book",
