@@ -43,6 +43,7 @@ module.exports = {
           "/guides/books/css_secret_outline",
           "/guides/books/js_advanced3_1",
           "/guides/books/js_advanced4_outline",
+          "/guides/books/you_dont_know_js1_outline",
           "/guides/books/webpack_outline",
           "/guides/books/flutter_1",
         ],
@@ -123,11 +124,11 @@ module.exports = {
         collapsable: true,
         children: ["/guides/leetcode/", "/guides/leetcode/outline"],
       },
-
       {
         title: "博客文章",
         collapsable: true,
         children: [
+          "/guides/blog_article/css3",
           "/guides/blog_article/first_vue3",
           "/guides/blog_article/cra_admin",
           "/guides/blog_article/commit",
