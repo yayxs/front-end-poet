@@ -1,8 +1,35 @@
 module.exports = {
   title: "前端厚说",
-  plugins: ["@vuepress/back-to-top"],
+  plugins: [
+    ["@vuepress/back-to-top"], // 返回顶部
+    ["@vuepress/nprogress"], // 加载进度条
+    [
+      "vuepress-plugin-comment",
+      {
+        choosen: "valine",
+        // options选项中的所有参数，会传给Valine的配置
+        options: {
+          el: "#vcomments",
+          appId: "T7SJkJx11EpLNMvfzjee4mmM-gzGzoHsz",
+          appKey: "8XiyybSQiGhWVGACeLeL6csO",
+          visitor: true, // 阅读量统计
+          placeholder: "有什么问题请留言",
+        },
+      },
+    ],
+  ],
   description: "frontend-thick-talk",
   themeConfig: {
+    lastUpdated: "最近更新于", // string | boolean
+    serviceWorker: {
+      updatePopup: true, // Boolean | Object, 默认值是 undefined.
+      // 如果设置为 true, 默认的文本配置将是:
+      // updatePopup: {
+      //    message: "New content is available.",
+      //    buttonText: "Refresh"
+      // }
+    },
+    head: [["link", { rel: "icon", href: "/favo.jpg" }]],
     nav: [
       { text: "指南", link: "/guides/" },
       {
