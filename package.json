@@ -17,7 +17,11 @@
   ],
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.6.0",
-    "vuepress": "^1.5.4"
+    "vuepress": "^1.5.4",
+    "vuepress-plugin-comment": "^0.7.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@vuepress/plugin-nprogress": "^1.7.1",
+    "valine": "^1.4.14"
+  }
 }
