@@ -2,9 +2,17 @@
 title: 《JavaScript高级程序设计（第4版）》
 ---
 
-> JavaScript 高级程序设计 4 读书笔记
+# 《JavaScript 高级程序设计（第 4 版）》 读书笔记
 
-::: tip
+:::tip
+
+- [:heavy_minus_sign:] **[第 8 章 对象、类与面向对象编程](./js_advanced4_8.md)**
+  - [ :ballot_box_with_check:] 理解对象
+  - [ :x:] 创建对象
+  - [:x:] 继承
+  - [:x:] 类
+    - [:x:] test1
+    - [:x:] tess2
 
 1. [什么是 JS 以及基本的数据类型](./js_advanced4_one.md)
 2. [JS 中不同数据类型之间的转换](./js_advanced4_two.md)

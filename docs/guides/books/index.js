@@ -1,12 +1,8 @@
-let dom = document.getElementById("file_id");
-dom.addEventListener("change", (e) => {
-  console.log(e.target.files);
-  let files = e.target.files,
-    i = 0,
-    len = files.length;
+function Person(name, age, job) {
+  this.name = name;
+  this.age = age;
+  this.job = job;
+}
 
-  while (i < len) {
-    console.log(files[i]);
-    i++;
-  }
-});
+let hanshudeprototypeshuxing = Person.prototype;
+console.log(hanshudeprototypeshuxing.constructor);
