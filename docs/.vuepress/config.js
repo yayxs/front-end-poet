@@ -81,16 +81,6 @@ module.exports = {
         collapsable: false,
         children: ["/guides/bilibili/typescript", "/guides/bilibili/vue3"],
       },
-
-      {
-        title: "实战项目",
-        collapsable: false,
-        children: [
-          "/guides/wangyiyun/",
-          "/guides/pro/flutter",
-          "/guides/pro/mini_pro",
-        ],
-      },
       {
         title: "HTML/HTML5",
         collapsable: true,
@@ -130,6 +120,15 @@ module.exports = {
         title: "Flutter",
         collapsable: true,
         children: ["/guides/flutter/"],
+      },
+      {
+        title: "实战项目",
+        collapsable: false,
+        children: [
+          "/guides/wangyiyun/",
+          "/guides/pro/flutter",
+          "/guides/pro/mini_pro",
+        ],
       },
       {
         title: "微信小程序",
