@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .app{
+            width: 100vw;
+            /* height:100vh; */
+            /* border: 1px solid #ddd; */
+        }
+        .app .left{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            float: left;
+        }
+        .app .right{
+            margin-left: 200px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+        .app1{
+            position: absolute;
+        }
+        .app1 .left1{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            top: 0;
+            left: 0;
+        }
+        .app1 .right1{
+            position: relative;
+            height: 200px;
+            top: -200px;
+            right: 0;
+            /* left 的值对应左侧的width宽度值 */
+            left: 200px;
+            background-color: coral;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h3>左右两列布局-浮动float浮动脱离文档流+margin移动位置-兼容性好</h3>
+    </header>
+    <section class="app">
+      <aside class="left"></aside>
+      <main class="right"></main>
+    </section>
+    <header>
+        <h3>左右两列布局-position定位-脱离文档流</h3>
+    </header>
+    <section class="app1 app">
+      <aside class="left1"></aside>
+      <main class="right1"></main>
+    </section>
+  </body>
+</html>

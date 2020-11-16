@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>水平居中</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 100%;
+        height: 60px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      .inline-block {
+        display: inline-block;
+      }
+      .block {
+        /* 左右margin 上下平分0 计算值是0 */
+        width: 200px;
+        margin: 0 auto;
+        border: 1px solid red;
+      }
+      .parent-block {
+        width: 100%;
+        height: 60px;
+        border: 1px solid #ddd;
+      }
+      .some-parent-block {
+        width: 100%;
+        height: 60px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      .some-parent-block section {
+        border: 1px solid red;
+        display: inline-block;
+      }
+      .father-element{
+          /* 宽度是一定的 */
+          width: 100%;
+          border: 1px solid #ddd;
+          height: 140px;
+          /* 相对定位 */
+          position: relative;
+      }
+      .son-ele{
+          width: 100px;
+          height: 100px;
+          background-color: #00ff00;
+          position: absolute;
+          /* 父元素宽度的一半 */
+          left: calc(100%/2);
+          /* 这句话也可替换为 transform:translateX(-50%) */
+          margin-left: calc(-100px /2);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h3>水平居中-text-align方式</h3>
+    </header>
+    <section class="parent">
+      我是一段文字
+    </section>
+    <section class="parent">
+      <span>我是一个行内元素</span>
+    </section>
+    <section class="parent">
+      <span class="inline-block">我是一个行内块元素</span>
+    </section>
+    <section class="parent-block">
+      <section class="block">
+        我是一个定宽度的块级元素(不然的话直接占满整行)
+      </section>
+    </section>
+
+    <section class="some-parent-block">
+      <section class="son-block-one">块1</section>
+      <section class="son-block-two">块2</section>
+      <section class="son-block-three">块3</section>
+    </section>
+    <header>
+      <h3>水平居中-position方式(知道宽度的情况下)</h3>
+    </header>
+    <section class="father-element">
+        <section class="son-ele"></section>
+    </section>
+  </body>
+</html>

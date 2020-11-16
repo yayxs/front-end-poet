@@ -98,8 +98,13 @@ module.exports = {
       },
       {
         title: "CSS/CSS3",
-        collapsable: true,
-        children: ["/guides/css/"],
+        collapsable: false,
+        children: [
+          "/guides/css/css_basis",
+          "/guides/css/css3",
+          "/guides/css/css_layout", 
+          "/guides/css/css_preprocessor"
+        ],
       },
       {
         title: "JavaScript",
@@ -155,7 +160,6 @@ module.exports = {
         title: "博客文章",
         collapsable: true,
         children: [
-          "/guides/blog_article/css3",
           "/guides/blog_article/first_vue3",
           "/guides/blog_article/cra_admin",
           "/guides/blog_article/commit",
