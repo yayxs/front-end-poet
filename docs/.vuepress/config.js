@@ -70,7 +70,7 @@ module.exports = {
           "/guides/books/css_secret_outline",
           "/guides/books/js_advanced3_1",
           "/guides/books/js_advanced4_outline",
-          "/guides/books/you_dont_know_js1_outline",
+          "/guides/books/You-Dont-Know-JS/outline",
           "/guides/books/webpack_outline",
           "/guides/books/flutter_1",
         ],
@@ -102,8 +102,8 @@ module.exports = {
         children: [
           "/guides/css/css_basis",
           "/guides/css/css3",
-          "/guides/css/css_layout", 
-          "/guides/css/css_preprocessor"
+          "/guides/css/css_layout",
+          "/guides/css/css_preprocessor",
         ],
       },
       {
