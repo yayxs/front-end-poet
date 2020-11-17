@@ -93,7 +93,7 @@ module.exports = {
           "/guides/css/css_basis",
           "/guides/css/css3",
           "/guides/css/css_layout",
-          '/guides/css/css_mixin',
+          "/guides/css/css_mixin",
           "/guides/css/css_preprocessor",
         ],
       },
@@ -142,9 +142,9 @@ module.exports = {
         children: ["/guides/performance_optimization/vue"],
       },
       {
-        title: "工程化",
-        collapsable: true,
-        children: [],
+        title: "前端工程化",
+        collapsable: false,
+        children: ["/guides/webpack/webpack_basic"],
       },
       {
         title: "数据结构与算法",
