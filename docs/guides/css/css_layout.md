@@ -380,3 +380,243 @@ title: CSS 必须掌握的布局方式
 </html>
 
 ```
+
+## 圣杯布局-左右定宽-中间自适应
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>圣杯布局</title>
+    <style>
+      header,
+      footer {
+        width: 100%;
+        height: 50px;
+        background-color: #ccc;
+      }
+      .container {
+        height: 200px;
+        /* overflow: hidden; */
+        padding-left: 100px;
+        padding-right: 200px;
+      }
+      .container .center {
+        width: 100%;
+        background-color: darkkhaki;
+        /* 高度等于外层容器的高度 */
+        height: 200px;
+        float: left;
+      }
+      .container .left {
+        width: 100px;
+        height: 200px;
+        background-color: coral;
+        float: left;
+        /* 使左侧的盒子移动到中间盒子的一行上 */
+        margin-left: -100%;
+        position: relative;
+        left: -100px;
+      }
+      .container .right {
+        width: 200px;
+        height: 200px;
+        background-color: wheat;
+        float: left;
+        /* 使右侧的盒子移动到中间盒子的右侧 */
+        margin-left: -200px;
+        position: relative;
+        right: -200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h4>Header内容区</h4></header>
+    <div class="container">
+      <!-- 中间部分优先渲染 -->
+      <div class="center"><h4>中间盒子自适应</h4>
+      测试文字测试文字测试文字测试文字测试文字测试
+      文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+      文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+      文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+      文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+      文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+      </div>
+      <div class="left"><h4>左边栏</h4></div>
+      <div class="right"><h4>右边栏</h4></div>
+    </div>
+    <footer><h4>Footer内容区</h4></footer>
+  </body>
+</html>
+
+```
+
+## 双飞翼布局-左右定宽-中间内容自适应
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>双飞翼布局</title>
+  <style>
+    header,footer{
+      width: 100%;
+      height: 50px;
+      background-color: #ccc;
+    }
+    .container{
+
+    }
+    #center_inbox{
+      margin-right: 210px;
+      margin-left: 110px;
+    }
+    .container .center{
+      width: 100%;
+      height: 200px;
+      float: left;
+      background-color: thistle;
+    }
+    .container .left{
+      width: 100px;
+      height: 200px;
+      background-color: teal;
+      float: left;
+      margin-left: -100%;
+    }
+    .container .right{
+      width: 200px;
+      height: 200px;
+      float: left;
+      background-color: tan;
+      margin-left: -200px;
+    }
+
+  </style>
+</head>
+<body>
+  <header></header>
+  <main class="container">
+    <section class="center">
+      <div id="center_inbox">中间自适应</div>
+    </section>
+    <section class="left"></section>
+    <section class="right"></section>
+  </main>
+  <footer></footer>
+</body>
+</html>
+```
+
+## 多列布局--注意清除浮动
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    .parent{
+      border: 1px solid #ccc;
+      padding: 50px;
+    }
+    .col{
+      width: 25%;
+      height: 500px;
+      float: left;
+    }
+    .col:nth-child(odd){
+      background-color: tan;
+    }
+    .col:nth-child(even){
+      background-color: thistle;
+    }
+    .other-box{
+      width: 200px;
+      height: 100px;
+      background-color: yellowgreen;
+    }
+    .clearfix:after{
+      clear: both;
+      font-size: 0;
+      height: 0;
+      visibility: hidden;
+      display: block;
+      content: '';
+    }
+  </style>
+  
+</head>
+<body>
+  
+  <section class="parent clearfix">
+    <section class="col">
+      <p>测试文字文字文字测试文字文字文字测试文字文字文
+        字测试文字文字文字测试文字文字文字</p>
+    </section>
+    <section class="col">
+      <p>测试文字文字文字测试文字文字文字测试文字文字文
+        字测试文字文字文字测试文字文字文字</p>
+    </section>
+    <section class="col">
+      <p>测试文字文字文字测试文字文字文字测试文字文字文
+        字测试文字文字文字测试文字文字文字</p>
+    </section>
+    <section class="col">
+      <p>测试文字文字文字测试文字文字文字测试文字文字文
+        字测试文字文字文字测试文字文字文字</p>
+    </section>
+  </section>
+  <section class="other-box"></section>
+</body>
+</html>
+```
+
+## 多列布局-九宫格布局
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08多列布局-九宫格布局</title>
+    <style>
+      .parent {
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+      .item {
+        /* width: 20px;
+        height: 20px; */
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="parent">
+      <section class="item"></section>
+      <section class="item"></section>
+      <section class="item"></section>
+      <section class="item"></section>
+      <section class="item"></section>
+      <section class="item"></section>
+      <section class="item"></section>
+      <section class="item"></section>
+      <section class="item"></section>
+    </section>
+  </body>
+</html>
+
+```
