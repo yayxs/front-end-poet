@@ -93,6 +93,7 @@ module.exports = {
           "/guides/css/css_basis",
           "/guides/css/css3",
           "/guides/css/css_layout",
+          '/guides/css/css_mixin',
           "/guides/css/css_preprocessor",
         ],
       },

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    .parent{
+      border: 1px solid #ccc;
+      padding: 50px;
+    }
+    .col{
+      width: 25%;
+      height: 500px;
+      float: left;
+    }
+    .col:nth-child(odd){
+      background-color: tan;
+    }
+    .col:nth-child(even){
+      background-color: thistle;
+    }
+    .other-box{
+      width: 200px;
+      height: 100px;
+      background-color: yellowgreen;
+    }
+    .clearfix:after{
+      clear: both;
+      font-size: 0;
+      height: 0;
+      visibility: hidden;
+      display: block;
+      content: '';
+    }
+  </style>
+  
+</head>
+<body>
+  
+  <section class="parent clearfix">
+    <section class="col">
+      <p>测试文字文字文字测试文字文字文字测试文字文字文
+        字测试文字文字文字测试文字文字文字</p>
+    </section>
+    <section class="col">
+      <p>测试文字文字文字测试文字文字文字测试文字文字文
+        字测试文字文字文字测试文字文字文字</p>
+    </section>
+    <section class="col">
+      <p>测试文字文字文字测试文字文字文字测试文字文字文
+        字测试文字文字文字测试文字文字文字</p>
+    </section>
+    <section class="col">
+      <p>测试文字文字文字测试文字文字文字测试文字文字文
+        字测试文字文字文字测试文字文字文字</p>
+    </section>
+  </section>
+  <section class="other-box"></section>
+</body>
+</html>
