@@ -68,6 +68,7 @@ module.exports = {
         collapsable: false,
         children: [
           "/guides/books/css_secret_outline",
+          "/guides/books/css-artistic-beauty/",
           "/guides/books/js_advanced3_1",
           "/guides/books/js_advanced4_outline",
           "/guides/books/You-Dont-Know-JS/outline",
