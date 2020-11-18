@@ -1,333 +1,84 @@
 ---
-title: CSS的基础知识
+title: CSS 的基础知识
 ---
 
-# CSS的基础知识
+# CSS 的基础知识
 
-::: tip
-[选择器](#选择器)
-[权重](#权重)
-[继承](#继承)
-[字体](#字体)
-:::
+css 中的样式空白依赖压缩工具压缩其空白； css 样式表错误不影响正常的 css 渲染（不像 JS 的代码一样）
 
 ## 选择器
 
-1. css 样式空白 依赖压缩工具 压缩空白
-2. css 样式表错误 不影响正常的 css 表
+### 选择器的基本分类
 
-```css
-body {
-  backgroundadas: #000; // 不影响当前的样式表 控制台也不会报错
-}
-```
+> 基本的选择器
 
-3. 选择器
+| 选择器 | 别名       | 使用 |
+| ------ | ---------- | ---- |
+| \*     | 通配符     | \*{} |
+| tag    | 标签选择器 | p{}  |
+| .class | 类         | .{}  |
+| #id    | id 选择器  | #{}  |
 
-```
-*  // 通配符
-a // 元素选择器
-.app // 类选择器
-#app // id选择器 理论上是唯一的 不应重复出现
-main h2 // 结构选择器
-h1[title] // 属性选择器 h1元素 有title这个属性
-h1[title="img"] // 属性是title并且属性值是img的h1元素
-h1[title~="img"] // 属性的值 是img 独立的一个单词
-h1[title|="img"] // 属性选择器
-h1[title*="img"] // 属性选择器
-a:active 伪类选择器
-input:focus // 聚焦的时候
-```
+> 伪元素
 
-4. 多类名选择器
+| 选择器   | 别名         | 使用 |
+| -------- | ------------ | ---- |
+| ::before | 在元素前插入 |      |
+| ::after  | 在元素后插入 |      |
 
-```html
-<section class="main-right success"></section>
-```
+> 层次选择器
 
-5. main 元素的 h2
+| 选择器      | 别名       | 使用 |
+| ----------- | ---------- | ---- |
+| elem1+elem2 | 相邻的同胞 |      |
+| elem1~elem2 | 通用的同胞 |      |
+
+
+
+#### + 选择器的应用
 
 ```html
-<main>
-  <!-- 仅仅只选中这一个h2 -->
-  <h2>main</h2>
-  <aside>
-    <h2>aside</h2>
-  </aside>
-  <section>
-    <h2>right</h2>
-  </section>
-</main>
-```
-
-```css
-main > h2 {
-  color: red;
-}
-```
-
-6. h2 元素的兄弟 h3
-
-```html
-<main>
-  <h2>main</h2>
-  <!-- 选中 -->
-  <h3>h3-main</h3>
-
-  <aside>
-    <h2>aside</h2>
-  </aside>
-  <section>
-    <h2>right</h2>
-  </section>
-
-  <!-- 选中 -->
-  <h3>h3-main</h3>
-</main>
-```
-
-```css
-main h2 ~ h3 {
-  color: pink;
-}
-```
-
-7. 伪类选择器
-
-可以作用在一般的元素上，不仅仅是 a 标签
-
-```css
-a:link {
-  color: red;
-}
-a:visited {
-  color: pink;
-}
-a:hover {
-  color: blue;
-}
-```
-
-目标元素，应用在锚点链接
-
-```css
-div:target {
-  color: red;
-}
-```
-
-根元素的伪类选择器
-
-```css
-html {
-}
-/* 通过下方的方式也可 通过`:root` 选中html */
-:root {
-}
-```
-
-空元素的伪类选择器
-
-```css
-li:empty {
-  /* li是空元素的话直接不显示 */
-  display: none;
-}
-```
-
-首尾选择器
-
-```css
-aside :first-child {
-  color: red;
-}
-```
-
-```html
-<main>
-  <aside>
-    <h1>选中</h1>
-    <ul>
-      <li>选中</li>
-      <li>选中</li>
+<h3>选择器的应用</h3>
+  <div class="box1">
+    <ul class="list">
+      <li>同胞元素</li>
+      <li class="curr">当前的元素</li>
+      <li>同胞元素</li>
+      <li>同胞元素</li>
+      <li>同胞元素</li>
     </ul>
-  </aside>
-  <h1>h1</h1>
-</main>
+  </div>
+  <div class="box1"></div>
 ```
+
 
 ```css
-aside > :first-child {
-  color: red;
+.box1{
+  display: flex;
+  & + .box1{
+    margin-top: 20px;
+  }
+  .list{
+    border: 1px solid #f66;
+    width: 200px;
+    line-height: 2;
+    font-weight: bold;
+    font-size: 20px;
+    color: #f66;
+    & + .list{
+      margin-left: 20px;
+    }
+    li{
+      padding: 0 10px;
+    }
+    .curr{
+      background-color: aquamarine;
+      & + li{
+        background-color: bisque;
+      }
+    }
+  }
 }
-```
-
-```html
-<main>
-  <aside>
-    <h1>选中</h1>
-    <ul>
-      <li>xx</li>
-      <li>xx</li>
-    </ul>
-  </aside>
-  <h1>h1</h1>
-</main>
-```
-
-```css
-aside h1:first-child {
-  color: red;
-}
-```
-
-```html
-<main>
-  <aside>
-    <h1>选中</h1>
-    <ul>
-      <li>xx</li>
-      <li>xx</li>
-    </ul>
-  </aside>
-  <h1>h1</h1>
-</main>
-```
-
-```html
-<main>
-  <aside>
-    <h2>xx</h2>
-    <h1>xx</h1>
-    <ul>
-      <li>xx</li>
-      <li>xx</li>
-    </ul>
-  </aside>
-  <h1>h1</h1>
-</main>
-```
-
-```css
-aside h1:first-of-type {
-  color: red;
-}
-```
-
-```html
-<main>
-  <aside>
-    <h2>xx</h2>
-    <h1>选中</h1>
-    <ul>
-      <li>xx</li>
-      <li>xx</li>
-    </ul>
-  </aside>
-  <h1>h1</h1>
-</main>
-```
-
-唯一选择器
-
-```css
-aside :only-child {
-  color: red;
-}
-```
-
-```html
-<main>
-  <aside>
-    <h2>xx</h2>
-    <h1>xx</h1>
-    <ul>
-      <li>xx</li>
-      <li>xx</li>
-    </ul>
-    <p>
-      <span>选中</span>
-    </p>
-  </aside>
-  <h1>xx</h1>
-</main>
-```
-
-**选中 aside 中里边的 ul**
-
-```css
-aside ul:only-of-type {
-  color: red;
-}
-```
-
-```html
-<main>
-  <aside>
-    <h2>xx</h2>
-    <h1>xx</h1>
-    <ul>
-      <li>选中</li>
-      <li>选中</li>
-    </ul>
-    <p>
-      <span>xx</span>
-    </p>
-  </aside>
-  <h1>xx</h1>
-</main>
-```
-
-8. 隔一行变色的效果
-   理论上可以
-
-```css
-main > ul li:nth-child(2n-1) {
-  color: red;
-}
-main > ul li:nth-child(odd) {
-  color: red;
-}
-main > ul li:nth-child(even) {
-  color: red;
-}
-```
-
-```html
-<main>
-  <h1></h1>
-  <h2></h2>
-  <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-</main>
-```
-
-9. 表单的样式
-
-```css
-/* 必填 */
-input:required {
-  border: 1px solid red;
-}
-/* 有效 */
-input:valid {
-  background-color: pink;
-}
-/* 无效 */
-input:invalid {
-  background: powderblue;
-}
-```
-
-```html
-<form action="">
-  <input type="text" required />
-</form>
 ```
 
 ## 权重
@@ -430,3 +181,5 @@ overflow: hidden;
 /* 超出 的部分处理 */
 text-overflow: ellipsis;
 ```
+
+## CSS 中的函数计算

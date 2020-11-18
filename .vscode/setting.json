@@ -1,0 +1,28 @@
+{
+    "csscomb.formatOnSave": true, 
+    "csscomb.preset": {
+        "always-semicolon": true, 
+        "block-indent": "\t", 
+        "color-case": "lower", 
+        "color-shorthand": true, 
+        "element-case": "lower", 
+        "leading-zero": false, 
+        "quotes": "double", 
+        "remove-empty-rulesets": true, 
+        "space-between-declarations": "\n", 
+        "space-before-closing-brace": "\n", 
+        "space-after-colon": " ", 
+        "space-before-colon": "", 
+        "space-after-combinator": " ", 
+        "space-before-combinator": " ", 
+        "space-after-opening-brace": "\n", 
+        "space-before-opening-brace": " ", 
+        "space-after-selector-delimiter": "\n", 
+        "space-before-selector-delimiter": "", 
+        "strip-spaces": true, 
+        "tab-size": true, 
+        "unitless-zero": true, 
+        "vendor-prefix-align": false, 
+        "sort-order": [] 
+    }
+}

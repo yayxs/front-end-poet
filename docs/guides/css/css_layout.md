@@ -620,3 +620,53 @@ title: CSS 必须掌握的布局方式
 </html>
 
 ```
+
+## 全屏布局-上中下-中间自适应
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .full{
+      position: relative;
+      width: 500px;
+      height: 500px;
+
+    }
+    header,footer,main{
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    header {
+        top: 0;
+        height: 50px;
+        background-color: #f66;
+    }
+    /* 主要 */
+    main{
+      top: 50px;
+      bottom: 50px;
+      background-color: burlywood;
+    }
+    /* 底部 */
+    footer{
+      bottom: 0;
+      height: 50px;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+  <div class="full">
+    <header></header>
+    <main></main>
+    <footer></footer>
+  </div>
+</body>
+</html>
+```
