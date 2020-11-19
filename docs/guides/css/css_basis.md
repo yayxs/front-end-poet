@@ -41,11 +41,11 @@ css 中的样式空白依赖压缩工具压缩其空白； css 样式表错误�
 <h3>选择器的应用</h3>
   <div class="box1">
     <ul class="list">
-      <li>同胞元素</li>
+      <li>兄弟元素</li>
       <li class="curr">当前的元素</li>
-      <li>同胞元素</li>
-      <li>同胞元素</li>
-      <li>同胞元素</li>
+      <li>兄弟元素</li>
+      <li>兄弟元素</li>
+      <li>兄弟元素</li>
     </ul>
   </div>
   <div class="box1"></div>
@@ -182,4 +182,19 @@ overflow: hidden;
 text-overflow: ellipsis;
 ```
 
-## CSS 中的函数计算
+## 关于CSS中的背景background
+
+```scss
+.box-bg{
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ddd;
+  background-color: cornsilk;
+  background-image: url('https://yayxs.github.io/avatar.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-size: 200px 200px;
+  background-size: contain;
+}
+```
+

@@ -8,7 +8,9 @@
 
 ## JavaScript
 
-1. [谈谈浏览器客户端的数据本地存储方案](https://github.com/yayxs/frontend-thick-talk/issues/4)
+1. [JS中数组去重的十二种方案](https://github.com/yayxs/frontend-thick-talk/issues/7)
+2. [一步步完善一个防抖debounce函数](https://github.com/yayxs/frontend-thick-talk/issues/8)
+3. [谈谈浏览器客户端的数据本地存储方案](https://github.com/yayxs/frontend-thick-talk/issues/4)
 
 ## Webpack
 
