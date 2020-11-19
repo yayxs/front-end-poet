@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渐变</title>
+  <style>
+    .box{
+      width: 200px;
+      height: 50px;
+      /* 线性渐变 */
+      /* to right 指的是方向 */
+      /*  */
+      background-image: linear-gradient(to right,#fff,#ddd);
+    }
+    .box1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background: linear-gradient(135deg,#f66,#f90,#3c9,#09f,#66f) left center/400% 400%;
+      font-weight: bold;
+      font-size: 100px;
+      color: #fff;
+      animation: move 10s infinite;
+    }
+    @keyframes move {
+        0%,100%{
+          background-position-x: left;
+        }
+        50%{
+          background-position-x: right;
+        }
+    }
+    .gradient-text{
+      background-image: linear-gradient(90deg,#f66,#f90);
+      background-clip: text;
+      line-height: 60px;
+      font-size: 60px;
+      color: transparent;
+      animation: aname 5s linear infinite;
+    }
+    @keyframes aname {
+        from{
+          filter: hue-rotate(0);
+        }
+        to{
+          filter: hue-rotate(-1turn);
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box1">text</div>
+  <h1 class="gradient-text">Hello</h1>
+</body>
+</html>

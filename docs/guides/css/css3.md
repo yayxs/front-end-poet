@@ -5,14 +5,8 @@ title: CSS3 有哪些好玩的新特性
 ---
 
 # 前言
-
-`css3` 新增了好玩的特性，大体包括
-
-- 圆角
-- 阴影
-- 渐变
-- 过度
-- 动画
+ 
+`css3` 新增了好玩的特性，大体包括三大交互属性 `变换` `过渡` `动画` 以及`圆角` `阴影` `渐变`等等
 
 # 一、 CSS3 系列之动画 animations
 
@@ -107,3 +101,50 @@ to {
 }
 // 值得注意的是即使是顺序颠倒也是同样的道理 0% 是动画的开始，100% 是动画的完成。 为了得到最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。
 ```
+
+
+# 二、 CSS3 系列之渐变 gradient
+
+渐变指两种或多种颜色在特定区域内平滑过渡的效果,值得注意的是每个渐变函数都必须在background或background-image上使用，
+
+## 线性渐变
+```scss
+  .box{
+      width: 200px;
+      height: 50px;
+      /* 线性渐变 */
+      /* to right 指的是方向 */
+      /*  */
+      background-image: linear-gradient(to right,#fff,#ddd);
+    }
+```
+### 渐变背景
+
+```scss
+  .box1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background: linear-gradient(135deg,#f66,#f90,#3c9,#09f,#66f) left center/400% 400%;
+      font-weight: bold;
+      font-size: 100px;
+      color: #fff;
+      animation: move 10s infinite;
+    }
+    @keyframes move {
+        0%,100%{
+          background-position-x: left;
+        }
+        50%{
+          background-position-x: right;
+        }
+    }
+```
+
+
+
+
+# 三、 CSS3 系列之阴影 
+
+阴影效果有三剑客，分别是box-shadow、text-shadow、drop-shadow()，
