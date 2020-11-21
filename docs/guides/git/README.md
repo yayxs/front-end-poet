@@ -1,20 +1,24 @@
 ---
-title: git 的一些常规操作命令以及习惯
+title: git 的一些常规操作命令以及小规范
 ---
-# Git 的一些常规操作命令以及习惯
+# git 的一些常规操作命令以及小规范
+>[前端厚说] 2020-11-21 更新
 >
->原文仓库 **【reading-writing】 [记录所读所写](https://github.com/yayxs/reading-writing) **
+>文中涉及的代码案例 [frontend-thick-talk……](https://github.com/yayxs/frontend-thick-talk)
 >
->原文链接 :point_right:   [第一时间更新 ](https://github.com/yayxs/reading-writing/issues/12)
-## 背景
+>本文线上阅读地址 [将会在第一时间更新……](https://fett.netlify.app/guides/git/)    [备用地址]()
+>
+>本章节B站视频教程 [前端工程化 | 企业开发中的commit规范（代码提交规范）](https://www.bilibili.com/video/BV13t4y197xA)
+## 企业开发中的commit规范
+### 背景
 
-### 从个人角度来说
+#### 从个人角度来说
 
 首先自己习惯把自己的一些代码案例放在github 上一方面是记录学习，最重要的一点就在在未来的某天看看现在写的代码，在现在去总结过去写的代码，接着自我嘲讽一番。笔者2020年截至11月份已经 提交了 **653**次 :smiley:，早期 `commit` 每次都是乱七八糟，随便贴一条。你是否也有同样的问题？每一次`commit` 都像是回答你女朋友的问题，不知道如何更好的描述自己的这次提交信息
 
 ![](https://user-gold-cdn.xitu.io/2020/6/20/172cfe5b8d0013c6?w=862&h=105&f=png&s=6807)
 
-### 从一个企业开发小组的角度
+#### 从一个企业开发小组的角度
 
 在实际开发场景中，一个成熟的团队是有一种不言而喻的默契。甚至连`commit` 信息都能重复。那么团队协作的规范化更是迫在眉睫
 
@@ -36,20 +40,20 @@ title: git 的一些常规操作命令以及习惯
 ![](https://user-gold-cdn.xitu.io/2020/6/22/172d971af3f7b283?w=255&h=255&f=jpeg&s=7984)
 
 
-## 关键词
+### 关键词
 
 
 >commmit commitizen husky commitlint  cz-conventional-changelog
 >
 > - git commit
-- 规范化提交
-- commitizen 
-- husky
-- commitlint
-- cz-conventional-changelog
-- 前端工程化
+> - 规范化提交
+>- commitizen 
+>- husky
+>- commitlint
+>- cz-conventional-changelog
+>- 前端工程化
 
-## 看一看
+### 优秀的开源项目
 
 我们先来看一看一些优秀的开源项目，他们的`commit` 日志
 
@@ -62,17 +66,18 @@ title: git 的一些常规操作命令以及习惯
 
 好了，够了，那么咱们也许可能没有这样完善的项目架构，但是这种规范还是值得学习的。那么这么才能够规范化我们的代码呢，往下看
 
-## 实操
+### 实操过程
 
-### 第一步
+#### 第一步
 
+我们可以尝试在全局安装一个包 `commitizen`
 ```sh
 npm install -g commitizen
 ```
 
 ![](https://user-gold-cdn.xitu.io/2020/6/21/172d4f413405fd81?w=1539&h=113&f=png&s=21055)
 
-### 第二步
+#### 第二步
 
 - 首先全局安装 `cz-conventional-changelog`
 
@@ -105,7 +110,7 @@ commitizen init cz-conventional-changelog --save --save-exact
 
 ![](https://user-gold-cdn.xitu.io/2020/6/21/172d4f4f3ae56313?w=1070&h=282&f=png&s=98134)
 
-### 第三步
+#### 第三步
 
 项目内安装 `commitlint`
 
@@ -131,7 +136,7 @@ module.exports = { extends: ["@commitlint/config-conventional"] };
 
 
 
-### 第四步
+#### 第四步
 
 项目中安装`husky`
 
@@ -158,7 +163,7 @@ yarn add husky
 
 ![](https://user-gold-cdn.xitu.io/2020/6/21/172d4f588ada0545?w=1079&h=291&f=png&s=79848)
 
-### 总结
+#### 总结
 
 整个提交的流程,大概就是这样的，以下我贴出步骤，至于具体的像以下内容代表的含义，你可以直接，在某搜索引擎，然后，输入上文提到的关键词，应该会有词条告诉你都是啥意思
 
@@ -191,29 +196,7 @@ cz-cli@4.1.2, cz-conventional-changelog@3.2.0
  rewrite flutter_state_provider/README.md (100%)
 ```
 
-## 写在最后
 
-欢迎你，关注微信公众号 《前端厚说》 有几点
-
-- 一：你可能打开 github 有点慢，甚至进不去，这样你可以在`微信公众号上找到我` 
-
-![](https://user-gold-cdn.xitu.io/2020/6/21/172d4ecae27c8d64?w=1500&h=1500&f=jpeg&s=766248)
-
-
-
-- 二：一块学习呗，不止前端
-
-**同时有什么疑问可以添加咱们的《前端互鱼QQ群》** 713593204
-
-![](https://user-gold-cdn.xitu.io/2020/6/21/172d4f373417072c?w=238&h=250&f=png&s=6817)
-
------
-
-End but thank you
-
-
-
-
-## git log --reverse
+## git log --reverse 命令
 
 通过此命令进行倒序展示`log` 信息，排在第一个的就是仓库的第一次 `commit` 信息，这也是git 查看第一次 commit的方式，接着通过 `git checkout xxx` 可以很方便的签出该 commit 的代码。通过此种方式可以更好的 阅读一些 开源的库 或者框架
