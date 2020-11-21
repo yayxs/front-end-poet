@@ -163,7 +163,6 @@ module.exports = {
         children: [
           "/guides/blog_article/first_vue3",
           "/guides/blog_article/cra_admin",
-          "/guides/blog_article/commit",
         ],
       },
     ],
