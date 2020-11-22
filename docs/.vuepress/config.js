@@ -55,6 +55,22 @@ module.exports = {
         ],
       },
       {
+        title: "HTML/HTML5",
+        collapsable: true,
+        children: ["/guides/html/"],
+      },
+      {
+        title: "CSS/CSS3",
+        collapsable: false,
+        children: [
+          "/guides/css/css_basis",
+          "/guides/css/css3",
+          "/guides/css/css_layout",
+          "/guides/css/css_mixin",
+          "/guides/css/css_preprocessor",
+        ],
+      },
+      {
         title: "读书笔记",
         collapsable: false,
         children: [
@@ -73,22 +89,7 @@ module.exports = {
         collapsable: false,
         children: ["/guides/bilibili/typescript", "/guides/bilibili/vue3"],
       },
-      {
-        title: "HTML/HTML5",
-        collapsable: true,
-        children: ["/guides/html/"],
-      },
-      {
-        title: "CSS/CSS3",
-        collapsable: false,
-        children: [
-          "/guides/css/css_basis",
-          "/guides/css/css3",
-          "/guides/css/css_layout",
-          "/guides/css/css_mixin",
-          "/guides/css/css_preprocessor",
-        ],
-      },
+
       {
         title: "JavaScript",
         collapsable: true,
@@ -138,9 +139,13 @@ module.exports = {
         children: ["/guides/mini_pro/"],
       },
       {
-        title: "性能优化",
-        collapsable: true,
-        children: ["/guides/performance_optimization/vue"],
+        title: "Web性能优化",
+        collapsable: false,
+        children: [
+          "/guides/optimization/all",
+          "/guides/optimization/css",
+          "/guides/optimization/vue",
+        ],
       },
       {
         title: "前端工程化",
