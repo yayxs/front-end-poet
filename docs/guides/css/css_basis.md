@@ -6,115 +6,57 @@ title: CSS 的基础知识
 
 css 中的样式空白依赖压缩工具压缩其空白； css 样式表错误不影响正常的 css 渲染（不像 JS 的代码一样）
 
-## 选择器
-
-### 选择器的基本分类
-
-> 基本的选择器
-
-| 选择器 | 别名       | 使用 |
-| ------ | ---------- | ---- |
-| \*     | 通配符     | \*{} |
-| tag    | 标签选择器 | p{}  |
-| .class | 类         | .{}  |
-| #id    | id 选择器  | #{}  |
-
-> 伪元素
-
-| 选择器   | 别名         | 使用 |
-| -------- | ------------ | ---- |
-| ::before | 在元素前插入 |      |
-| ::after  | 在元素后插入 |      |
-
-> 层次选择器
-
-| 选择器      | 别名       | 使用 |
-| ----------- | ---------- | ---- |
-| elem1+elem2 | 相邻的同胞 |      |
-| elem1~elem2 | 通用的同胞 |      |
 
 
+## 非布局的样式
+ - 字体、字重、颜色、大小、行高
+ - 背景、边框
+ - 滚动、换行
+ - 粗体、斜体、下划线
+ - 等等
 
-#### + 选择器的应用
 
-```html
-<h3>选择器的应用</h3>
-  <div class="box1">
-    <ul class="list">
-      <li>兄弟元素</li>
-      <li class="curr">当前的元素</li>
-      <li>兄弟元素</li>
-      <li>兄弟元素</li>
-      <li>兄弟元素</li>
-    </ul>
-  </div>
-  <div class="box1"></div>
-```
+### 字体和字体族
 
+保证字体能够显示，一般情况下不使用中文字体，一个字体找不到接着找来进行渲染，也可以显示自定义的字体（网络字体）
 
 ```css
-.box1{
-  display: flex;
-  & + .box1{
-    margin-top: 20px;
-  }
-  .list{
-    border: 1px solid #f66;
-    width: 200px;
-    line-height: 2;
-    font-weight: bold;
-    font-size: 20px;
-    color: #f66;
-    & + .list{
-      margin-left: 20px;
-    }
-    li{
-      padding: 0 10px;
-    }
-    .curr{
-      background-color: aquamarine;
-      & + li{
-        background-color: bisque;
-      }
-    }
-  }
+body{
+  /* 单个的平台独有  多个平台都有 字体族 */
+  font-family:'aa',"bbb", // 系统找不到就接着往后找,但是字体族是不加引号的
 }
 ```
-
-## 权重
-
-|     选择器     |  权重位  |
-| :------------: | :------: |
-|      行内      |   1000   |
-|       id       |   0100   |
-| 类选择器、属性 |   0010   |
-|      标签      |   0001   |
-|       \*       |   0000   |
-|      继承      | 没有权重 |
-
-通过 `color: powderblue !important;` 提高自己的权重
-
-## 继承
-
-子元素继承自父级的元素，大部分元素在 html 中设置字体 大小 能够继承的属性能有哪些呢？
-
-## 字体
-
-保证字体能够显示，一般情况下不使用中文字体 商业版权
-
+#### 自定义的字体
 ```css
 @font-face {
   /* 自己定义的名字是 my */
-  font-family: "my";
+  font-family: "CUSTOM";
   /* format 是字体的格式化类似于 */
-  src: url("xxx") format("opentype");
+  src: url("./xxx.ttf"); // url 可以是远程的地址
 }
 h3 {
-  font-family: my;
+  font-family: CUSTOM;
 }
-```
 
-### 字体大小
+```
+#### iconfont的原理
+
+原理是：自定义字体
+
+#### 行高
+
+ - 行高的构成
+ - 行高的现象方案
+ - 
+`line-height` 一般情况下是字体的 倍数 随着当前的字体的大小的改变而改变 动态的调整
+#### 字重
+#### 斜体
+#### 下划线
+
+ - text-decoration
+
+#### 指针 cursor
+#### 字体大小
 
 像素 百分比 px 常用的单位
 
@@ -136,53 +78,19 @@ span {
 </main>
 ```
 
-### 行高
 
-`line-height` 一般情况下是字体的 倍数 随着当前的字体的大小的改变而改变 动态的调整
 
-### 颜色
+#### 颜色
 
 用于描述颜色的方式有哪些呢
 
-### 倾斜
+ - rgba
+ - rgb
+ - 单词
+ - hls
+ - hlsa
 
-`font-style: italic;`
-
-**组合定义的时候需要字体样式和 size**
-
-### 大小写转换
-
-- 小型的大写等等
-
-### 下划线
-
-```css
-h3 {
-  text-decoration: underline;
-  text-decoration: overline;
-  text-decoration: line-through;
-  text-decoration: none;
-}
-```
-
-### 文字阴影
-
-```css
-text-shadow: pink 1px 2px 3px;
-```
-
-### 超出显示省略号
-
-```css
-/* 不换行 */
-white-space: nowrap;
-/* 超出隐藏 */
-overflow: hidden;
-/* 超出 的部分处理 */
-text-overflow: ellipsis;
-```
-
-## 关于CSS中的背景background
+### 背景background
 
 ```scss
 .box-bg{
@@ -191,10 +99,45 @@ text-overflow: ellipsis;
   border: 1px solid #ddd;
   background-color: cornsilk;
   background-image: url('https://yayxs.github.io/avatar.jpg');
+  // 平铺的方式
   background-repeat: no-repeat;
-  background-position: center;
+  // 平铺的
+  // background-position: center top;
+  background-position: 20px 30px;
+  背景图的大小
   // background-size: 200px 200px;
   background-size: contain;
 }
 ```
+### 文本换行
 
+ - overflow-wrap(word-warp) 
+ - word-break
+ - white-space 空白处是否断行
+
+### CSS Hack
+
+CSS中，hack是指一种兼容css在不同浏览器中正确显示的技巧方法，因为他们都属于个人对css代码的非官方的修改，或非官方的补丁。有些人更喜欢使用patch（补丁）来描述这种行为。
+
+ 1.因为历史原因，不同的浏览器样式存在差异，可以通过 Normalize.css 抹平差异，也可以定制自己的 reset.css，例如通过通配符选择器，全局重置样式
+```css
+  { margin: 0; padding: 0; }
+```
+ 2.在CSS3还没有成为真正的标准时，浏览器厂商就开始支持这些属性的使用了。CSS3样式语法还存在波动时，浏览器厂商提供了针对浏览器的前缀，直到现在还是有部分的属性需要加上浏览器前缀。在开发过程中我们一般通过IDE开发插件、css 预处理器以及前端自动化构建工程帮我们处理。
+
+浏览器内核与前缀的对应关系如下
+
+| 内核    | 主要代表的浏览器 | 前缀    |
+| ------- | ---------------- | ------- |
+| Trident | IE浏览器         | -ms     |
+| Gecko   | Firefox          | -moz    |
+| Presto  | Opera            | -o      |
+| Webkit  | Chrome和Safari   | -webkit |
+
+ 3.在还原设计稿的时候我们常常会需要用到透明属性，所以解决 IE9 以下浏览器不能使用 opacit。
+
+```
+ opacity: 0.5;
+ filter: alpha(opacity = 50); //IE6-IE8我们习惯使用filter滤镜属性来进行实现
+ filter: progid:DXImageTransform.Microsoft.Alpha(style = 0, opacity = 50); //IE4-IE9都支持滤镜写法progid:DXImageTransform.Microsoft.Alpha(Opacity=xx)
+```

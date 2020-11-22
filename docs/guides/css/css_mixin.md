@@ -17,12 +17,12 @@ title: 企业级项目中的CSS Mixin
 }
 ```
 
-## 文字溢出
+## 文本溢出不换行
 
 
 ```css
 .ellipsis {
-     overflow: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
