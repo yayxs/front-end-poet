@@ -9,3 +9,5 @@ title: 从CSS的角度出发
  - 不使用CSS表达式
 
  - 使用<link>不使用@import
+ - 使用雪碧图
+   - 减少http的请求数
