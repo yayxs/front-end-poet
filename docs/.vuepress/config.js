@@ -56,7 +56,7 @@ module.exports = {
       },
       {
         title: "HTML/HTML5",
-        collapsable: true,
+        collapsable: false,
         children: ["/guides/html/"],
       },
       {
@@ -69,6 +69,11 @@ module.exports = {
           "/guides/css/css_mixin",
           "/guides/css/css_preprocessor",
         ],
+      },
+      {
+        title: "JavaScript",
+        collapsable: false,
+        children: ["/guides/javascript/storage", "/guides/javascript/modular"],
       },
       {
         title: "读书笔记",
@@ -90,11 +95,6 @@ module.exports = {
         children: ["/guides/bilibili/typescript", "/guides/bilibili/vue3"],
       },
 
-      {
-        title: "JavaScript",
-        collapsable: true,
-        children: ["/guides/javascript/storage"],
-      },
       {
         title: "推荐分享",
         collapsable: false,
