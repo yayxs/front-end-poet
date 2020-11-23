@@ -73,14 +73,18 @@ module.exports = {
       {
         title: "JavaScript",
         collapsable: false,
-        children: ["/guides/javascript/storage", "/guides/javascript/modular"],
+        children: [
+          "/guides/javascript/storage",
+          "/guides/javascript/modular",
+          "/guides/javascript/custom_method",
+        ],
       },
       {
         title: "读书笔记",
         collapsable: false,
         children: [
           "/guides/books/css_secret_outline",
-          "/guides/books/css-artistic-beauty/",
+          "/guides/books/js-info/",
           "/guides/books/js_advanced3_1",
           "/guides/books/js_advanced4_outline",
           "/guides/books/You-Dont-Know-JS/outline",

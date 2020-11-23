@@ -1,5 +1,5 @@
 ---
-title: 《JavaScript高级程序设计（第4版）》
+title: 《JavaScript高级程序设计4》
 ---
 
 # 《JavaScript 高级程序设计（第 4 版）》 读书笔记

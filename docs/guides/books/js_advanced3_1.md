@@ -1,5 +1,5 @@
 ---
-title: 《JavaScript高级程序设计（第3版）》
+title: 《JavaScript高级程序设计3》
 ---
 
 # 重读《JavaScript 高级程序设计（第 3 版）》
