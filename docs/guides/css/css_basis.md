@@ -1,5 +1,5 @@
 ---
-title: CSS 的基础知识
+title: CSS你要掌握的知识及技巧
 ---
 
 # CSS 的基础知识
@@ -9,6 +9,7 @@ css 中的样式空白依赖压缩工具压缩其空白； css 样式表错误�
 
 
 ## 非布局的样式
+
  - 字体、字重、颜色、大小、行高
  - 背景、边框
  - 滚动、换行
@@ -140,4 +141,62 @@ CSS中，hack是指一种兼容css在不同浏览器中正确显示的技巧方�
  opacity: 0.5;
  filter: alpha(opacity = 50); //IE6-IE8我们习惯使用filter滤镜属性来进行实现
  filter: progid:DXImageTransform.Microsoft.Alpha(style = 0, opacity = 50); //IE4-IE9都支持滤镜写法progid:DXImageTransform.Microsoft.Alpha(Opacity=xx)
+```
+
+## 布局方式
+
+ - table 布局
+ - float 浮动 + margin的方式
+ - inline-block布局
+ - flexbox布局
+
+### 表格布局
+
+```html
+
+    <style>
+        .left{
+            background:red;
+        }
+        .right{
+            background:blue;
+        }
+        table{
+            width:800px;
+            height:200px;
+            border-collapse: collapse;
+        }
+        .table{
+            margin-top:20px;
+            display: table;
+            width:800px;
+            height:200px;
+        }
+        .table-row{
+            display: table-row;
+        }
+        .table-cell{
+            vertical-align: center;
+            display: table-cell;
+        }
+    </style>
+
+
+    <table>
+        <tr>
+            <td class="left">左</td>
+            <td class="right">右</td>
+        </tr>
+    </table>
+    <div class="table">
+        <div class="table-row">
+            <div class="left table-cell">
+                左
+            </div>
+            <div class="right table-cell">
+                右
+            </div>
+        </div>
+    </div>
+
 ```
