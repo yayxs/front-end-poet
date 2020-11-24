@@ -3,7 +3,7 @@
 
 ## CSS
 
-1. [企业级项目中的CSS Mixin配置](https://github.com/yayxs/frontend-thick-talk/issues/5)
+1. [CSS预处理器与企业级通用Mixin配置](https://github.com/yayxs/frontend-thick-talk/issues/5)
 2. [CSS 建议掌握的布局方式](https://github.com/yayxs/frontend-thick-talk/issues/6)
 
 ## JavaScript

@@ -10,9 +10,11 @@
     "docs:build": "vuepress build docs"
   },
   "keywords": [
-    "JavaScript高级程序设计 4 ",
+    "HTML",
+    "HTML5",
     "css",
     "Css 3",
+    "JavaScript高级程序设计 4 ",
     "webpack",
     "webpack 5"
   ],

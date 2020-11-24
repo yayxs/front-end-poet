@@ -66,7 +66,6 @@ module.exports = {
           "/guides/css/css_basis",
           "/guides/css/css3",
           "/guides/css/css_layout",
-          "/guides/css/css_mixin",
           "/guides/css/css_preprocessor",
         ],
       },
@@ -105,7 +104,8 @@ module.exports = {
         children: [
           "/guides/recommend/book",
           "/guides/recommend/video",
-          "/guides/recommend/other",
+          "/guides/recommend/renting",
+          "/guides/recommend/know",
         ],
       },
       {
@@ -154,7 +154,11 @@ module.exports = {
       {
         title: "前端工程化",
         collapsable: false,
-        children: ["/guides/webpack/webpack_basic", "/guides/git/"],
+        children: [
+          "/guides/engineering/css/",
+          "/guides/engineering/webpack/webpack_basic",
+          "/guides/engineering/git/",
+        ],
       },
       {
         title: "数据结构与算法",
