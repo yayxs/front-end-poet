@@ -1,7 +1,7 @@
 ---
-title: git 的一些常规操作命令以及小规范
+title: Git的一些常规操作命令以及小规范
 ---
-# git 的一些常规操作命令以及小规范
+# git的一些常规操作命令以及小规范
 >[前端厚说] 2020-11-21 更新
 >
 >文中涉及的代码案例 [frontend-thick-talk……](https://github.com/yayxs/frontend-thick-talk)
