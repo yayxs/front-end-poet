@@ -85,7 +85,7 @@ module.exports = {
           "/guides/books/css_secret_outline",
           "/guides/books/js-info/",
           "/guides/books/js_advanced3_1",
-          "/guides/books/js_advanced4_outline",
+          "/guides/books/professional-javascript-4/",
           "/guides/books/You-Dont-Know-JS/outline",
           "/guides/books/webpack_outline",
           "/guides/books/flutter_1",
