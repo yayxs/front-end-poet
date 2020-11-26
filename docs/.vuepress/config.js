@@ -57,7 +57,7 @@ module.exports = {
       {
         title: "HTML/HTML5",
         collapsable: false,
-        children: ["/guides/html/"],
+        children: ["/guides/html/video"],
       },
       {
         title: "CSS/CSS3",
