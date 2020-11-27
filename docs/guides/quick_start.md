@@ -25,6 +25,4 @@ xxxxxxxxxxxxxxxxxxxx
 ## 目前进度
 以下列出来的是目前正在整理的部分
 
-1. `css ` 常用到的布局整理  [直达->](./css/css_layout.md)
-2. 就是`css3` 的整理，但是重心是放在梳理上，css 也是前端的基础必须掌握的，比如 动画 媒体查询等[直达->](./css/css3.md)
-3. `你不知道的javascript` 读后的笔记 [直达->](./books/You-Dont-Know-JS/outline.md)
+1. `css` 相关的部分
