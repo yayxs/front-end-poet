@@ -82,6 +82,7 @@ module.exports = {
         title: "读书笔记",
         collapsable: false,
         children: [
+          "/guides/books/css-world/",
           "/guides/books/css_secret_outline",
           "/guides/books/js-info/",
           "/guides/books/js_advanced3_1",
