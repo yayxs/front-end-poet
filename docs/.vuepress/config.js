@@ -92,7 +92,11 @@ module.exports = {
           "/guides/books/flutter_1",
         ],
       },
-
+      {
+        title: "计算机网络",
+        collapsable: false,
+        children: ["/guides/http/"],
+      },
       {
         title: "自制教程",
         collapsable: false,
