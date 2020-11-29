@@ -10,9 +10,7 @@ title: 性能优化的基本知识
 ![20200407214919](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200407214919.png)
 ### 1. 关键词
 
-- DNS解析（没有）
 - 304缓存 (没有)
-- TCP协议的三次挥手四次握手（没有）
 - HTTP报文（没有）
 - 重绘、回流
 - 同异步编程（没有）
@@ -70,9 +68,7 @@ title: 性能优化的基本知识
 
 ## 三、HTTP 请求
 
-### 1. DNS解析
 
-### 2 .TCP协议的三次握手四次挥手
 
 ### 3 .HTTPS和HTTP
 

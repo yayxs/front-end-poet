@@ -4,6 +4,7 @@
 0. [前端书籍推荐](https://github.com/yayxs/frontend-thick-talk/issues/10)
 1. [CSS世界 张鑫旭](./assets/pdfs/CSS世界-张鑫旭.pdf)
 2. [图灵程序设计丛书 CSS揭秘](./assets/pdfs/[图灵程序设计丛书].CSS揭秘.pdf) 
+3. [图解HTTP](./assets/pdfs/图解HTTP.pdf)
 ## CSS
 
 1. [CSS预处理器与企业级通用Mixin配置](https://github.com/yayxs/frontend-thick-talk/issues/5)
