@@ -74,7 +74,7 @@ module.exports = {
         collapsable: false,
         children: [
           "/guides/javascript/storage",
-          "/guides/javascript/modular",
+          "/guides/javascript/module",
           "/guides/javascript/custom_method",
         ],
       },

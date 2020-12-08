@@ -242,3 +242,190 @@ console.log(info)
     ```
 
   -
+
+
+# [Reading-Thinking]   现代  JavaScript 
+
+## 2020-07-01
+
+- 关于`引擎` 不同的浏览器 
+
+- 手写 `ajax`
+
+- 本地存储的方式有哪些 有什么异同点  
+
+  特点区别
+
+- 什么是`同源策略` 怎么解决跨域问题呢
+
+- 刚起步重点是规范，这是起点
+
+- [https://www.google.com/search?q=mdn%20parseint&ie=utf-8](https://www.google.com/search?q=mdn parseint&ie=utf-8)
+
+- 控制台多行输入代码
+
+- `js` 代码中的错误 有哪些类型  error
+
+  - ```javascript
+    SyntaxError
+    ```
+
+- https://plnkr.co/
+
+- `jsonp` 的原理
+
+---
+
+
+
+- 深浅拷贝  手写 深浅拷贝
+
+- `let` 与  `const` `var`  
+
+- JavaScript 也是有类型的不是吗？
+
+  >动态类型
+
+- 数据类型
+
+  - bigint
+
+- null 和 undefined 区别的点在哪
+
+- ```
+  typeof null` 会返回 `"object"` —— 这是 JavaScript 编程语言的一个错误，实际上它并不是一个 `object
+  ```
+
+- 自增自减
+
+- 字符串的比较算法 
+
+  - sort（）函数是怎样进行排序的
+  - **Unicode 编码顺序**
+
+## 2020-07-02
+
+- 逻辑或 是怎么运算的
+
+  > 一个或 `"||"` 运算的链，将返回第一个真值，如果不存在真值，就返回该链的最后一个值。
+
+- ?? 运算符
+
+- 局部变量
+
+- 全局变量
+
+- Js 的默认参数可以是一个函数的调用
+
+- 创建函数的方式
+
+  - 函数声明
+  - 函数表达式
+
+- 回调函数
+
+- 什么是函数的声明提前
+
+>首先 函数有两种形式  目前来看的话 1是 函数声明 2 表达式 不同的是 
+>
+>- 初始化在全局寻找 函数的声明 ，完事之后执行代码 那这样 
+>- 不过函数声明会有一个`块级作用域`
+
+- 创建 对象的 方式有？
+
+  - 构造函数 
+  - 字面量
+
+- 属性名（key）必须是字符串
+
+  >let obj = {
+  >
+  >0:'hah'
+  >
+  >}
+  >
+  >console.log(obj[0])
+  >
+  >console.log(obj['0']===obj[0]) // true
+
+  >let obj = {}
+  >
+  >obj.__proto__ = 5
+  >
+  >console.log(typeof obj['__proto__']) object
+
+- **属性存在性**
+
+  >let obj = {}
+  >	>
+  >	>console.log('name' in obj) // 使用`in`
+
+- 取`key`
+
+  >let obj = {
+  >
+  >0:'yayxs',
+  >
+  >'name':'name',
+  >
+  >age:18
+  >
+  >}
+  >
+  >for(let key in obj){
+  >
+  >console.log(key)
+  >
+  >}
+
+- 一个被 `const` 修饰的对象是 **可以** 被修改。
+
+>
+>
+>const info = {
+>
+>username:'yayxs',
+>
+>age:20
+>
+>}
+>
+>info['age'] = 18 ;
+>
+>console.log(info)
+
+- 深拷贝 和 浅拷贝
+
+>const info = {
+>
+>username:'yayxs',
+>
+>age:20,
+>
+>sex:'nan'
+>
+>}
+>
+>
+>
+>let clone = {}
+>
+>for(let prop in info){
+>
+>clone[prop] = info[prop]
+>
+>}
+>
+>console.log(clone)
+>
+>delete clone.sex
+>
+>console.log(clone)
+>
+>console.log(info)
+
+什么是 深拷贝 ：如果一个对象的 属性值 它还是个对象 那把它拷贝一遍 就是深拷贝了
+
+- 谈一谈垃圾回收机制
+  - mark-and-sweep 算法
+  - 
