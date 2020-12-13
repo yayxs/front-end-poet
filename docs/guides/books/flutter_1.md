@@ -1,5 +1,5 @@
 ---
-title: 《Flutter 实战》
+title: 《Flutter实战》
 ---
 
 # 《Flutter 实战》- 作者 wendux

@@ -5,7 +5,8 @@
 1. [CSS世界 张鑫旭](./assets/pdfs/CSS世界-张鑫旭.pdf)
 2. [图灵程序设计丛书 CSS揭秘](./assets/pdfs/[图灵程序设计丛书].CSS揭秘.pdf) 
 3. [图解HTTP](./assets/pdfs/图解HTTP.pdf)
-4. [JavaScript设计模式与开发实践](./assets/pdfs/JavaScript设计模式与开发实践.pdf)
+4. [HTTP权威指南](./assets/pdfs/HTTP权威指南.pdf)
+5. [JavaScript设计模式与开发实践](./assets/pdfs/JavaScript设计模式与开发实践.pdf)
 ## CSS
 
 1. [CSS预处理器与企业级通用Mixin配置](https://github.com/yayxs/frontend-thick-talk/issues/5)

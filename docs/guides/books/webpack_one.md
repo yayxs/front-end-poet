@@ -1,5 +1,5 @@
 ---
-title: 《深入浅出 Webpack》入门基本配置
+title: 《深入浅出Webpack》入门基本配置
 ---
 
 ::: tip
