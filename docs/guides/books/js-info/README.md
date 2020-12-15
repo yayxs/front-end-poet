@@ -85,7 +85,7 @@ title: 《现代JavaScript教程》
 - **属性存在性**
 
       let obj = {}
-
+    
       console.log('name' in obj) // 使用`in`
 
 - 取`key`
@@ -428,4 +428,19 @@ console.log(info)
 
 - 谈一谈垃圾回收机制
   - mark-and-sweep 算法
-  - 
+
+## 正则表达式
+
+> 包含模式可选的修饰符 **regexp**  **reg** 
+
+- i 大小写不区分
+- g 查找全部
+- m 多行模式
+- u unicode支持
+- 粘滞模式
+
+- `\d` 任何一个数字 0-9的字符
+- `\s` 空格 \t  \n \v \f \r
+- `\w` 下划线
+- `.` 任何字符
+- `\` 转义

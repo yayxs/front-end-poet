@@ -6,21 +6,20 @@ title: 《图解HTTP》
 
 http:`hyperText Transfer Protocol ` 超文本传输协议
 
-## URL与URI的区别
 
-- `url`统一资源定位符 指定文档所在地址的URL **网页地址**
-- `uri` 统一资源标识符
-- url是uri的子集
 
 ```
-http://localhost:8080/guides/http/#ip%E5%8D%8F%E8%AE%AE%E4%B8%8Eip%E5%9C%B0%E5%9D%80
+
 ```
 
 - http:// 协议类型
 
 ## HTTP的版本
 
-
+- http 0.9
+- http 1.0
+- http 1.1
+- http2.0
 
 ## 什么是TCP/IP协议族
 
@@ -61,25 +60,5 @@ dns解析：
 
 ## 输入URL
 
-1. 网址通过`dns` 解析到ip地址 
-2. http请求报文
-3. tcp分割为报文段
-4. ip搜索对方地址 传送
 
-## 请求报文
-
-## http方法
-
-在http/1.0和http/1.1支持的方法不同
-
-- GET
-- POST 传输实体主体
-- PUT 传输文件
-- HEAD 获得报文首部
-  - 和GET差不多不返回报文的主体内容
-- DELETE 删除文件 和PUT 相反
-- OPTIONS 询问支持的方法
-  - 用来查询针对请求URI指定资源支持的方法
-- TRACE 容易引发跨站追踪
-- CONNECT 要求用隧道协议连接代理
 
