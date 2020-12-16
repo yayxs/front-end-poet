@@ -85,7 +85,7 @@ title: 《现代JavaScript教程》
 - **属性存在性**
 
       let obj = {}
-    
+        
       console.log('name' in obj) // 使用`in`
 
 - 取`key`
@@ -444,3 +444,21 @@ console.log(info)
 - `\w` 下划线
 - `.` 任何字符
 - `\` 转义
+
+## 事件循环
+
+## 宏任务微任务
+
+
+
+```js
+  setTimeout(() => {
+        console.log(`延时执行setTimeout`); // 3
+      });
+
+      Promise.resolve().then(() => {
+        console.log(`Promise then 执行`); // 2
+      });
+      console.log(`正常js进程`); // 1
+```
+

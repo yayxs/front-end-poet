@@ -1,5 +1,5 @@
 ---
-title: leetcode刷题启动仪式
+title: leetcode刷题方式
 ---
 
 > 歌曲推荐：《MOM-蜡笔小心-网易云》
@@ -51,3 +51,7 @@ title: leetcode刷题启动仪式
 `vscode` 插件结合官网
 
 ![An image](./index.png)
+
+## LeetCode
+
+[https://leetcode-cn.com/progress/](https://leetcode-cn.com/progress/)
