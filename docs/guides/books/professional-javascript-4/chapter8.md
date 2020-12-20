@@ -59,29 +59,6 @@ Object.assign(targetO, source2, source3, source4);
 console.log(targetO);
 ```
 
-## 理解原型、原型链
-
-首先创建一个函数
-
-```js
-function Person() {}
-```
-
-当前的`Person` 这个函数也是一个对象,对象就有属性，恰好有一个属性是 `prototype`
-
-```js
-let hanshudeprototypeshuxing = Person.prototype;
-
-// hanshudeprototypeshuxing 是一个对象 （typeof hanshudeshuxing ==='object'）
-// 这个玩意是原型对象
-```
-
-首先引出一个名词**原型对象**，这个对象也有一个属性 `constructor`
-
-```js
-hanshudeprototypeshuxing.constructor;
-```
-
 ## 相关考点
 
 - 对象的深浅拷贝

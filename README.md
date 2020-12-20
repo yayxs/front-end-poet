@@ -26,6 +26,7 @@
 2. [一步步完善一个防抖 debounce 函数](https://github.com/yayxs/frontend-thick-talk/issues/8)
 3. [谈谈浏览器客户端的数据本地存储方案](https://github.com/yayxs/frontend-thick-talk/issues/4)
 4. [作用域与作用域链的理解](https://github.com/yayxs/frontend-thick-talk/issues/13)
+5. [原型与原型链](https://github.com/yayxs/frontend-thick-talk/issues/15)
 
 ## Vue
 
