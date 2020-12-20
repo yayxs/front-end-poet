@@ -19,6 +19,7 @@
     "webpack 5"
   ],
   "devDependencies": {
+    "@babel/core": "^7.12.10",
     "@vuepress/plugin-back-to-top": "^1.6.0",
     "vuepress": "^1.5.4",
     "vuepress-plugin-comment": "^0.7.3"
