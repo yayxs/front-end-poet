@@ -22,11 +22,12 @@
 
 ## JavaScript
 
-1. [JS 中数组去重的十二种方案](https://github.com/yayxs/frontend-thick-talk/issues/7)
-2. [一步步完善一个防抖 debounce 函数](https://github.com/yayxs/frontend-thick-talk/issues/8)
-3. [谈谈浏览器客户端的数据本地存储方案](https://github.com/yayxs/frontend-thick-talk/issues/4)
-4. [作用域与作用域链的理解](https://github.com/yayxs/frontend-thick-talk/issues/13)
-5. [原型与原型链](https://github.com/yayxs/frontend-thick-talk/issues/15)
+1. [前端工程师 JavaScript 功底自测清单](https://github.com/yayxs/frontend-thick-talk/issues/16)
+2. [JS 中数组去重的十二种方案](https://github.com/yayxs/frontend-thick-talk/issues/7)
+3. [一步步完善一个防抖 debounce 函数](https://github.com/yayxs/frontend-thick-talk/issues/8)
+4. [谈谈浏览器客户端的数据本地存储方案](https://github.com/yayxs/frontend-thick-talk/issues/4)
+5. [作用域与作用域链的理解](https://github.com/yayxs/frontend-thick-talk/issues/13)
+6. [原型与原型链](https://github.com/yayxs/frontend-thick-talk/issues/15)
 
 ## Vue
 
