@@ -10,7 +10,7 @@
 6. [JavaScript 设计模式与开发实践](./assets/pdfs/JavaScript设计模式与开发实践.pdf)
 7. [你不知道的 JavaScript 上卷](../assets/../frontend-thick-talk/assets/pdfs/你不知道的JavaScript%20上卷.pdf)
 8. [JavaScript 正则表达式迷你书（1.1 版）](./assets/pdfs/JavaScript正则表达式迷你书（1.1版）.pdf)
-
+9. [学习JavaScript数据结构与算法（第3版）](./assets/pdfs/学习JavaScript数据结构与算法（第3版）.pdf)
 ## Book Notes
 
 1. [你不知道的 JavaScript](https://github.com/yayxs/frontend-thick-talk/issues/14)
