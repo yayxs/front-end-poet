@@ -192,3 +192,5 @@ Promise.resolve().then(() => {
 });
 console.log(`正常js进程`); // 1
 ```
+
+## `DOM`和`BOM`
