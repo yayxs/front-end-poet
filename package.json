@@ -1,6 +1,6 @@
 {
   "name": "frontend-thick-talk",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Use vuepress to build a blog",
   "repository": "https://github.com/yayxs/frontend-thick-talk",
   "author": "yayxs <leaderywl@163.com>",
@@ -16,7 +16,8 @@
     "Css 3",
     "JavaScript高级程序设计 4 ",
     "webpack",
-    "webpack 5"
+    "webpack 5",
+    "计算机网络"
   ],
   "devDependencies": {
     "@babel/core": "^7.12.10",
