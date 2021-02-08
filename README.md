@@ -34,6 +34,7 @@
 ## webpack
 
 - [从 0 学习 webpack](https://github.com/yayxs/webpack-learn)
+- [深入浅出 webpack 读书笔记](https://github.com/yayxs/webpack-learn/blob/main/book.md)
 
 ## Vue
 

@@ -87,7 +87,6 @@ module.exports = {
           "/guides/books/js-info/",
           "/guides/books/professional-javascript-4/",
           "/guides/books/You-Dont-Know-JS/",
-          "/guides/books/webpack_outline",
           "/guides/books/flutter_1",
           "/guides/books/http/",
         ],
@@ -159,11 +158,7 @@ module.exports = {
       {
         title: "前端工程化",
         collapsable: false,
-        children: [
-          "/guides/engineering/css/",
-          "/guides/engineering/webpack/webpack_basic",
-          "/guides/engineering/git/",
-        ],
+        children: ["/guides/engineering/css/", "/guides/engineering/git/"],
       },
       {
         title: "数据结构与算法",
@@ -178,11 +173,7 @@ module.exports = {
       {
         title: "其他工具",
         collapsable: false,
-        children: [
-          "/guides/blog_article/fiddler",
-          "/guides/blog_article/first_vue3",
-          "/guides/blog_article/cra_admin",
-        ],
+        children: ["/guides/blog_article/cra_admin"],
       },
     ],
   },
