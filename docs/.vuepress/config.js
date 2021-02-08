@@ -92,11 +92,6 @@ module.exports = {
         ],
       },
       {
-        title: "计算机网络",
-        collapsable: false,
-        children: [],
-      },
-      {
         title: "自制教程",
         collapsable: false,
         children: ["/guides/bilibili/typescript", "/guides/bilibili/vue3"],
