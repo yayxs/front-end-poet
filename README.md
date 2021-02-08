@@ -40,6 +40,10 @@
 
 1. [读 Vue3 的 Composition API RFC 笔记](https://github.com/yayxs/frontend-thick-talk/issues/11)
 
+## 计算机网络
+
+- [从 0 学习计算机网络协议 HTTP TCP IP](https://github.com/yayxs/computer-network-learn)
+
 ## 设计模式
 
 1. [JavaScript 设计模式](https://github.com/yayxs/frontend-thick-talk/issues/12)
