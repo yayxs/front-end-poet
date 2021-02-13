@@ -156,16 +156,6 @@ module.exports = {
         children: ["/guides/engineering/css/", "/guides/engineering/git/"],
       },
       {
-        title: "数据结构与算法",
-        collapsable: true,
-        children: ["/guides/dataStructuresAndAlgorithms/one"],
-      },
-      {
-        title: "LeetCode",
-        collapsable: false,
-        children: ["/guides/leetcode/"],
-      },
-      {
         title: "其他工具",
         collapsable: false,
         children: ["/guides/blog_article/cra_admin"],
