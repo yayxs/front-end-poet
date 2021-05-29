@@ -1,13 +1,9 @@
 {
-    "vetur.format.defaultFormatter.html": "js-beautify-html",
-    //============= Editor ======================
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "editor.formatOnSave": true,
-    // Enable per-language
-    "[javascript]": {
-      "editor.formatOnSave": true
-    }
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
   }
-  
+}
