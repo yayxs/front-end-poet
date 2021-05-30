@@ -1,14 +1,9 @@
 {
   "name": "frontend-thick-talk",
-  "version": "1.8.1",
-  "description": "Use vuepress to build a blog",
-  "repository": "https://github.com/yayxs/frontend-thick-talk",
+  "version": "2.0.0",
+  "repository": "https://github.com/yayxs/advanced-road.git",
   "author": "yayxs <leaderywl@163.com>",
   "license": "MIT",
-  "scripts": {
-    "docs:dev": "vuepress dev docs ",
-    "docs:build": "vuepress build docs"
-  },
   "keywords": [
     "HTML",
     "HTML5",
@@ -20,13 +15,17 @@
     "计算机网络"
   ],
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@vuepress/plugin-back-to-top": "^1.6.0",
-    "vuepress": "^1.5.4",
-    "vuepress-plugin-comment": "^0.7.3"
+    "cz-conventional-changelog": "^3.3.0",
+    "vitepress": "^0.14.0"
   },
-  "dependencies": {
-    "@vuepress/plugin-nprogress": "^1.7.1",
-    "valine": "^1.4.14"
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
