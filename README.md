@@ -15,3 +15,7 @@
 7. [图解 TCP/IP（第 5 版）](./assets/pdfs/图解TCPIP.pdf)
 8. [图解 HTTP](./assets/pdfs/图解HTTP.pdf)
 9. [HTTP 权威指南](./assets/pdfs/HTTP权威指南.pdf)
+
+## 部署
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee8782c7-41e1-4ae6-869b-2eece8c8ce23/deploy-status)](https://app.netlify.com/sites/fett/deploys)
