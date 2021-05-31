@@ -1,1 +1,0 @@
-const hello = (): string => `hello TS`
