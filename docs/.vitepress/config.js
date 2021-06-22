@@ -22,12 +22,14 @@ module.exports = {
 function getGuideSidebar() {
   return [
     {
-      text: '介绍',
-      children: [{ text: 'Repo Introduction', link: '/' }],
-    },
-    {
-      text: '书籍分享',
-      children: [{ text: 'book-share', link: '/guide/book' }],
+      text: 'Class类',
+      children: [
+        { text: '类的基本语法', link: '/guide/class-base' },
+        {
+          text: '类的继承',
+          link: '/guide/class-inherit',
+        },
+      ],
     },
   ]
 }

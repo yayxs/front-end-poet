@@ -27,5 +27,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "serve-index": "^1.9.1"
   }
 }
