@@ -2,11 +2,6 @@
 title: JavaScript API
 ---
 
-## keywords
-
-- atomics
-- sharedArrayBuffer
-
 ## 实现跨源通信
 
 跨文档的通信（不同的线程或者直接是不同源的页面）
@@ -15,12 +10,10 @@ title: JavaScript API
 
 window.postMessage() 方法可以安全地实现跨源通信。
 
-- 参数一消息  message 将要发送到其他 window 的数据
-- 参数二  targetOrigin 通过窗口的`origin` 属性来指定哪些窗口能接收到消息事件
-  - 或者直接传 * 不推荐
+- 参数一消息 message 将要发送到其他 window 的数据
+- 参数二 targetOrigin 通过窗口的`origin` 属性来指定哪些窗口能接收到消息事件
+  - 或者直接传 \* 不推荐
 - transfer 是一串和 message 同时传递的 Transferable 对象. 这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。
-
-
 
 > otherWindow.postMessage(message, targetOrigin, [transfer]);
 
@@ -55,7 +48,7 @@ window.postMessage() 方法可以安全地实现跨源通信。
       }
       window.addEventListener(
         "message",
-        function(event) {
+        function (event) {
           console.log(event, event.data);
         },
         false
@@ -68,8 +61,6 @@ window.postMessage() 方法可以安全地实现跨源通信。
 #### 子页面
 
 ```html
-
-
 // child.html
 <!DOCTYPE html>
 <html lang="en">

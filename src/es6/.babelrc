@@ -1,9 +1,0 @@
-{
-  // 转码规则
-  "presets": [
-    "@babel/env", // 最新的转码规则
-    "@babel/preset-react" // react的转码规则
-  ],
-  // 插件
-  "plugins": []
-}

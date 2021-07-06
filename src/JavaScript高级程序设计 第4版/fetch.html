@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const URL = `https://jsonplaceholder.typicode.com/todos/1`;
+      const r = fetch(URL);
+      console.log(r); // Promise {<pending>}
+      r.then((response) => {
+        console.log(response);
+      });
+    </script>
+  </body>
+</html>

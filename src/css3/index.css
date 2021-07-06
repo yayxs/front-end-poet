@@ -1,7 +1,0 @@
-@import url(mini.css) only screen and (max-width: 768px);
-
-@import url(small.css) only screen and (min-width: 768px);
-
-@import url(medium.css) only screen and (min-width: 960px);
-
-@import url(default.css) only screen and (min-width: 1200px);
