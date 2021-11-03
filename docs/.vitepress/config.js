@@ -4,7 +4,7 @@ module.exports = {
 
   themeConfig: {
     nav: [
-      { text: '指南', link: '/', activeMatch: '^/$|^/guide/' },
+      { text: '数据结构', link: '/', activeMatch: '^/$|^/guide/' },
 
       {
         text: 'Repo',
