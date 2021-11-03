@@ -1,10 +1,17 @@
 {
   "name": "frontend-thick-talk",
-  "version": "2.0.0",
+  "version": "0.0.3",
+  "description": "前端厚说--官方仓库",
   "repository": "https://github.com/yayxs/advanced-road.git",
-  "author": "yayxs <leaderywl@163.com>",
+  "author": "Name:'yayxs' or 'vast' All can / B站:洋小洋同学 / 掘金:洋小洋同学",
   "license": "MIT",
   "keywords": [
+    "JavaScript",
+    "Data Structures and Algorithms",
+    "javascript-algorithms",
+    "algo",
+    "数据结构与算法",
+    "算法与数据结构",
     "HTML",
     "HTML5",
     "css",
@@ -16,8 +23,9 @@
   ],
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
-    "nodemon": "^2.0.9",
-    "vitepress": "^0.14.0"
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1",
+    "vitepress": "^0.14.1"
   },
   "scripts": {
     "dev": "nodemon ./app.js",
@@ -31,7 +39,7 @@
     }
   },
   "dependencies": {
-    "@koa/router": "^10.0.0",
+    "@koa/router": "^10.1.1",
     "koa": "^2.13.1"
   }
 }
