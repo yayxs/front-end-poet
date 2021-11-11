@@ -8,6 +8,27 @@
 
 > 前端厚说 Take the front end to the next level
 
+## 前言
+
+- [项目缘起](https://github.com/yayxs/frontend-thick-talk/issues/26)
+
+## 书籍推荐
+
+1. [前端书籍推荐](https://github.com/yayxs/frontend-thick-talk/issues/10)
+2. [CSS 世界 张鑫旭]()
+3. [图灵程序设计丛书 CSS 揭秘]()
+4. [图解 HTTP]()
+5. [HTTP 权威指南]()
+6. [JavaScript 设计模式与开发实践]()
+7. [你不知道的 JavaScript 上卷]()
+8. [JavaScript 正则表达式迷你书（1.1 版）]()
+9. [学习 JavaScript 数据结构与算法（第 3 版）]()
+10. [图解 TCP/IP（第 5 版）]()
+
+## 数据结构专题
+
+- [数据结构字符串篇](https://github.com/yayxs/frontend-thick-talk/issues/25) keywords javascript js string 字符串
+
 ## 《剑指 offer》 专题
 
 ### 字符串
@@ -49,11 +70,44 @@
 
 ## JavaScript 编程语言专题
 
+- [你不知道的 JavaScript](https://github.com/yayxs/frontend-thick-talk/issues/14)
+- [前端工程师 JavaScript 功底自测清单](https://github.com/yayxs/frontend-thick-talk/issues/16)
+- [JS 中数组去重的十二种方案](https://github.com/yayxs/frontend-thick-talk/issues/7)
+- [一步步完善一个防抖 debounce 函数](https://github.com/yayxs/frontend-thick-talk/issues/8)
+- [谈谈浏览器客户端的数据本地存储方案](https://github.com/yayxs/frontend-thick-talk/issues/4)
+- [作用域与作用域链的理解](https://github.com/yayxs/frontend-thick-talk/issues/13) -[原型与原型链](https://github.com/yayxs/frontend-thick-talk/issues/15)
+
 ### JavaScript 基础知识
 
-#### 运算符
-
 - [javascript js 运算符 操作符](./src/operators/readme.md)
+
+## 浏览器专题
+
+## CSS 专题
+
+1. [CSS 预处理器与企业级通用 Mixin 配置](https://github.com/yayxs/frontend-thick-talk/issues/5)
+2. [CSS 建议掌握的布局方式](https://github.com/yayxs/frontend-thick-talk/issues/6)
+
+## webpack 专题
+
+- [从 0 学习 webpack](https://github.com/yayxs/webpack-learn)
+- [深入浅出 webpack 读书笔记](https://github.com/yayxs/webpack-learn/blob/main/book.md)
+
+## Vue 专题
+
+1. [读 Vue3 的 Composition API RFC 笔记](https://github.com/yayxs/frontend-thick-talk/issues/11)
+
+## 计算机网络专题
+
+- [从 0 学习计算机网络协议 HTTP TCP IP](https://github.com/yayxs/computer-network-learn)
+
+## 前端安全专题
+
+- [CORS CSRF XSS JSONP](https://github.com/yayxs/frontend-thick-talk/issues/21)
+
+## 设计模式专题
+
+1. [JavaScript 设计模式](https://github.com/yayxs/frontend-thick-talk/issues/12)
 
 ## Install
 
