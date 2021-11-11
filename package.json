@@ -1,9 +1,9 @@
 {
   "name": "frontend-thick-talk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "前端厚说--官方仓库",
   "repository": "https://github.com/yayxs/advanced-road.git",
-  "author": "Name:'yayxs' or 'vast' All can / B站:洋小洋同学 / 掘金:洋小洋同学",
+  "author": "全网关键字搜索：前端厚说 | 洋小洋同学 | vast | yayxs ; GitHub@yaxys | 掘金@洋小洋同学 | 知乎@vast | B站@洋小洋同学",
   "license": "MIT",
   "keywords": [
     "JavaScript",
@@ -24,22 +24,11 @@
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
     "nodemon": "^2.0.12",
-    "prettier": "^2.4.1",
-    "vitepress": "^0.14.1"
-  },
-  "scripts": {
-    "dev": "nodemon ./app.js",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "prettier": "^2.4.1"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@koa/router": "^10.1.1",
-    "koa": "^2.13.1"
   }
 }
