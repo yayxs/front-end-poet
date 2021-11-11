@@ -120,6 +120,7 @@
 ## React 专题
 
 - <a href="https://github.com/yayxs/frontend-thick-talk/issues/28" target="_blank">React admin 后台管理的一些学习</a>
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/32" target="_blank">React 仿网易云</a>
 
 ## 计算机网络专题
 
