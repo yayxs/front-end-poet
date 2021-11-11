@@ -145,9 +145,15 @@ pnpm install # Please see tips one
 
 ## Author
 
-👤 **全网任何搜索引擎关键字搜索：前端厚说 | 洋小洋同学 | vast | yayxs ; GitHub@yaxys | 掘金@洋小洋同学 | 知乎@vast | B 站@洋小洋同学**
+👤 **全网任何搜索引擎关键字搜索：前端厚说 | 洋小洋同学 | vast | yayxs** Any keyword can find me
 
-- Github: [@yayxs](https://github.com/yayxs)
+GitHub@yaxys | 掘金@洋小洋同学 | 知乎@vast | B 站@洋小洋同学
+
+- 代码: [GitHub@yayxs](https://github.com/yayxs)
+- 博文: [掘金社区@洋小洋同学](https://juejin.cn/user/3491704661872910/posts)
+- 导图: [语雀@前端厚说-洋小洋同学-VAST](https://www.yuque.com/yayxs?tab=books)
+- 问答: [知乎@vast](https://www.zhihu.com/people/gao-zi-yuan-de-cheng-xu-yuan)
+- 视频：[B 站@洋小洋同学](https://space.bilibili.com/310726273)
 
 ## Show your support
 
@@ -155,5 +161,5 @@ Give a ⭐️ if this project helped you! Please.
 
 ## Tips
 
-- NodePackageManagement tool for this project : **[pnpm](https://github.com/pnpm/pnpm)**
+- NodePackageManagement tool for this project : **[pnpm](https://github.com/pnpm/pnpm)** It's so fast
 - Continuously updating
