@@ -10,30 +10,41 @@
 
 ## 前言
 
-- [项目缘起](https://github.com/yayxs/frontend-thick-talk/issues/26)
+> 作者想起什么随便说点
+
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/26" target="_blank">先来看看作者简单谈谈这个项目</a>
 
 ## 书籍推荐
 
-1. [前端书籍推荐](https://github.com/yayxs/frontend-thick-talk/issues/10)
-2. [CSS 世界 张鑫旭]()
-3. [图灵程序设计丛书 CSS 揭秘]()
-4. [图解 HTTP]()
-5. [HTTP 权威指南]()
-6. [JavaScript 设计模式与开发实践]()
-7. [你不知道的 JavaScript 上卷]()
-8. [JavaScript 正则表达式迷你书（1.1 版）]()
-9. [学习 JavaScript 数据结构与算法（第 3 版）]()
-10. [图解 TCP/IP（第 5 版）]()
+> 基本功提升，读书有必要，前端推荐基本不错的书籍
+
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/10" target="_blank">身为一个前端，这几本书错不了 读吧</a>
+- <a href="/" target="_blank">CSS 世界 张鑫旭</a>
+- <a href="/" target="_blank">图灵程序设计丛书 CSS 揭秘</a>
+- <a href="/" target="_blank">图解 HTTP</a>
+- <a href="/" target="_blank">HTTP 权威指南</a>
+- <a href="/" target="_blank">JavaScript 设计模式与开发实践</a>
+- <a href="/" target="_blank">你不知道的 JavaScript 上卷</a>
+- <a href="/" target="_blank">JavaScript 正则表达式迷你书（1.1 版）</a>
+- <a href="/" target="_blank">学习 JavaScript 数据结构与算法（第 3 版）</a>
+- <a href="/" target="_blank">JavaScript 正则表达式迷你书（1.1 版</a>
+- <a href="/" target="_blank">图解 TCP/IP（第 5 版）</a>
 
 ## 数据结构专题
+
+> 前端萌新粗浅的谈谈数据结构，此专题只说数据结构
 
 - [数据结构字符串篇](https://github.com/yayxs/frontend-thick-talk/issues/25) keywords javascript js string 字符串
 
 ## 《剑指 offer》 专题
 
+> 剑指 offer 这本书 力扣也有题库 分数据结构刷题
+
 ### 字符串
 
 ## leetcode/力扣 专题
+
+> 刷力扣 按题号
 
 |  #  |          中文题目          |         English title          | 数据结构/data-structures |      考察点       | 题解 | JavaScript-code | 问题类型 |
 | :-: | :------------------------: | :----------------------------: | :----------------------: | :---------------: | :--: | :-------------: | :------: |
@@ -70,6 +81,8 @@
 
 ## JavaScript 编程语言专题
 
+> 此专题只谈 JS
+
 - [你不知道的 JavaScript](https://github.com/yayxs/frontend-thick-talk/issues/14)
 - [前端工程师 JavaScript 功底自测清单](https://github.com/yayxs/frontend-thick-talk/issues/16)
 - [JS 中数组去重的十二种方案](https://github.com/yayxs/frontend-thick-talk/issues/7)
@@ -97,6 +110,8 @@
 
 1. [读 Vue3 的 Composition API RFC 笔记](https://github.com/yayxs/frontend-thick-talk/issues/11)
 
+## React 专题
+
 ## 计算机网络专题
 
 - [从 0 学习计算机网络协议 HTTP TCP IP](https://github.com/yayxs/computer-network-learn)
@@ -104,6 +119,10 @@
 ## 前端安全专题
 
 - [CORS CSRF XSS JSONP](https://github.com/yayxs/frontend-thick-talk/issues/21)
+
+## 前端工程化专题
+
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/9" target="_blank">git 的一些常规操作命令以及小规范</a>
 
 ## 设计模式专题
 
@@ -117,13 +136,13 @@ pnpm install # Please see tips one
 
 ## Author
 
-👤 **Name:'yayxs' or 'vast' All can / B 站:洋小洋同学 / 掘金:洋小洋同学**
+👤 **全网任何搜索引擎关键字搜索：前端厚说 | 洋小洋同学 | vast | yayxs ; GitHub@yaxys | 掘金@洋小洋同学 | 知乎@vast | B 站@洋小洋同学**
 
-- Github: [@vast yayxs](https://github.com/yayxs yayxs)
+- Github: [@yayxs](https://github.com/yayxs)
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if this project helped you! Please.
 
 ## Tips
 
