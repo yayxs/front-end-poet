@@ -10,15 +10,21 @@
 
 ## 前言
 
-> 作者想起什么随便说点
+> 作者想起什么随便说点，可听可不听
 
-- <a href="https://github.com/yayxs/frontend-thick-talk/issues/26" target="_blank">先来看看作者简单谈谈这个项目</a>
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/26" target="_blank">作者简单谈谈此项目的缘起</a>
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/26" target="_blank">作者收藏的一些小网站</a>
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/26" target="_blank">作者大城市租房的一些心得</a>
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/19" target="_blank">作者 2020 年年度总结</a>
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/20" target="_blank">作者 2019 年年度总结</a>
 
 ## 书籍推荐
 
 > 基本功提升，读书有必要，前端推荐基本不错的书籍
 
 - <a href="https://github.com/yayxs/frontend-thick-talk/issues/10" target="_blank">身为一个前端，这几本书错不了 读吧</a>
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/24" target="_blank">学习数据结构算法，这几本书不赖</a>
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/14" target="_blank">一点《你不知道的 JavaScript 上卷》读书笔记</a>
 - <a href="/" target="_blank">CSS 世界 张鑫旭</a>
 - <a href="/" target="_blank">图灵程序设计丛书 CSS 揭秘</a>
 - <a href="/" target="_blank">图解 HTTP</a>
@@ -108,9 +114,12 @@
 
 ## Vue 专题
 
-1. [读 Vue3 的 Composition API RFC 笔记](https://github.com/yayxs/frontend-thick-talk/issues/11)
+- [读 Vue3 的 Composition API RFC 笔记](https://github.com/yayxs/frontend-thick-talk/issues/11)
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/27" target="_blank">Vue3 刚出 RFC 文档后的一些尝鲜</a>
 
 ## React 专题
+
+- <a href="https://github.com/yayxs/frontend-thick-talk/issues/28" target="_blank">React admin 后台管理的一些学习</a>
 
 ## 计算机网络专题
 
