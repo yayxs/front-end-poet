@@ -20,8 +20,6 @@ export default defineConfig({
     sidebar: {
       '/html/': sidebarHTML(),
       '/vite/': sidebarVite(),
-      //   '/guide/': sidebarGuide(),
-      //   '/config/': sidebarConfig(),
     },
 
     editLink: {
