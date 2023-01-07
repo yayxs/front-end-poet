@@ -29,7 +29,11 @@
     "洋小洋同学"
   ],
   "devDependencies": {
-    "prettier": "^2.4.1",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
     "vitepress": "1.0.0-alpha.35",
     "vue": "^3.2.45"
   }
