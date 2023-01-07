@@ -1,10 +1,15 @@
 {
-  "name": "frontend-thick-talk",
-  "version": "0.0.4",
-  "description": "前端厚说--官方仓库",
-  "repository": "https://github.com/yayxs/advanced-road.git",
-  "author": "全网关键字搜索：前端厚说 | 洋小洋同学 | vast | yayxs ; GitHub@yaxys | 掘金@洋小洋同学 | 知乎@vast | B站@洋小洋同学",
+  "name": "front-end-poet",
+  "version": "2.0.0",
+  "description": "前端厚说变更为前端诗人",
+  "repository": "https://github.com/yayxs/front-end-poet",
+  "author": "vanlee",
   "license": "MIT",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
   "keywords": [
     "JavaScript",
     "Data Structures and Algorithms",
@@ -19,16 +24,15 @@
     "JavaScript高级程序设计 4 ",
     "webpack",
     "webpack 5",
-    "计算机网络"
+    "计算机网络",
+    "前端诗人",
+    "洋小洋同学"
   ],
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0",
-    "nodemon": "^2.0.12",
     "prettier": "^2.4.1"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "dependencies": {
+    "vitepress": "1.0.0-alpha.35",
+    "vue": "^3.2.45"
   }
 }
