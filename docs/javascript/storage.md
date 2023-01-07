@@ -62,7 +62,7 @@ VM180:1 _ga=GA1.2.230961981.1582299221; gr_user_id=2b19e35b-61c1-4c7b-9d8a-8fa49
 
 ```javascript
 const bigObj = {
-  name: "info",
+  name: 'info',
   data: {
     list: [
       {
@@ -73,17 +73,17 @@ const bigObj = {
       },
     ],
   },
-};
-console.log(123);
-sessionStorage.infoKey = bigObj;
-console.log(456);
+}
+console.log(123)
+sessionStorage.infoKey = bigObj
+console.log(456)
 ```
 
 这时候会有问题，因为要求我们是 字符串，取而代之
 
 ```javascript
 const bigObj = {
-  name: "info",
+  name: 'info',
   data: {
     list: [
       {
@@ -94,10 +94,10 @@ const bigObj = {
       },
     ],
   },
-};
-console.log(123);
-sessionStorage.infoKey = JSON.stringify(bigObj); // 请注意，键和值都必须是字符串。
-console.log(456);
+}
+console.log(123)
+sessionStorage.infoKey = JSON.stringify(bigObj) // 请注意，键和值都必须是字符串。
+console.log(456)
 ```
 
 ## 三、localStorage
@@ -127,19 +127,19 @@ console.log(456);
  * @Date:
  * @Description: 封装本地存储
  */
-const localStore = window.localStorage;
+const localStore = window.localStorage
 class ComLocalStorage {
   // 设置数据 如果value是obj 调用JSON.stringify转换为字符串
   static set(key, value) {
     if (!localStore) {
-      return;
+      return
     }
-    let v = value;
+    let v = value
     try {
-      if (typeof value === "object") {
-        v = JSON.stringify(v);
+      if (typeof value === 'object') {
+        v = JSON.stringify(v)
       }
-      localStore.setItem(key, v);
+      localStore.setItem(key, v)
     } catch (error) {
       // error
     }
@@ -147,39 +147,39 @@ class ComLocalStorage {
   // 直接读取
   static get(key) {
     if (!localStore) {
-      return;
+      return
     }
-    return localStore.getItem(key);
+    return localStore.getItem(key)
   }
   // 读取转Obj
   static get2Json(key) {
     if (!localStore) {
-      return;
+      return
     }
-    const data = localStore.getItem(key);
+    const data = localStore.getItem(key)
     if (data) {
       try {
-        return JSON.parse(data);
+        return JSON.parse(data)
       } catch (error) {
         // todo error
       }
     }
 
-    return null;
+    return null
   }
   // 直接移除
   static remove(key) {
     if (!localStore) {
-      return;
+      return
     }
     try {
-      localStore.removeItem(key);
+      localStore.removeItem(key)
     } catch (error) {
       // todo error
     }
   }
 }
-export default ComLocalStorage;
+export default ComLocalStorage
 ```
 
 ### vuex-persistedstate
@@ -188,27 +188,27 @@ export default ComLocalStorage;
 
 ```javascript
 export default new Vuex.Store({
-  strict: process.env.NODE_ENV !== "production",
+  strict: process.env.NODE_ENV !== 'production',
   plugins: [createPersistedState()],
   state: {
     num: 0,
     isLogin: false,
     list: [
       {
-        name: "zhangsan",
+        name: 'zhangsan',
         age: 12,
       },
       {
-        name: "lisi",
-        age: "17",
+        name: 'lisi',
+        age: '17',
       },
       {
-        name: "lisi",
+        name: 'lisi',
         age: 20,
       },
     ],
     obj: {
-      name: "subs",
+      name: 'subs',
     },
     res: null,
   },
@@ -219,22 +219,22 @@ export default new Vuex.Store({
   mutations: {
     numMuta(state) {
       // console.log(state);
-      state.num++;
+      state.num++
       // console.log(state);
     },
     toogleMuta(state, payload) {
-      state.isLogin = payload.newFlag;
+      state.isLogin = payload.newFlag
     },
     [CHANGE_NAME_MUTATION](state, payload) {
-      console.log(payload);
+      console.log(payload)
       // 不建议这样搞
       // state.obj.name = payload.newName;
-      state.obj = { ...state.obj, name: payload.newName };
+      state.obj = { ...state.obj, name: payload.newName }
     },
     changeRes(state, payload) {
-      console.log(state);
-      console.log(payload);
-      state.res = { ...payload.data };
+      console.log(state)
+      console.log(payload)
+      state.res = { ...payload.data }
     },
   },
   actions: {
@@ -242,16 +242,16 @@ export default new Vuex.Store({
       return new Promise((reso, rej) => {
         axios(`https://jsonplaceholder.typicode.com/todos/1`)
           .then((res) => {
-            commit("changeRes", res);
-            reso(res);
+            commit('changeRes', res)
+            reso(res)
           })
           .catch((err) => {
-            rej(err);
-          });
-      });
+            rej(err)
+          })
+      })
     },
   },
-});
+})
 ```
 
 核心就是在插件的地方使用
@@ -263,4 +263,4 @@ export default new Vuex.Store({
 
 从 `存储大小` `生命周期` `优缺点` `服务器通信` 等维度谈谈前端的客户端（本地存储）存储吧
 
-<span style="color:red">一段时间没有更新了，不要怕，不用扫码回复，没有公众号链接，没有扫码关注，，感兴趣的可以直接访问 github 好了，写文不易，有帮助最好，没帮助划走吧，有缘再见</span>
+<span style="color:red">一段时间没有更新了，不要怕，不用扫码回复，没有微信公众号链接，没有扫码关注，，感兴趣的可以直接访问 github 好了，写文不易，有帮助最好，没帮助划走吧，有缘再见</span>
