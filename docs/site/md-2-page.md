@@ -290,11 +290,11 @@ Uncaught SyntaxError: The requested module '/@fs/D:/gh-code/vitepress-starter/no
 
 [https://vitepress.vuejs.org/guide/using-vue](https://vitepress.vuejs.org/guide/using-vue)
 
-<script setup>
+<!-- <script setup>
 import WordCloud from '../components/WordCloud.vue'
 </script>
 
-<WordCloud />
+<WordCloud /> -->
 
 要想这样使用一个组件，和写 vue 代码差不多，装一下`@antv/g2plot` 的依赖，然后在 `docs/components` 新建一个组件`WordCloud.vue`
 
