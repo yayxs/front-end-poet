@@ -20,6 +20,7 @@ export default defineConfig({
     sidebar: {
       '/html/': sidebarHTML(),
       '/vite/': sidebarVite(),
+      '/site/': sidebarSite(),
     },
 
     editLink: {
@@ -53,6 +54,7 @@ function nav() {
   return [
     { text: 'HTML', link: '/html/video-tag', activeMatch: '/html/' },
     { text: 'Vite', link: '/vite/vite-in-production', activeMatch: '/vite/' },
+    { text: 'Site', link: '/site/md-2-page', activeMatch: '/site/' },
 
     // { text: 'Configs', link: '/config/introduction', activeMatch: '/config/' },
   ]
@@ -149,6 +151,17 @@ function sidebarVite() {
       items: [
         { text: 'vite 上次了生产，问题不大', link: '/vite/vite-in-production' },
       ],
+    },
+  ]
+}
+/**
+ * @description 生成site文章的侧边栏
+ */
+function sidebarSite() {
+  return [
+    {
+      text: 'Site',
+      items: [{ text: 'Markdown语法变成页面', link: '/site/md-2-page' }],
     },
   ]
 }
