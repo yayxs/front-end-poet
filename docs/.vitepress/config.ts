@@ -21,6 +21,7 @@ export default defineConfig({
       '/html/': sidebarHTML(),
       '/vite/': sidebarVite(),
       '/site/': sidebarSite(),
+      '/interview': sidebarInterview(),
     },
 
     editLink: {
@@ -55,6 +56,11 @@ function nav() {
     { text: 'HTML', link: '/html/video-tag', activeMatch: '/html/' },
     { text: 'Vite', link: '/vite/vite-in-production', activeMatch: '/vite/' },
     { text: 'Site', link: '/site/md-2-page', activeMatch: '/site/' },
+    {
+      text: 'Interview',
+      link: '/interview/2b-interviewer',
+      activeMatch: '/interview/',
+    },
 
     // { text: 'Configs', link: '/config/introduction', activeMatch: '/config/' },
   ]
@@ -162,6 +168,17 @@ function sidebarSite() {
     {
       text: 'Site',
       items: [{ text: 'Markdown语法变成页面', link: '/site/md-2-page' }],
+    },
+  ]
+}
+
+function sidebarInterview() {
+  return [
+    {
+      text: 'Interview',
+      items: [
+        { text: '如何做一名前端面试官', link: '/interview/2b-interviewer' },
+      ],
     },
   ]
 }
