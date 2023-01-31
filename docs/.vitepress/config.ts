@@ -20,6 +20,7 @@ export default defineConfig({
     sidebar: {
       '/html/': sidebarHTML(),
       '/vite/': sidebarVite(),
+      '/applets': sidebarApplets(),
       '/site/': sidebarSite(),
       '/interview': sidebarInterview(),
     },
@@ -55,6 +56,11 @@ function nav() {
   return [
     { text: 'HTML', link: '/html/video-tag', activeMatch: '/html/' },
     { text: 'Vite', link: '/vite/vite-in-production', activeMatch: '/vite/' },
+    {
+      text: 'Applets',
+      link: '/applets/ali-live-player',
+      activeMatch: '/applets/',
+    },
     { text: 'Site', link: '/site/md-2-page', activeMatch: '/site/' },
     {
       text: 'Interview',
@@ -143,7 +149,10 @@ function sidebarHTML() {
   return [
     {
       text: 'HTML',
-      items: [{ text: '有关video 标签', link: '/html/video-tag' }],
+      items: [
+        { text: '一些面试题', link: '/html/interview' },
+        { text: 'html中的video标签', link: '/html/video-tag' },
+      ],
     },
   ]
 }
@@ -178,6 +187,20 @@ function sidebarInterview() {
       text: 'Interview',
       items: [
         { text: '如何做一名前端面试官', link: '/interview/2b-interviewer' },
+      ],
+    },
+  ]
+}
+
+function sidebarApplets() {
+  return [
+    {
+      text: 'Applets',
+      items: [
+        {
+          text: '支付宝小程序实时音视频拉流播',
+          link: '/applets/ali-live-player',
+        },
       ],
     },
   ]
