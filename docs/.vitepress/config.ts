@@ -39,11 +39,11 @@ export default defineConfig({
       copyright: 'Copyright © 2020-2023-present vanlee',
     },
 
-    // algolia: {
-    //   appId: '8J64VVRP8K',
-    //   apiKey: 'a18e2f4cc5665f6602c5631fd868adfd',
-    //   indexName: 'vitepress',
-    // },
+    algolia: {
+      appId: 'BVTK6RESHX',
+      apiKey: 'fa0398a514f4f7eb8ade9b06d7d01739',
+      indexName: 'vleejs',
+    },
 
     // carbonAds: {
     //   code: 'CEBDT27Y',

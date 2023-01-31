@@ -342,6 +342,13 @@ function getListDevices(deviceInfos) {
 
 ## 自定义视频播放器
 
+::: tip
+
+以下案例完整的代码可以在这里看
+
+https://github.com/yayxs/html-learn/tree/main/projects/custom-video-player
+:::
+
 我们通过上文大致了解，`video` 标签，下面我们使用原生的 html css js 来自定义一个视频播放器
 
 html 部分：分为 `video` 标签 + `<i class="fa fa-play fa-2x"></i>` 播放和暂停的图标按钮 + `input` 进度条 + `span`时间
