@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /my-express-app/node_modules
 node_modules
 .astro
@@ -19,3 +20,6 @@ node_modules
 ./docs/.vuepress/dist
 dist
 >>>>>>> c3f516a (feat:修改前言以及简历面试)
+=======
+node_modules
+>>>>>>> 18a2b4e (docs:main readme)

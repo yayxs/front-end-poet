@@ -55,15 +55,6 @@ module.exports = {
         ],
       },
       {
-        title: "推荐分享",
-        collapsable: false,
-        children: [
-          "/guides/recommend/book",
-          "/guides/recommend/video",
-          "/guides/recommend/other",
-        ],
-      },
-      {
         title: "读书笔记",
         collapsable: false,
         children: [
@@ -102,6 +93,15 @@ module.exports = {
         title: "JavaScript",
         collapsable: true,
         children: ["/guides/javascript/storage"],
+      },
+      {
+        title: "推荐分享",
+        collapsable: false,
+        children: [
+          "/guides/recommend/book",
+          "/guides/recommend/video",
+          "/guides/recommend/other",
+        ],
       },
       {
         title: "TypeScript",
@@ -145,7 +145,7 @@ module.exports = {
       {
         title: "前端工程化",
         collapsable: false,
-        children: ["/guides/webpack/webpack_basic"],
+        children: ["/guides/webpack/webpack_basic", "/guides/git/"],
       },
       {
         title: "数据结构与算法",
