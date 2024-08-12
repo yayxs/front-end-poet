@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Node | 自我爬虫掘金专栏文章
 
 ## 需求概述
@@ -78,3 +79,13 @@ getEntryBySelf();
 ```
 
 ![20200220210104.png](https://raw.githubusercontent.com/yayxs/Pics/master/img/20200220210104.png)
+=======
+全局安装`nodemon`
+
+### 模块 module
+
+- exports
+- module.exports
+
+`exports`在模块执行之前赋值给`module.exports` ，实际上导出的是`module.rxports`
+>>>>>>> 22bd853 (node)
