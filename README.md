@@ -44,6 +44,10 @@
 
 - [从 0 学习计算机网络协议 HTTP TCP IP](https://github.com/yayxs/computer-network-learn)
 
+## 前端安全
+
+- [CORS CSRF XSS JSONP](https://github.com/yayxs/frontend-thick-talk/issues/21)
+
 ## 设计模式
 
 1. [JavaScript 设计模式](https://github.com/yayxs/frontend-thick-talk/issues/12)

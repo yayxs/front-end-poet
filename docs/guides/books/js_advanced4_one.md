@@ -12,15 +12,6 @@ title: Js语言基础
 6. 0.1+0.2
    :::
 
-## 关于 ECMAScript 版本
-
-|       版本        |     别名      |   发布时间   |                                                          主要变动                                                           |
-| :---------------: | :-----------: | :----------: | :-------------------------------------------------------------------------------------------------------------------------: |
-| ECMA-262 第 6 版  |  ES6 ES2015   | 2016 年 6 月 |                    ES6 正式支持了类、模块、迭代器、生成器、箭头函数、期约、反射、代理和众多新的数据类型                     |
-| ECMA-262 第 7 版  | ES7 或 ES2016 | 2016 年 6 月 |                                            Array.prototype.includes 和指数操作符                                            |
-| ECMA-262 第 8 版  |  Es8 ES2017   | 2017 年 6 月 |                 异步函数（async/await）Object.values()/Object.entries()/Object.getOwnPropertyDescriptors()                  |
-| ECMA-262 第 9 版  |  ES9、ES2018  | 2018 年 6 月 |                                                      Promise finally()                                                      |
-| ECMA-262 第 10 版 | ES10、ES2019  | 2019 年 6 月 | Array.prototype.flat()/flatMap()、String.prototype.trimStart()/trimEnd()、Object.fromEntries() Symbol.prototype.description |
 
 ::: details 点击查看代码
 ES6 重点 ：类 class 模块化 import from 、生成器函数 Promise Proxy 箭头函数、模板字符串、解构语法
